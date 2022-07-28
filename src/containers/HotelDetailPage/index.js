@@ -1,8 +1,8 @@
 import { Box, Dialog, Divider, Grid, Stack, styled, Typography } from "@mui/material";
-import MuiBox from '@mui/material/Box';
 import { Container } from "@mui/system";
 import { useState } from 'react';
 import { useParams } from "react-router-dom";
+import { hotelData } from "../../api/fakeData";
 import DescriptionBox from "../../Atomic/organisms/DescriptionBox";
 import DetailBookingBox from "../../Atomic/organisms/DetailBookingBox";
 import HeroBanner from "../../Atomic/organisms/HeroBanner";
@@ -17,8 +17,6 @@ import FreeWifiIcon from '../../icons/freeWifiIcon';
 import HairDryerIcon from '../../icons/hairDryerIcon';
 import ShowerIcon from '../../icons/showerIcon';
 import SingleBedIcon from '../../icons/singleBedIcon';
-import { hotelData } from "../../api/fakeData";
-
 const images = [
     '/Images/hotelDetailBanner.jpg',
     '/Images/placeDetailBanner.jpg',
@@ -67,7 +65,7 @@ const reviewData = [
 ];
 
 
-const IframeDialogBox = styled(MuiBox)(
+const IframeDialogBox = styled(Box)(
     ({ theme }) => ({
         position: "relative",
         overflow: "hidden",
@@ -116,7 +114,6 @@ function HotelDetailPage() {
     const [imageDialogOpen, setImageDialogOpen] = useState(false);
     const [videoDialogOpen, setVideoDialogOpen] = useState(false);
     const params = useParams();
-    // const [pageData, setPageData] = useState(hotelData.find(item => item?.id === params?.id));
     const pageData = hotelData.find(item => item?.id === params?.id);
 
     const handleImageDialogClose = () => {
@@ -171,19 +168,19 @@ function HotelDetailPage() {
                     hotelDetails.map((value, index) => {
                         return (
                             <StyledRow key={index}>
-                                <Grid spacing={3} container>
-                                    <Grid lg={4} md={4} sm={4} item>
+                                <Grid container spacing={3}>
+                                    <Grid item lg={4} md={4} sm={4}>
                                         <img style={{ width: "100%", height: "auto" }} src={value.image} className="img-fluid" alt="" />
                                     </Grid>
-                                    <Grid lg={8} md={8} sm={8} item>
-                                        <Typography variant="h4" mb={1} fontSize={"18px"}>{value.title}</Typography>
-                                        <Typography variant="body1" mb={2}>{value.description}</Typography>
-                                        <Grid spacing={2} container item>
-                                            <Grid xl={6} lg={6} md={6} ms={6} xs={6} display={"flex"} item><SingleBedIcon /><Typography variant="body1" ml={"8px"}>Giường đơn</Typography></Grid>
-                                            <Grid xl={6} lg={6} md={6} ms={6} xs={6} display={"flex"} item><AirConditionIcon /><Typography variant="body1" ml={"8px"}>Máy điều hòa</Typography></Grid>
-                                            <Grid xl={6} lg={6} md={6} ms={6} xs={6} display={"flex"} item><FreeWifiIcon /><Typography variant="body1" ml={"8px"}>Wifi miễn phí</Typography></Grid>
-                                            <Grid xl={6} lg={6} md={6} ms={6} xs={6} display={"flex"} item><HairDryerIcon /><Typography variant="body1" ml={"8px"}>Máy sấy tóc</Typography></Grid>
-                                            <Grid xl={6} lg={6} md={6} ms={6} xs={6} display={"flex"} item><ShowerIcon /><Typography variant="body1" ml={"8px"}>Vòi sen</Typography></Grid>
+                                    <Grid item lg={8} md={8} sm={8}>
+                                        <Typography variant="h4" sx={{ mb: 1, fontSize: "18px" }}>{value.title}</Typography>
+                                        <Typography variant="body1" sx={{ mb: 2 }}>{value.description}</Typography>
+                                        <Grid container spacing={2}>
+                                            <Grid item xl={6} lg={6} md={6} ms={6} xs={6} sx={{ display: "flex" }}><SingleBedIcon /><Typography variant="body1" sx={{ ml: 1 }} >Giường đơn</Typography></Grid>
+                                            <Grid item xl={6} lg={6} md={6} ms={6} xs={6} sx={{ display: "flex" }}><AirConditionIcon /><Typography variant="body1" sx={{ ml: 1 }} >Máy điều hòa</Typography></Grid>
+                                            <Grid item xl={6} lg={6} md={6} ms={6} xs={6} sx={{ display: "flex" }}><FreeWifiIcon /><Typography variant="body1" sx={{ ml: 1 }} >Wifi miễn phí</Typography></Grid>
+                                            <Grid item xl={6} lg={6} md={6} ms={6} xs={6} sx={{ display: "flex" }}><HairDryerIcon /><Typography variant="body1" sx={{ ml: 1 }} >Máy sấy tóc</Typography></Grid>
+                                            <Grid item xl={6} lg={6} md={6} ms={6} xs={6} sx={{ display: "flex" }}><ShowerIcon /><Typography variant="body1" sx={{ ml: 1 }} >Vòi sen</Typography></Grid>
                                         </Grid>
                                     </Grid>
                                 </Grid>
@@ -213,16 +210,16 @@ function HotelDetailPage() {
             />
             <SecondNav links={secondNavLink} />
             <Container sx={{ py: 3 }}>
-                <Grid spacing={3} container>
+                <Grid container spacing={3} >
                     <Grid item xl={12} lg={12} md={12} sm={12} xs={12}>
                         <DescriptionBox name="3d" title="">
                             <iframe title="3d" width="100%" style={{ aspectRatio: 16 / 9 }} src="https://my.matterport.com/show/?m=NRoQ6ffpUHf&amp;play=1&amp;nozoom=1&amp;qs=1&amp;ts=1&amp;guides=0&amp;lp=1" frameBorder="0" allowFullScreen="" />
                         </DescriptionBox>
                     </Grid>
-                    <Grid lg={8} md={8} sm={12} xs={12} item>
-                        <Stack gap={4}>
+                    <Grid item xl={12} lg={8} md={8} sm={12} xs={12}>
+                        <Stack sx={{ gap: 4 }} >
                             <DescriptionBox name="introduce" title="Giới thiệu">
-                                <Typography fontSize={"0.875rem"} fontWeight={400}>
+                                <Typography >
                                     {pageData?.description}
                                 </Typography>
                             </DescriptionBox>
@@ -259,7 +256,7 @@ function HotelDetailPage() {
                             </DescriptionBox>
                         </Stack>
                     </Grid>
-                    <Grid lg={4} md={4} sm={12} xs={12} item>
+                    <Grid item lg={4} md={4} sm={12} xs={12}>
                         <DetailBookingBox data={pageData} />
                     </Grid>
                 </Grid>

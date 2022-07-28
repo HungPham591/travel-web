@@ -309,14 +309,14 @@ function TourDetailPage(props) {
                                 <TimelineHead>
                                     <CustomTimelineOppositeContent
                                     >
-                                        <Typography color={"#888"}>Ngày</Typography>
+                                        <Typography sx={{ color: "#888" }} >Ngày</Typography>
                                         <Typography variant="h6" component="span">
                                             {value.time}
                                         </Typography>
                                     </CustomTimelineOppositeContent>
                                     <TimelineSeparator>
                                         <CustomTimelineSeparator>
-                                            <Typography color={"common.yellow"} fontWeight="500" fontSize={"24px"} margin={"auto"}>
+                                            <Typography sx={{ color: "common.yellow", fontWeight: "500", fontSize: "24px", margin: "auto" }} >
                                                 {index + 1}
                                             </Typography>
                                         </CustomTimelineSeparator>
@@ -332,17 +332,16 @@ function TourDetailPage(props) {
                                         <Box >
                                             <Typography
                                                 variant="h5"
-                                                textAlign={"left"}
-                                                paddingBottom={1}
+                                                sx={{ textAlign: "left", pb: 1 }}
                                             >
                                                 {value.title} - {value.placeName}
                                             </Typography>
                                             <Typography
-                                                textAlign={"left"}
+                                                sx={{ textAlign: "left" }}
                                             >
                                                 {value.description}
                                             </Typography>
-                                            <Box width={"100%"} display={"flex"} justifyContent={"flex-start"} paddingTop={2}>
+                                            <Box sx={{ width: "100%", display: "flex", justifyContent: "flex-start", paddingTop: 2 }} >
                                                 <VRButton
                                                     variant="contained"
                                                     onClick={() => handleVRButtonClick(index)}
@@ -351,7 +350,7 @@ function TourDetailPage(props) {
                                                 </VRButton>
                                             </Box>
                                         </Box>
-                                        <Box ml={1}>
+                                        <Box sx={{ ml: 1 }} >
                                             <CircleImage image={value.image} />
                                         </Box>
                                     </TimelineLabel>
@@ -418,9 +417,9 @@ function TourDetailPage(props) {
             />
             <SecondNav links={secondNavLink} />
             <Container sx={{ py: 3 }}>
-                <Grid spacing={3} container>
-                    <Grid lg={8} md={8} sm={12} xs={12} item>
-                        <Stack gap={4}>
+                <Grid container spacing={3} >
+                    <Grid item lg={8} md={8} sm={12} xs={12}>
+                        <Stack sx={{ gap: 4 }} >
                             <DescriptionBox name="introduce" title="Giới thiệu">
                                 <Typography>
                                     {pageData?.description}
@@ -478,7 +477,7 @@ function TourDetailPage(props) {
                             </DescriptionBox>
                         </Stack>
                     </Grid>
-                    <Grid lg={4} md={4} sm={12} xs={12} item>
+                    <Grid item lg={4} md={4} sm={12} xs={12} >
                         <DetailBookingBox data={pageData} />
                     </Grid>
                 </Grid>

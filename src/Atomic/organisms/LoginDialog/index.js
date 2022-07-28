@@ -106,15 +106,15 @@ function LoginDialog(props) {
                 </Box>
                 <TextField label="Email" size='small' fullWidth type={"email"} InputProps={{ startAdornment: < MailOutlineIcon /> }} />
                 <TextField label="Mật khẩu" size='small' fullWidth type={"password"} InputProps={{ startAdornment: < LockOpenIcon /> }} />
-                <Box display={"flex"} justifyContent={"space-between"} alignItems={"center"}>
+                <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center" }} >
                     <FormControlLabel color='common.grey' control={<Checkbox />} label="Lưu mật khẩu" />
                     <Typography><Link variant='subtitle2' color={"common.grey"} onClick={handleForgotPasswordClick}>Quên mật khẩu?</Link ></Typography>
                 </Box>
                 <LoginButton variant='contained' fullWidth>Đăng nhập</LoginButton>
-                <Box textAlign={"center"}>
-                    <Typography display="inline" >Không có tài khoản? </Typography>
+                <Box sx={{ textAlign: "center" }}>
+                    <Typography sx={{ display: "inline" }}  >Không có tài khoản? </Typography>
                     <RouterLink to="/register" onClick={handleClose}>
-                        <Typography display={"inline"} color={"secondary.main"}>Đăng ký</Typography>
+                        <Typography sx={{ display: "inline" }} color={"secondary.main"}>Đăng ký</Typography>
                     </RouterLink>
                 </Box>
             </SignInFormBox>
@@ -123,8 +123,8 @@ function LoginDialog(props) {
     const forgotPasswordForm = () => {
         return (
             <ForgotPasswordFormBox open={isForgotPassword}>
-                <TextField label="Email" placeholder='Email đăng nhập' size='small' fullWidth type={"email"} InputProps={{ startAdornment: < MailOutlineIcon /> }} />
-                <Typography mt={2}>Bạn sẽ nhận được một email chứa một link cho phép bạn thiết lặp lại mật khẩu của bạn.</Typography>
+                <TextField label="Email" placeholder='Email đăng nhập' size='small' fullWidth type="email" InputProps={{ startAdornment: < MailOutlineIcon /> }} />
+                <Typography sx={{ mt: 2 }} >Bạn sẽ nhận được một email chứa một link cho phép bạn thiết lặp lại mật khẩu của bạn.</Typography>
                 <LoginButton variant='contained' sx={{ mx: "auto", mt: 2 }}>Reset Password</LoginButton>
             </ForgotPasswordFormBox>
         )
@@ -132,15 +132,15 @@ function LoginDialog(props) {
 
     return (
         <Dialog disableScrollLock={true} onClose={handleClose} open={open}>
-            <Box display={"flex"} justifyContent="space-between" bgcolor={"background.default"}>
-                <DialogTitle fontSize={"18px"}>Đăng Nhập</DialogTitle>
-                <Box display={"block"} mt={"auto"} mb={"auto"}>
+            <Box sx={{ display: "flex", justifyContent: "space-between", bgcolor: "background.default" }}>
+                <DialogTitle >Đăng Nhập</DialogTitle>
+                <Box sx={{ display: "block", mt: "auto", mb: "auto" }} >
                     <CloseDialogButton onClick={handleClose}>
                         <CloseIcon />
                     </CloseDialogButton>
                 </Box>
             </Box>
-            <DialogBody position={"relative"}>
+            <DialogBody sx={{ position: "relative" }}>
                 {signInForm()}
                 {forgotPasswordForm()}
             </DialogBody>

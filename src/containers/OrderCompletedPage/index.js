@@ -1,10 +1,9 @@
 import { Box, Step, StepConnector, StepLabel, Stepper, styled, Typography } from '@mui/material';
-import MuiBox from '@mui/material/Box';
 import { stepConnectorClasses } from '@mui/material/StepConnector';
 import { Container } from '@mui/system';
 
 
-const HeroImage = styled(MuiBox)(
+const HeroImage = styled(Box)(
     ({ theme, image }) => ({
         backgroundImage: `url("${image}")`,
         backgroundColor: theme.palette.primary.main,
@@ -41,7 +40,7 @@ const ColorlibConnector = styled(StepConnector)(({ theme }) => ({
 }));
 
 const ColorlibStepIconRoot = styled('div')(({ theme, ownerState }) => ({
-    backgroundColor: "#0054a6",
+    backgroundColor: theme.palette.primary.main,
     zIndex: 1,
     width: 50,
     height: 50,
@@ -56,7 +55,7 @@ const ColorlibStepIconRoot = styled('div')(({ theme, ownerState }) => ({
     ...(ownerState.active && {
         "& .dot": {
             backgroundColor: theme.palette.common.yellow,
-            borderRadius: "50px",
+            borderRadius: "100%",
             width: 30,
             height: 30,
         },
@@ -64,7 +63,7 @@ const ColorlibStepIconRoot = styled('div')(({ theme, ownerState }) => ({
     ...(ownerState.completed && {
         "& .dot": {
             backgroundColor: theme.palette.common.yellow,
-            borderRadius: "50px",
+            borderRadius: "100%",
             width: 30,
             height: 30,
         },
@@ -79,7 +78,7 @@ function ColorlibStepIcon(props) {
     return (
         <ColorlibStepIconRoot ownerState={{ completed, active }} className={className}>
             <Box className='dot'></Box>
-            <Typography position={"absolute"} top={-35} color={"white"} fontWeight={600} noWrap>{steps[String(props.icon - 1)]}</Typography>
+            <Typography sx={{ position: "absolute", top: -35, color: "white", fontWeight: 600 }} noWrap>{steps[String(props.icon - 1)]}</Typography>
         </ColorlibStepIconRoot>
     );
 }
@@ -99,8 +98,8 @@ function CartPage() {
                         </Step>
                     ))}
                 </Stepper>
-                <Typography textAlign={"center"} color="white" variant='h4' mt={2} mb={1}>Hoàn tất đặt hàng!</Typography>
-                <Typography textAlign={"center"} color="white" fontSize={"16px"}>Bạn sẽ nhận được email xác nhận tại mail@example.com</Typography>
+                <Typography sx={{ textAlign: "center", color: "white", mt: 2, mb: 1 }} variant='h4' >Hoàn tất đặt hàng!</Typography>
+                <Typography sx={{ textAlign: "center", color: "white" }}>Bạn sẽ nhận được email xác nhận tại mail@example.com</Typography>
             </Container>
         </HeroImage>
     )

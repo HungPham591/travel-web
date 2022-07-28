@@ -62,8 +62,8 @@ const CustomDivider = styled(Box)(
     ({ theme }) => ({
         borderRadius: theme.shape.borderRadius,
         backgroundColor: theme.palette.warning.main,
-        width: "80px",
-        height: "4px",
+        width: theme.spacing(10),
+        height: theme.spacing(0.5),
     })
 )
 function HerroBanner(props) {
@@ -76,7 +76,7 @@ function HerroBanner(props) {
         <HeroContainer>
             <HeroImage image={image} start={start ? 1 : 0} />
             <TitleBox start={start ? 1 : 0}>
-                <Box paddingY={2}>
+                <Box sx={{ py: 2 }} >
                     <CustomDivider />
                 </Box>
                 <Typography sx={{ color: "white", textAlign: "center", fontWeight: 700 }} variant="h1">

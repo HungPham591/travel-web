@@ -39,9 +39,9 @@ function SecondNav(props) {
         setActiveLink(index);
     }
     return (
-        <Box position={"sticky"} top={useAppBarHeight()} zIndex={1} sx={{ borderBottom: 1, borderColor: 'grey.300' }} width="100%" bgcolor={"white"}>
+        <Box sx={{ borderBottom: 1, borderColor: 'grey.300', position: "sticky", top: useAppBarHeight(), zIndex: 1, width: "100%", bgcolor: "white" }}>
             <Container>
-                <Stack flexWrap={"wrap"} py={2} columnGap={2} direction={"row"}>
+                <Stack sx={{ flexWrap: "wrap", py: 2, columnGap: 2 }} direction="row" >
                     {
                         props?.links.map((value, index) => {
                             return (
@@ -51,7 +51,7 @@ function SecondNav(props) {
                             )
                         })
                     }
-                    <CustomButton variant='contained' sx={{ marginRight: 0 }}>Booking</CustomButton>
+                    <CustomButton variant='contained' sx={{ mr: 0 }}>Booking</CustomButton>
                 </Stack>
             </Container>
         </Box>

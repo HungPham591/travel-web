@@ -20,9 +20,9 @@ export default function NotFoundPage(props) {
     return (
         <Wrapper>
             <Box>
-                <Typography textAlign={"center"} color={"secondary"} fontSize={"100px"}>404!</Typography>
-                <Typography textAlign={"center"} fontSize={"30px"}>Sorry, Page not found</Typography>
-                <Button color='secondary' variant='contained' sx={{ display: "block", margin: "auto", mt: 2 }} onClick={handleGoHomePageButtonClick}>
+                <Typography sx={{ textAlign: "center", color: "secondary", fontSize: "100px" }} >404!</Typography>
+                <Typography sx={{ textAlign: "center", fontSize: "30px" }} >Sorry, Page not found</Typography>
+                <Button variant='contained' sx={{ display: "block", margin: "auto", mt: 2, color: 'secondary' }} onClick={handleGoHomePageButtonClick}>
                     Go to home page
                 </Button>
             </Box>

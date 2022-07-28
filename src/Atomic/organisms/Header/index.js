@@ -26,7 +26,6 @@ const CustomAppBar = styled(MuiAppBar)(
 )
 const AppBarTypography = styled(MuiTypography)(
     ({ theme, show, display }) => ({
-        cursor: "pointer",
         whiteSpace: "nowrap",
         ...(!show && {
             color: "white"
@@ -39,6 +38,7 @@ const AppBarTypography = styled(MuiTypography)(
 const AppBarMenuTypography = styled(MuiTypography)(
     ({ theme }) => ({
         whiteSpace: "nowrap",
+        color: theme.palette.grey[700],
         ':hover': {
             color: theme.palette.secondary.main
         },
@@ -61,14 +61,12 @@ const CustomGrid = styled(MuiGrid)(
 const MenuButton = styled(CustomGrid)(
     ({ theme }) => ({
         alignItems: 'center',
-        cursor: "pointer"
     })
 )
 const LogoBox = styled(Box)(
     ({ theme }) => ({
         display: "flex",
         alignItems: "center",
-        cursor: "pointer"
     })
 )
 const CustomIconButton = styled(IconButton)(
@@ -93,7 +91,7 @@ function Header(props) {
     const { setLoginDialogOpen } = props;
 
     const navLinkClass = ({ isActive }) => ({
-        color: isActive ? theme.palette.secondary.main : showAppbar ? "#444444" : "white",
+        color: isActive ? theme.palette.secondary.main : showAppbar ? theme.palette.grey[700] : "white",
         '&:hover': {
             color: theme.palette.secondary.main
         },
@@ -139,16 +137,16 @@ function Header(props) {
         <CustomAppBar show={showAppbar ? 1 : 0} >
             <Toolbar>
                 <Grid container>
-                    <MenuButton lg={0} md={0} sm={3} xs={3} display={isMedium ? 1 : 0} onClick={handleMenuButton} item>
+                    <MenuButton item lg={0} md={0} sm={3} xs={3} display={isMedium ? 1 : 0} onClick={handleMenuButton} >
                         <MenuIcon />
                     </MenuButton>
-                    <CustomGrid lg={3} md={3} sm={6} xs={6} display="flex" alignItems="center" center={isMedium ? 1 : 0} item>
+                    <CustomGrid item lg={3} md={3} sm={6} xs={6} sx={{ display: "flex", alignItems: "center" }} center={isMedium ? 1 : 0} >
                         <LogoBox onClick={handleLogoClick}>
                             <img alt='logo' src={showAppbar ? "/Images/logoblack.svg" : "/Images/logo.svg"} height={"36px"} />
                         </LogoBox>
                     </CustomGrid>
-                    <Grid lg={9} md={9} sm={3} xs={3} display="flex" alignItems="center" justifyContent="end" item>
-                        <Stack direction="row" alignItems={"center"} spacing={2}>
+                    <Grid item lg={9} md={9} sm={3} xs={3} sx={{ display: "flex", alignItems: "center", justifyContent: "end" }} >
+                        <Stack direction="row" sx={{ alignItems: "center" }} spacing={2}>
                             {
                                 BackendRoutes.map((value, index) => {
                                     if (value.element?.length === 0) {
@@ -196,7 +194,7 @@ function Header(props) {
                                     }
                                 })
                             }
-                            <Box display={"flex"}>
+                            <Box sx={{ display: "flex" }} >
                                 <CustomIconButton display={!isSmall ? 1 : 0} show={showAppbar ? 1 : 0} onClick={handleCartButtonClick}>
                                     <Badge
                                         badgeContent={4}

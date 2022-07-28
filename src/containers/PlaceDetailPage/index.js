@@ -153,16 +153,16 @@ function PlaceDetailPage() {
             />
             <SecondNav links={secondNavLink} />
             <Container sx={{ py: 3 }}>
-                <Grid spacing={3} container>
+                <Grid container spacing={3} >
                     <Grid item xl={12} lg={12} md={12} sm={12} xs={12}>
                         <DescriptionBox name="3d" title="">
                             <iframe title="3d" width="100%" style={{ aspectRatio: 16 / 9 }} src="https://my.matterport.com/show/?m=dcL5nzT5CuX&play=1&nozoom=1&qs=1&ts=1&guides=0&lp=1" frameBorder="0" allowFullScreen="" />
                         </DescriptionBox>
                     </Grid>
-                    <Grid lg={8} md={8} sm={12} xs={12} item>
-                        <Stack gap={4}>
+                    <Grid item lg={8} md={8} sm={12} xs={12} >
+                        <Stack sx={{ gap: 4 }} >
                             <DescriptionBox name="introduce" title="Giới thiệu">
-                                <Typography fontSize={"0.875rem"} fontWeight={400}>
+                                <Typography >
                                     {pageData?.description}
                                 </Typography>
                             </DescriptionBox>

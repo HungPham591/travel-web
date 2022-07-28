@@ -55,9 +55,9 @@ function ImageDialog(props) {
             </ImageDialogButton>
             <ImageBox>
                 <CustomImage image={images[currentImageOpen]} />
-                <Box display={"flex"} justifyContent="space-between" position={"absolute"} bottom={10} left={10} right={10}>
-                    <Typography color={"white"}>Photo title</Typography>
-                    <Typography color={"white"}>{currentImageOpen + 1} of {images.length}</Typography>
+                <Box sx={{ display: "flex", justifyContent: "space-between", position: "absolute", bottom: 10, left: 10, right: 10 }}>
+                    <Typography sx={{ color: "white" }} >Photo title</Typography>
+                    <Typography sx={{ color: "white" }}>{currentImageOpen + 1} of {images.length}</Typography>
                 </Box>
             </ImageBox>
             <ImageDialogButton sx={{ right: 20 }} onClick={handleBackButtonClick}>

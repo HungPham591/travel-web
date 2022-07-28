@@ -43,7 +43,8 @@ const CustomLink = styled(ListItemText)(
 
 const styles = {
     listItemText: {
-        textAlign: 'center', color: 'rgba(0,0,0,.3)'
+        textAlign: 'center',
+        color: 'rgba(0,0,0,.3)'
     }
 }
 
@@ -85,12 +86,14 @@ function CustomDrawer(props) {
             <Box
                 role="presentation"
                 onKeyDown={handleCloseDrawer}
-                height={"100vh"}
-                width={500}
-                maxWidth={"80vw"}
+                sx={{
+                    height: "100vh",
+                    width: 500,
+                    maxWidth: "80vw"
+                }}
             >
                 <List disablePadding>
-                    <ListItemButton display={"flex"} >
+                    <ListItemButton sx={{ display: "flex" }}>
                         <ListItem disablePadding>
                             <ListItemText className={classes.listItemText} primary={title} />
                         </ListItem>
@@ -105,7 +108,7 @@ function CustomDrawer(props) {
                                             <ListItemButton onClick={() => handleMenuClick(value, value?.element?.length > 0)}>
                                                 <CustomLink disableTypography active={location?.pathname === value?.path ? 1 : 0} primary={value?.label} />
                                                 <CustomListItemIcon display={value?.element?.length > 0 ? 1 : 0}>
-                                                    <Typography paddingRight={1}>
+                                                    <Typography sx={{ pr: 1 }} >
                                                         {value?.element?.length}
                                                     </Typography>
                                                     {subMenuOpen ? <ExpandLess /> : <ExpandMore />}

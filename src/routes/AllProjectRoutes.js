@@ -97,12 +97,13 @@ const AllProjectRoutes = [
         element: <RegisterPage />
     },
     {
-        path: '*',
-        element: <NotFoundPage />
-    },
-    {
         path: '/cart-3',
         element: <OrderCompletedPage />
+    },
+
+    {
+        path: '*',
+        element: <NotFoundPage />
     },
 ];
 

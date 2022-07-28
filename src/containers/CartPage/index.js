@@ -1,14 +1,12 @@
 import DeleteIcon from '@mui/icons-material/Delete';
-import { Avatar, Box, Divider, Grid, IconButton, Step, StepConnector, StepLabel, Stepper, styled, Table, TableBody, TableCell, tableCellClasses, TableContainer, TableHead, TableRow, TextField, Typography } from '@mui/material';
-import MuiBox from '@mui/material/Box';
-import MuiButton from '@mui/material/Button';
+import { Avatar, Box, Button, Divider, Grid, IconButton, Step, StepConnector, StepLabel, Stepper, styled, Table, TableBody, TableCell, tableCellClasses, TableContainer, TableHead, TableRow, TextField, Typography } from '@mui/material';
 import { stepConnectorClasses } from '@mui/material/StepConnector';
 import { Container } from '@mui/system';
 import { useNavigate } from 'react-router-dom';
 import DetailCheckoutBox from '../../Atomic/organisms/DetailCheckoutBox';
 
 
-const HeroImage = styled(MuiBox)(
+const HeroImage = styled(Box)(
     ({ theme, image }) => ({
         backgroundImage: `url("${image}")`,
         backgroundColor: theme.palette.primary.main,
@@ -41,20 +39,16 @@ const StyledTableCell = styled(TableCell)(({ theme, label }) => ({
         backgroundColor: theme.palette.common.black,
         color: theme.palette.common.white,
     },
-    [`&.${tableCellClasses.body}`]: {
-        fontSize: 14,
-    },
     [theme.breakpoints.down("sm")]: {
         display: "block",
         paddingLeft: "50%",
         width: "100%",
         textAlign: "left",
-        color: "#212529",
         "&::before": {
             content: `"${label}"`,
             display: "block",
             position: "absolute",
-            left: "30px",
+            left: theme.spacing(5),
             fontWeight: "bold"
         }
     }
@@ -88,7 +82,7 @@ const ColorlibConnector = styled(StepConnector)(({ theme }) => ({
 }));
 
 const ColorlibStepIconRoot = styled('div')(({ theme, ownerState }) => ({
-    backgroundColor: "#0054a6",
+    backgroundColor: theme.palette.primary.main,
     zIndex: 1,
     width: 50,
     height: 50,
@@ -111,21 +105,7 @@ const ColorlibStepIconRoot = styled('div')(({ theme, ownerState }) => ({
 
 }));
 
-const CustomButton = styled(MuiButton)(
-    ({ theme }) => ({
-        borderColor: "#999999",
-        color: "#999999",
-        border: "solid 2px",
-        fontWeight: 600,
-        whiteSpace: "nowrap",
-        ":hover": {
-            border: "solid 2px",
-            borderColor: theme.palette.primary.main,
-            color: "white",
-            backgroundColor: theme.palette.primary.main
-        }
-    })
-);
+
 const CustomAvatar = styled(Avatar)(
     ({ theme }) => ({
         width: "60px",
@@ -144,7 +124,7 @@ function ColorlibStepIcon(props) {
     return (
         <ColorlibStepIconRoot ownerState={{ completed, active }} className={className}>
             <Box className='dot'></Box>
-            <Typography position={"absolute"} top={-35} color={"white"} fontWeight={600} noWrap>{steps[String(props.icon - 1)]}</Typography>
+            <Typography sx={{ position: "absolute", top: -35, color: "white", fontWeight: 600 }} noWrap>{steps[String(props.icon - 1)]}</Typography>
         </ColorlibStepIconRoot>
     );
 }
@@ -175,7 +155,7 @@ const tableTitle = [
 const tableData = [
     {
         item: (
-            <Box display={"flex"} alignItems={"center"}>
+            <Box sx={{ display: "flex", alignItems: "center" }}>
                 <CustomAvatar >A</CustomAvatar>
                 <Typography >Persius delenit has cu</Typography>
             </Box>
@@ -186,7 +166,7 @@ const tableData = [
     },
     {
         item: (
-            <Box display={"flex"} alignItems={"center"}>
+            <Box sx={{ display: "flex", alignItems: "center" }}>
                 <CustomAvatar >A</CustomAvatar>
                 <Typography >Persius delenit has cu</Typography>
             </Box>
@@ -197,7 +177,7 @@ const tableData = [
     },
     {
         item: (
-            <Box display={"flex"} alignItems={"center"}>
+            <Box sx={{ display: "flex", alignItems: "center" }}>
                 <CustomAvatar >A</CustomAvatar>
                 <Typography >Persius delenit has cu</Typography>
             </Box>
@@ -208,7 +188,7 @@ const tableData = [
     },
     {
         item: (
-            <Box display={"flex"} alignItems={"center"}>
+            <Box sx={{ display: "flex", alignItems: "center" }}>
                 <CustomAvatar >A</CustomAvatar>
                 <Typography >Persius delenit has cu</Typography>
             </Box>
@@ -245,7 +225,7 @@ function CartPage() {
                             {tableTitle.map((value, index) => {
                                 return (
                                     <TableCell align={tableCellAlign[index]} width={cellWidth[index]} key={index}>
-                                        <Typography fontWeight={600} textTransform={"uppercase"} noWrap>
+                                        <Typography sx={{ fontWeight: 600, textTransform: "uppercase" }} noWrap>
                                             {value}
                                         </Typography>
                                     </TableCell>
@@ -275,34 +255,27 @@ function CartPage() {
         );
     }
     return (
-        <Box minHeight={"100vh"}>
+        <Box sx={{ minHeight: "100vh" }} >
             {heroBanner()}
             <Container sx={{ py: 6 }}>
-                <Grid spacing={3} container>
-                    <Grid lg={8} sm={12} md={8} xs={12} item>
+                <Grid container spacing={3}>
+                    <Grid item lg={8} sm={12} md={8} xs={12}>
                         {table()}
                         <Divider />
-                        <Box my={3} display={"flex"} justifyContent={"space-between"} flexWrap={"wrap"} gap={2}>
-                            <Box display={"flex"} gap={2}>
+                        <Box sx={{ my: 3, display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: 2 }}>
+                            <Box sx={{ display: "flex", gap: 2 }} >
                                 <TextField
                                     placeholder='Mã giảm giá'
                                     variant="outlined"
                                     size="small"
                                 />
-                                <CustomButton
-                                    size='small'
-                                >
-                                    Áp dụng mã giảm giá
-                                </CustomButton>
+                                <Button variant='outlined' sx={{ whiteSpace: "nowrap", color: 'common.grey', borderColor: 'common.grey' }}>Áp dụng mã giảm giá</Button>
                             </Box>
-                            <CustomButton
-                                size='small'
-                            >
-                                Cập nhật giỏ hàng
-                            </CustomButton>
+                            <Button variant='outlined' sx={{ color: 'common.grey', borderColor: 'common.grey' }}>Cập nhật giỏ hàng</Button>
+
                         </Box>
                     </Grid>
-                    <Grid lg={4} sm={12} md={4} xs={12} item>
+                    <Grid item lg={4} sm={12} md={4} xs={12}>
                         <DetailCheckoutBox buttonTitle="Thanh toán" handlePurchaseButtonClick={handlePurchaseButtonClick} />
                     </Grid>
                 </Grid>

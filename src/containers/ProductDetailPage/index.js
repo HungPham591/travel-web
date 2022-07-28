@@ -100,11 +100,11 @@ function ProductDetailPage() {
             />
             <SecondNav links={secondNavLink} />
             <Container sx={{ py: 3 }}>
-                <Grid spacing={3} container>
-                    <Grid lg={8} md={8} sm={12} xs={12} item>
-                        <Stack gap={4}>
+                <Grid container spacing={3} >
+                    <Grid item lg={8} md={8} sm={12} xs={12} >
+                        <Stack sx={{ gap: 4 }} >
                             <DescriptionBox name="introduce" title="Giới thiệu">
-                                <Typography fontSize={"0.875rem"} fontWeight={400}>
+                                <Typography>
                                     {pageData?.description}
                                 </Typography>
                             </DescriptionBox>
@@ -134,7 +134,7 @@ function ProductDetailPage() {
                             </DescriptionBox>
                         </Stack>
                     </Grid>
-                    <Grid lg={4} md={4} sm={12} xs={12} item>
+                    <Grid item lg={4} md={4} sm={12} xs={12} >
                         <DetailBookingBox data={pageData} />
                     </Grid>
                 </Grid>

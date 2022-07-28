@@ -68,7 +68,7 @@ const VideoContainer = styled(Box)(
 function VideoGridBox(props) {
     const { videos, handleClick } = props;
     return (
-        <Stack direction={"row"} flexWrap={"wrap"} gap={1}>
+        <Stack direction={"row"} sx={{ flexWrap: "wrap", gap: 1 }} >
             {
                 videos.map((value, index) => {
                     return (
