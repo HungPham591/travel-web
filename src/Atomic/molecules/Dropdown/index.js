@@ -5,14 +5,13 @@ import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 
 const NewPopper = styled(Popper)(({ theme }) => ({
   backgroundColor: "white",
-  maxHeight: "150px",
-  minWidth: "320px",
-  // width: "24%",
+  maxHeight: 150,
+  minWidth: 320,
   overflow: "auto",
   zIndex: "20",
-  borderTop: "10px solid #ffffff00",
+  borderTop: "1 solid common.white",
   [theme.breakpoints.down("md")]: {
-    maxWidth: "590px",
+    maxWidth: 590,
   },
   [theme.breakpoints.down("sm")]: {
     width: "90%",
@@ -51,9 +50,9 @@ export default function Dropdown({ values }) {
       >
         <Typography>{selected}</Typography>
         {open ? (
-          <KeyboardArrowUpIcon sx={{ fontSize: "30px", color: "#999999" }} />
+          <KeyboardArrowUpIcon sx={{ fontSize: "30px", color: "common.grey" }} />
         ) : (
-          <KeyboardArrowDownIcon sx={{ fontSize: "30px", color: "#999999" }} />
+          <KeyboardArrowDownIcon sx={{ fontSize: "30px", color: "common.grey" }} />
         )}
       </Button>
       <NewPopper

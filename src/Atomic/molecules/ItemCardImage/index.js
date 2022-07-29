@@ -20,12 +20,12 @@ export default function ItemCardImage({ data }) {
   return (
     <Wrapper image={data.image}>
       <Link href={data.href + "/" + data.id}>
-        <Box position="relative" backgroundColor="rgb(18, 25, 33, 0.2)" height="100%">
-          <Box position="absolute" right="20px" top="20px">
+        <Box sx={{ position: "relative", backgroundColor: "background.main", height: "100%" }}>
+          <Box sx={{ position: "absolute", right: 20, top: 20 }}>
             <Score score={data.score} />
           </Box>
-          <Box display="flex" alignItems="flex-end" height="100%" >
-            <Box display="flex" color="white" flexDirection="column" p="13px 20px">
+          <Box sx={{ display: "flex", alignItems: "flex-end", height: "100%" }} >
+            <Box sx={{ display: "flex", color: "white", flexDirection: "column", p: 2 }}>
               {data.rating &&
                 <Box>
                   <Rating name="read-only" value={data.rating} readOnly sx={{ color: 'white', fontSize: "12px" }} />

@@ -2,23 +2,23 @@ import React from "react";
 import { styled, Button } from "@mui/material";
 
 const NewButton = styled(Button)(({ theme }) => ({
-  borderRadius: "25px",
-  width: "100%",
-  marginTop: "30px",
-  padding: "10px",
-  fontWeight: "500",
   backgroundColor: theme.palette.secondary.main,
+  fontWeight: theme.typography.fontWeightMedium,
+  borderRadius: theme.spacing(4),
+  marginTop: theme.spacing(5),
+  padding: theme.spacing(1),
+  width: "inherit",
+  color: theme.palette.common.white,
+  "&:hover": {
+    backgroundColor: theme.palette.common.yellow,
+    color: theme.palette.text.main,
+  },
 }));
 
-export default function OvalButton({ value, width, onClick }) {
+export default function OvalButton({ value, onClick }) {
   return (
-    <>
-      <NewButton
-        variant="contained"
-        onClick={onClick}
-      >
+      <NewButton onClick={onClick}>
         {value}
       </NewButton>
-    </>
   );
 }

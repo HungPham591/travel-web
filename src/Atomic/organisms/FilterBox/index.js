@@ -9,30 +9,29 @@ const Wrapper = styled(Box)(({ theme }) => ({
   justifyContent: "space-between",
   alignItems: "center",
   backgroundColor: theme.palette.white,
-  padding: "11px 6px",
+  padding: theme.spacing(1),
   [theme.breakpoints.down("sm")]: {
     flexDirection: "column",
     alignItems: "flex-start",
-    padding: "11px 6px",
   },
 }));
 
 const BorderBox = styled(Box)(({ theme }) => ({
   display: "flex",
   border: "1px solid rgb(18, 25, 33, 0.2)",
-  borderRadius: "5px",
+  borderRadius: theme.shape.borderRadius,
   justifyContent: "space-around",
   alignItems: "center",
-  color: "#000000",
+  color: theme.palette.background.white,
   [theme.breakpoints.down("sm")]: {
-    margin: "5px",
+    margin: theme.spacing(1),
   },
 }));
 
 const NewButton = styled(Button)(({ theme }) => ({
   color: theme.palette.text.main, 
-  fontSize: "12px", 
-  fontWeight: "600", 
+  fontSize: 12, 
+  fontWeight: 600, 
   "&: hover": { color: theme.palette.secondary.main }
 }));
 
@@ -53,11 +52,11 @@ export default function FilterBox({ toggle, setToggle }) {
             <NewButton>Mới nhất</NewButton>
         </BorderBox>
         </Box>
-        <Box display="flex">
-          <BorderBox mr="10px">
+        <Box sx={{ display: "flex" }}>
+          <BorderBox sx={{ mr: 1 }}>
             <NewButton onClick={handleClick}>
-              <LocationOnIcon sx={{ fontSize: "14px", marginRight: "5px" }} />
-              <Typography variant="subtitle1" display="inline" color="inherit">
+              <LocationOnIcon sx={{ fontSize: 14, mr: 1 }} />
+              <Typography variant="subtitle1" sx={{ display: "inline", color: "inherit" }}>
                 {show ? "Hide map" : "View on map"}
               </Typography>
             </NewButton>
@@ -67,7 +66,7 @@ export default function FilterBox({ toggle, setToggle }) {
               <ViewComfyIcon sx={{ fontSize: "18px" }} />
             </IconButton>
             <IconButton sx={{ "&: hover": { color: "secondary.main" } }} onClick={() => setToggle(false)}>
-              <FormatListBulletedIcon sx={{ fontSize: "18px" }} />
+              <FormatListBulletedIcon sx={{ fontSize: 18 }} />
             </IconButton>
           </BorderBox>
         </Box>

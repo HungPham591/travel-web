@@ -23,10 +23,10 @@ const ImageContainer = styled(Box)(({ theme, image }) => ({
     backgroundSize: "100%",
     "& .readmore": {
       display: "block",
-      backgroundColor: theme.palette.white,
-      color: "#222222",
-      padding: "5px 10px",
-      borderRadius: "15px",
+      backgroundColor: theme.palette.background.white,
+      color: theme.palette.text.main,
+      padding: theme.spacing(1),
+      borderRadius: theme.spacing(3),
     },
   },
 }));
@@ -35,37 +35,24 @@ export default function ItemCardVertical({ data }) {
   return (
     <Card>
       <ImageContainer image={data.image}>
-        <Box height="100%" color="white">
-          <Box display="flex" p="20px 20px" justifyContent="space-between">
-            <Box
-              sx={{ backgroundColor: "background.dark" }}
-              borderRadius="3px"
-              p="5px 10px"
-            >
-              <Typography variant="body2" color="#cccccc" fontWeight="600">
+        <Box sx={{ color: "white" }}>
+          <Box sx={{ display: "flex", justifyContent: "space-between", p: 2 }}>
+            <Box sx={{ backgroundColor: "background.dark", borderRadius: "3px", p: 1 }}>
+              <Typography variant="body2" sx={{ color: "text.white", fontWeight: 600 }}>
                 {data.label}
               </Typography>
             </Box>
-            <Box zIndex="5">
+            <Box sx={{ zIndex: 5 }}>
               <HeartButton bgColor="rgb(18, 25, 33, 0.5)" color="#ffffff" />
             </Box>
           </Box>
-          <Box
-            position="absolute"
-            display="flex"
-            justifyContent="center"
-            alignItems="center"
-            height="100%"
-            width="100%"
-            top="0"
-            left="0"
-          >
-            <Box display="flex" justifyContent="center">
+          <Box sx={{ position: "absolute", display: "flex", justifyContent: "center", alignItems: "center", height: "100%", width: "100%", top: 0, left: 0 }}>
+            <Box sx={{ display: "flex", justifyContent: "center" }}>
               <Link
                 href={"/product-detail/" + data.id}
                 className="readmore"
-                display="none"
                 variant="subtitle1"
+                sx={{ display: "none" }}
               >
                 Xem thêm
               </Link>
@@ -74,59 +61,45 @@ export default function ItemCardVertical({ data }) {
         </Box>
       </ImageContainer>
       <Box>
-        <Box height="300px" p="25px">
-          <Box fontSize="20px">
+        <Box sx={{ height: 300, p: 3 }}>
+          <Box sx={{ fontSize: 20, mb: 1 }}>
             <AdvancedLink
               href={"/product-detail/" + data.id}
               value={data.title}
             />
           </Box>
-          <Typography
-            variant="body1"
-            fontWeight="300"
-            mb="24px"
-            color="text.light"
-            mt="5px"
-          >
-            {data.description}
-          </Typography>
-          <Typography variant="body1" fontWeight="300" color="text.light">
-            Giá từ
-            <Typography
-              color="green"
-              fontWeight="600"
-              display="inline"
-              ml="5px"
-            >
-              {data.price}₫
-            </Typography>
-            / {data.unit}
-          </Typography>
-        </Box>
-        <Box display="flex" justifyContent="space-between" p="15px 20px" sx={{ borderTop: "2px solid rgb(18, 25, 33, 0.1 )", }}>
-          <Box display="flex" alignItems="center" marginTop="5px">
-            <VisibilityIcon sx={{ fontSize: "20px" }} />
-            <Typography fontWeight="300" ml="5px">
-              {data.view} lượt xem
-            </Typography>
-          </Box>
-          <Box display="flex" color="text.light">
-            <Box mr="8px">
-              <Typography
-                variant="subtitle1"
-                color="text.light"
-                fontWeight="500"
-                textAlign="right"
-              >
-                Tuyệt vời
+          <Typography variant="body1" sx={{ fontWeight: "300", pb: 1 }}>
+                {data.description}
               </Typography>
-              <Typography fontSize="11px" fontWeight="300">
-                {data.review} đánh giá
+              <Typography variant="body1" sx={{ fontWeight: "300", color: "text.light" }}>
+                Giá
+                <Typography sx={{ color: "green", display: "inline", ml: 1 }}>
+                  {data.price}₫
+                </Typography>
+                / {data.unit}
               </Typography>
             </Box>
-            <Score score={data.score} />
-          </Box>
-        </Box>
+            <Box sx={{ borderTop: "shape.border", display: "flex", justifyContent: "space-between", px: 3, py: 1 }} >
+              <Box display="flex" alignItems="center">
+                <VisibilityIcon sx={{ fontSize: "20px" }} />
+                <Typography sx={{ fontWeight: "300", ml: 1 }}>
+                  {data.view} lượt xem
+                </Typography>
+              </Box>
+              <Box sx={{ display:"flex" }}>
+                <Box sx={{ pr: 1 }}>
+                  <Typography sx={{ fontSize: 12, textAlign: "right"}}>
+                    Tuyệt vời
+                  </Typography>
+                  <Typography sx={{ fontSize: 11,  fontWeight: 300 }}>
+                    {data.review} Đánh giá
+                  </Typography>
+                </Box>
+                <Box>
+                  <Score score={data.score} />
+                </Box>
+              </Box>
+            </Box>
       </Box>
     </Card>
   );

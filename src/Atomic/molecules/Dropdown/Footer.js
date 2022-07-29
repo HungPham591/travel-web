@@ -2,13 +2,11 @@ import React, { useState } from "react";
 import { Button, MenuItem, Typography, styled, Popper } from "@mui/material";
 
 const NewPopper = styled(Popper)(({ theme }) => ({
-  backgroundColor: "white",
-  maxHeight: "100px",
-  minWidth: "50px",
-  // width: "24%",
+  backgroundColor: theme.palette.common.white,
+  maxHeight: 100,
+  minWidth: 50,
   overflow: "auto",
-  zIndex: "20",
-  borderTop: "10px solid #ffffff00",
+  borderTop: "1 solid common.white",
 }));
 
 
@@ -38,7 +36,7 @@ export default function Dropdown({ values, children }) {
           display: "flex",
           justifyContent: "space-between",
           backgroundColor: "rgba(255, 255, 255, 0.06)",
-          color: "#fff",
+          color: "text.primary",
           opacity: "0.7",
         }}
         color="text"
@@ -47,7 +45,7 @@ export default function Dropdown({ values, children }) {
         aria-expanded={open ? "true" : undefined}
         onClick={handleClick}
       >
-        <Typography variant="subtitle1" mr="10px" color="white">{selected}</Typography>
+        <Typography variant="subtitle1" sx={{ mr: 1, color: "common.white" }}>{selected}</Typography>
         {children}
       </Button>
       <NewPopper
@@ -57,7 +55,7 @@ export default function Dropdown({ values, children }) {
       >
         {values.map((value, index) => {
           return (
-            <MenuItem key={index} onClick={() => handleChange(value)} fontSize="12px">
+            <MenuItem key={index} onClick={() => handleChange(value)} sx={{ fontSize: "12px" }}>
               {value}
             </MenuItem>
           );

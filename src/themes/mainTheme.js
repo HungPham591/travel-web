@@ -12,7 +12,8 @@ const theme = createTheme({
             primary: '#555555',
             main: "#333333",
             light: "#555555",
-            footer: "rgba(255, 255, 255, 0.7)"
+            footer: "rgba(255, 255, 255, 0.7)",
+            white: "#cccccc"
         },
         warning: {
             main: '#FFC107'
@@ -26,12 +27,14 @@ const theme = createTheme({
             grey: "#999999",
             black: "#121921",
             gray: "#e1e1e1",
+            divider :"#ededed"
         },
         background: {
             default: "#F8F8F8",
             main: "rgb(18, 25, 33, 0.3)",
             dark: "rgb(18, 25, 33, 0.5)",
             white: "#f8f8f8",
+            inputBase: "rgba(255, 255, 255, 0.06)"
         },
     },
     typography: {
@@ -96,6 +99,8 @@ const theme = createTheme({
     },
     shape: {
         borderRadius: 5,
+        halfBorderRadius: "0 5px 5px 0",
+        border: "2px solid rgb(18, 25, 33, 0.1)"
     },
     transitions: {
         duration: {

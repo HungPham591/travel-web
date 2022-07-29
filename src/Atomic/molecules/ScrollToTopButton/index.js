@@ -5,10 +5,10 @@ import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 const NewButton = styled(Fab)(({ theme }) => ({
   backgroundColor: theme.palette.text.light,
   position: "fixed",
-  bottom: "40px",
-  right: "40px",
-  width: "46px",
-  height: "46px",
+  bottom: 40,
+  right: 40,
+  width: 46,
+  height: 46,
   "&: hover": {
     backgroundColor: theme.palette.secondary.main
   }
@@ -43,7 +43,7 @@ export default function ScrollToTopButton() {
     <Box>
       {isVisible &&
         <NewButton onClick={handleClick}>
-          <KeyboardArrowUpIcon sx={{ color: "white", fontSize: "40px", fontWeight: "700" }} />
+          <KeyboardArrowUpIcon sx={{ color: "white", fontSize: 40, fontWeight: 700 }} />
         </NewButton>
       }
     </Box>

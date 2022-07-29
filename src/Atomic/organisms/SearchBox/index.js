@@ -5,23 +5,22 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 import Dropdown from "../../molecules/Dropdown";
 
 const Wrapper = styled(Grid)(({ theme }) => ({
-  width: "100%",
   borderRadius: "20px",
   flexWrap: "nowrap",
   [theme.breakpoints.down("md")]: {
     flexDirection: "column",
     border: "none",
     marginLeft: "0px",
-    gap: "10px",
+    gap: theme.spacing(2),
     maxWidth: "600px",
   },
 }));
 
 const SearchField = styled(Grid)(({ theme }) => ({
-  backgroundColor: theme.palette.white,
+  backgroundColor: theme.palette.common.white,
   display: "flex",
-  height: "50px",
   justifyContent: "space-between",
+  height: theme.spacing(6),
   padding: "5px 5px 5px 10px",
   borderRight: "1px solid rgb(18, 25, 33, 0.2 )",
   boxShadow: "1px 1px 5px rgb(18, 25, 33, 0.2 )",
@@ -32,7 +31,7 @@ const SearchField = styled(Grid)(({ theme }) => ({
 }));
 const NewButton = styled(Button)(({ theme }) => ({
   width: "100%",
-  height: "50px",
+  height: theme.spacing(6),
   borderRadius: "0px 5px 5px 0px",
   fontWeight: "600",
   transition: "all 0.3s ease-in-out",

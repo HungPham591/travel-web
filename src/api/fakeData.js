@@ -2,7 +2,7 @@ export const placeData = [
   {
     id: "1",
     label: "THẮNG CẢNH",
-    image: "/Images/adventurePage1.jpg",
+    image: "/Images/adventurePage/adventurePage1.jpg",
     banner: "/Images/placeDetailBanner.jpg",
     title: "Hoàng Su Phì",
     description:
@@ -16,7 +16,7 @@ export const placeData = [
   {
     id: "2",
     label: "DANH LAM",
-    image: "/Images/adventurePage2.jpg",
+    image: "/Images/adventurePage/adventurePage2.jpg",
     banner: "/Images/tourDetailBanner.jpg",
     title: "Đèo Mã Pí Lèng",
     description:
@@ -30,7 +30,7 @@ export const placeData = [
   {
     id: "3",
     label: "BẢO TÀNG",
-    image: "/Images/adventurePage3.jpg",
+    image: "/Images/adventurePage/adventurePage3.jpg",
     banner: "/Images/hotelDetailBanner.jpg",
     title: "Cao nguyên đá Đồng Văn",
     description:
@@ -44,7 +44,7 @@ export const placeData = [
   {
     id: "4",
     label: "THẮNG CẢNH",
-    image: "/Images/adventurePage4.jpg",
+    image: "/Images/adventurePage/adventurePage4.jpg",
     banner: "/Images/restaurantDetailBanner.jpg",
     title: "Thung lũng Sủng Là",
     description:
@@ -58,7 +58,7 @@ export const placeData = [
   {
     id: "5",
     label: "DANH LAM",
-    image: "/Images/adventurePage5.jpg",
+    image: "/Images/adventurePage/adventurePage5.jpg",
     banner: "/Images/productDetailBanner.jpg",
     title: "Dinh Thự họ Vương – dinh thự vua Mèo",
     description:
@@ -72,7 +72,7 @@ export const placeData = [
   {
     id: "6",
     label: "DI TÍCH LỊCH SỬ",
-    image: "/Images/adventurePage6.jpg",
+    image: "/Images/adventurePage/adventurePage6.jpg",
     banner: "/Images/placeDetailBanner.jpg",
     title: "Phó Bảng – Yên Minh",
     description:
@@ -89,7 +89,7 @@ export const tourData = [
   {
     id: "1",
     label: "TRỌN GÓI",
-    image: "/Images/tourPage1.jpg",
+    image: "/Images/tourPage/tourPage1.jpg",
     banner: "/Images/tourDetailBanner.jpg",
     title: "Tour khám phá Hà Giang - Nho Quế hùng vĩ 3 ngày 2 đêm",
     description: "Tự hào là nhà tổ chức tour Hà Giang chất lượng số 1 trên thị trường. Hãy đồng hành cùng PYS Travel để có một chuyến đi ấn tượng, vui vẻ, an toàn và đáng nhớ! Mùa xuân Hà Giang là sắc đào sắc mận nở trắng trời, mùa thu là những thửa ruộng bậc thang vàng óng ả, và khi mùa đông đến cả Hà Giang lại chìm trong sắc hồng dịu ngọt của những cánh đồng tam giác mạch mênh mang nơi miền biên viễn.",
@@ -109,7 +109,7 @@ export const tourData = [
   {
     id: "2",
     label: "GIA ĐÌNH",
-    image: "/Images/tourPage2.jpg",
+    image: "/Images/tourPage/tourPage2.jpg",
     banner: "/Images/hotelDetailBanner.jpg",
     title: "Du lịch Miền Bắc Hà Nội - Hà Giang - Lũng Cú - Cao Bằng",
     description: "Tự hào là nhà tổ chức tour Hà Giang chất lượng số 1 trên thị trường. Hãy đồng hành cùng PYS Travel để có một chuyến đi ấn tượng, vui vẻ, an toàn và đáng nhớ! Mùa xuân Hà Giang là sắc đào sắc mận nở trắng trời, mùa thu là những thửa ruộng bậc thang vàng óng ả, và khi mùa đông đến cả Hà Giang lại chìm trong sắc hồng dịu ngọt của những cánh đồng tam giác mạch mênh mang nơi miền biên viễn.",
@@ -129,7 +129,7 @@ export const tourData = [
   {
     id: "3",
     label: "TRỌN GÓI",
-    image: "/Images/tourPage3.jpg",
+    image: "/Images/tourPage/tourPage3.jpg",
     banner: "/Images/restaurantDetailBanner.jpg",
     title: "Du lịch Hà Giang - Quản Bạ - Đồng Văn - Lũng Cú - Sông Nho Quế",
     description: "Tự hào là nhà tổ chức tour Hà Giang chất lượng số 1 trên thị trường. Hãy đồng hành cùng PYS Travel để có một chuyến đi ấn tượng, vui vẻ, an toàn và đáng nhớ! Mùa xuân Hà Giang là sắc đào sắc mận nở trắng trời, mùa thu là những thửa ruộng bậc thang vàng óng ả, và khi mùa đông đến cả Hà Giang lại chìm trong sắc hồng dịu ngọt của những cánh đồng tam giác mạch mênh mang nơi miền biên viễn.",
@@ -149,7 +149,7 @@ export const tourData = [
   {
     id: "4",
     label: "GIA ĐÌNH",
-    image: "/Images/tourPage4.jpg",
+    image: "/Images/tourPage/tourPage4.jpg",
     banner: "/Images/productDetailBanner.jpg",
     title: "Hà Giang - Lũng Cú - Đồng Văn - Nơi đá nở hoa ( Khách sạn 3* & 4*)",
     description: "Tự hào là nhà tổ chức tour Hà Giang chất lượng số 1 trên thị trường. Hãy đồng hành cùng PYS Travel để có một chuyến đi ấn tượng, vui vẻ, an toàn và đáng nhớ! Mùa xuân Hà Giang là sắc đào sắc mận nở trắng trời, mùa thu là những thửa ruộng bậc thang vàng óng ả, và khi mùa đông đến cả Hà Giang lại chìm trong sắc hồng dịu ngọt của những cánh đồng tam giác mạch mênh mang nơi miền biên viễn.",
@@ -169,7 +169,7 @@ export const tourData = [
   {
     id: "5",
     label: "TOUR LẺ",
-    image: "/Images/tourPage5.jpg",
+    image: "/Images/tourPage/tourPage5.jpg",
     banner: "/Images/placeDetailBanner.jpg",
     title: "Du lịch Tết Nguyên Đán Hà Nội - Hà Giang - Đồng Văn - Lũng Cú - Cao Bằng - Thác Bản Giốc",
     description: "Tự hào là nhà tổ chức tour Hà Giang chất lượng số 1 trên thị trường. Hãy đồng hành cùng PYS Travel để có một chuyến đi ấn tượng, vui vẻ, an toàn và đáng nhớ! Mùa xuân Hà Giang là sắc đào sắc mận nở trắng trời, mùa thu là những thửa ruộng bậc thang vàng óng ả, và khi mùa đông đến cả Hà Giang lại chìm trong sắc hồng dịu ngọt của những cánh đồng tam giác mạch mênh mang nơi miền biên viễn.",
@@ -187,7 +187,7 @@ export const tourData = [
   {
     id: "6",
     label: "TRỌN GÓI",
-    image: "/Images/tourPage6.jpg",
+    image: "/Images/tourPage/tourPage6.jpg",
     banner: "/Images/tourDetailBanner.jpg",
     title: "Hà Giang-Lũng Cú - Đồng Văn - Hoa xuân miền Đông Bắc (Sản Phẩm Chọn Lọc, Tiết Kiệm Thời gian)",
     description: "Tự hào là nhà tổ chức tour Hà Giang chất lượng số 1 trên thị trường. Hãy đồng hành cùng PYS Travel để có một chuyến đi ấn tượng, vui vẻ, an toàn và đáng nhớ! Mùa xuân Hà Giang là sắc đào sắc mận nở trắng trời, mùa thu là những thửa ruộng bậc thang vàng óng ả, và khi mùa đông đến cả Hà Giang lại chìm trong sắc hồng dịu ngọt của những cánh đồng tam giác mạch mênh mang nơi miền biên viễn.",
@@ -208,7 +208,7 @@ export const hotelData = [
   {
     id: "1",
     label: "HOMESTAY",
-    image: "/Images/hotelPage1.jpg",
+    image: "/Images/hotelPage/hotelPage1.jpg",
     banner: "/Images/restaurantDetailBanner.jpg",
     rating: 5,
     title: "Family Homestay Đồng Văn",
@@ -224,7 +224,7 @@ export const hotelData = [
   {
     id: "2",
     label: "FARMSTAY",
-    image: "/Images/hotelPage2.jpg",
+    image: "/Images/hotelPage/hotelPage2.jpg",
     banner: "/Images/productDetailBanner.jpg",
     rating: 5,
     title: "Đồng Quê Homestay Hà Giang",
@@ -240,7 +240,7 @@ export const hotelData = [
   {
     id: "3",
     label: "HOMESTAY",
-    image: "/Images/hotelPage3.jpg",
+    image: "/Images/hotelPage/hotelPage3.jpg",
     banner: "/Images/placeDetailBanner.jpg",
     rating: 5,
     title: "Ban Tuy Homestay",
@@ -256,7 +256,7 @@ export const hotelData = [
   {
     id: "4",
     label: "HOTEL",
-    image: "/Images/hotelPage4.jpg",
+    image: "/Images/hotelPage/hotelPage4.jpg",
     banner: "/Images/tourDetailBanner.jpg",
     rating: 5,
     title: "Hoang Kim Hotel",
@@ -273,7 +273,7 @@ export const hotelData = [
   {
     id: "5",
     label: "HOTEL",
-    image: "/Images/hotelPage5.jpg",
+    image: "/Images/hotelPage/hotelPage5.jpg",
     banner: "/Images/hotelDetailBanner.jpg",
     rating: 5,
     title: "Mông Lodge Mèo Vạc",
@@ -289,7 +289,7 @@ export const hotelData = [
   {
     id: "6",
     label: "HOMESTAY",
-    image: "/Images/hotelPage6.jpg",
+    image: "/Images/hotelPage/hotelPage6.jpg",
     banner: "/Images/restaurantDetailBanner.jpg",
     rating: 5,
     title: "Homestay Nam Tran",
@@ -307,7 +307,7 @@ export const restaurantData = [
   {
     id: "1",
     label: "NHÀ HÀNG",
-    image: "/Images/restaurantPage1.jpg",
+    image: "/Images/restaurantPage/restaurantPage1.jpg",
     banner: "/Images/restaurantDetailBanner.jpg",
     title: "Quán nhà Sàn cơm dân tộc bản địa",
     address: "18 Nguyễn Văn Linh, TP. Hà Giang",
@@ -323,7 +323,7 @@ export const restaurantData = [
   {
     id: "2",
     label: "NHÀ HÀNG",
-    image: "/Images/restaurantPage2.jpg",
+    image: "/Images/restaurantPage/restaurantPage2.jpg",
     banner: "/Images/restaurantDetailBanner.jpg",
     title: "Nhà hàng Âu Việt",
     address: "Tổ 3, thị xã Đồng Văn, Đồng Văn, Hà Giang",
@@ -339,7 +339,7 @@ export const restaurantData = [
   {
     id: "3",
     label: "QUÁN ĂN",
-    image: "/Images/restaurantPage3.jpg",
+    image: "/Images/restaurantPage/restaurantPage3.jpg",
     banner: "/Images/restaurantDetailBanner.jpg",
     title: "Nhà hàng cá Sông Lô",
     address: "Sùng Dúng Lù, P. Quang Trung, TP. Hà Giang",
@@ -355,7 +355,7 @@ export const restaurantData = [
   {
     id: "4",
     label: "NHÀ HÀNG",
-    image: "/Images/restaurantPage4.jpg",
+    image: "/Images/restaurantPage/restaurantPage4.jpg",
     banner: "/Images/restaurantDetailBanner.jpg",
     title: "Quán ăn ngon Hà Giang Nhà hàng Sơn Thúy",
     address: "161 Trần Hưng Đạo, Trần Phú, TP. Hà Giang",
@@ -371,7 +371,7 @@ export const restaurantData = [
   {
     id: "5",
     label: "NHÀ HÀNG",
-    image: "/Images/restaurantPage5.jpg",
+    image: "/Images/restaurantPage/restaurantPage5.jpg",
     banner: "/Images/restaurantDetailBanner.jpg",
     title: "Nhà hàng Ngói Đỏ",
     address: "Tổ I- P. Nguyễn Trãi, TP.Hà Giang",
@@ -386,7 +386,7 @@ export const restaurantData = [
   {
     id: "6",
     label: "QUÁN ĂN",
-    image: "/Images/restaurantPage6.jpg",
+    image: "/Images/restaurantPage/restaurantPage6.jpg",
     banner: "/Images/restaurantDetailBanner.jpg",
     title: "Quán ăn ngon Hà Giang bán thắng dền",
     address: "Đến Ngọc Đường, TP.Hà Giang",
@@ -404,7 +404,7 @@ export const productData = [
   {
     id: "1",
     label: "THỰC PHẨM",
-    image: "/Images/productPage1.jpg",
+    image: "/Images//productPage/productPage1.jpg",
     banner: "/Images/productDetailBanner.jpg",
     title: "Thịt trâu, lợn gác bếp",
     description:
@@ -420,7 +420,7 @@ export const productData = [
   {
     id: "2",
     label: "THỰC PHẨM",
-    image: "/Images/productPage2.jpg",
+    image: "/Images//productPage/productPage2.jpg",
     banner: "/Images/productDetailBanner.jpg",
     title: "Mật ong bạc hà",
     description:
@@ -436,7 +436,7 @@ export const productData = [
   {
     id: "3",
     label: "NÔNG SẢN",
-    image: "/Images/productPage3.jpg",
+    image: "/Images//productPage/productPage3.jpg",
     banner: "/Images/productDetailBanner.jpg",
     title: "Cam sành Bắc Quang",
     description:
@@ -452,7 +452,7 @@ export const productData = [
   {
     id: "4",
     label: "QUÀ BIẾU",
-    image: "/Images/productPage5.jpg",
+    image: "/Images//productPage/productPage5.jpg",
     banner: "/Images/productDetailBanner.jpg",
     title: "Shan tuyết – Chè Hà Giang nổi tiếng",
     description:
@@ -468,7 +468,7 @@ export const productData = [
   {
     id: "5",
     label: "BÁNH KẸO",
-    image: "/Images/productPage4.jpg",
+    image: "/Images//productPage/productPage4.jpg",
     banner: "/Images/productDetailBanner.jpg",
     title: "Bánh tam giác mạch",
     description:
@@ -483,7 +483,7 @@ export const productData = [
   {
     id: "6",
     label: "THỰC PHẨM",
-    image: "/Images/productPage6.jpg",
+    image: "/Images//productPage/productPage6.jpg",
     banner: "/Images/productDetailBanner.jpg",
     title: "Lạp xưởng Hà Giang",
     description:
@@ -500,7 +500,7 @@ export const productData = [
 export const newsData = [
   {
     id: "1",
-    image: "/Images/newsCard1.jpg",
+    image: "/Images/newsCard/newsCard1.jpg",
     banner: "/Images/hotelDetailBanner.jpg",
     userName: "PHƯỢT PRO",
     date: "10.07.2022",
@@ -510,7 +510,7 @@ export const newsData = [
   },
   {
     id: "2",
-    image: "/Images/newsCard2.jpg",
+    image: "/Images/newsCard/newsCard2.jpg",
     banner: "/Images/placeDetailBanner.jpg",
     userName: "KHÁNH TRẦN",
     date: "10.07.2022",
@@ -520,7 +520,7 @@ export const newsData = [
   },
   {
     id: "3",
-    image: "/Images/newsCard3.jpg",
+    image: "/Images/newsCard/newsCard3.jpg",
     banner: "/Images/hotelDetailBanner.jpg",
     userName: "DẤU CHÂN",
     date: "10.07.2022",
@@ -530,7 +530,7 @@ export const newsData = [
   },
   {
     id: "4",
-    image: "/Images/newsCard4.jpg",
+    image: "/Images/newsCard/newsCard4.jpg",
     banner: "/Images/tourDetailBanner.jpg",
     userName: "HA GIANG TRAVEL",
     date: "10.07.2022",

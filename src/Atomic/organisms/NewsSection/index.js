@@ -7,15 +7,15 @@ import { newsData } from "../../../api/fakeData";
 
 export default function NewsSection() {
   return (
-    <Box px="15px">
-      <Box textAlign="center" mb="35px">
-        <Box display="flex" justifyContent="center" mb="25px">
+    <Box sx={{ px: 2 }}>
+      <Box sx={{ textAlign: "center", mb: 6 }}>
+        <Box sx={{ display: "flex", justifyContent: "center", mb: 3 }}>
           <CenterDivider />
         </Box>
-        <Typography variant="h3" fontWeight="500">
+        <Typography variant="h3">
           Tin Tức & Bài Viết Mới
         </Typography>
-        <Typography variant="h4" fontWeight="300">
+        <Typography variant="h4" sx={{ fontWeight: "300" }}>
           Tìm hiểu các thông tin mới nhất về Hà Giang.
         </Typography>
       </Box>
@@ -26,9 +26,9 @@ export default function NewsSection() {
           </Grid>
         ))}
       </Grid>
-      <Box display="flex" justifyContent="flex-end">
+      <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
         <Link href="#">
-          <Box width="134px">
+          <Box sx={{ width: 150 }}>
             <OvalButton value="Xem tất cả" />
           </Box>
         </Link>

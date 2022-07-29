@@ -14,8 +14,8 @@ import "swiper/css/pagination";
 
 const Wrapper = styled(Box)(({ theme }) => ({
   "& .swiper-pagination-bullet": {
-    width: "13px",
-    height: "13px",
+    width: 13,
+    height: 13,
     "--swiper-pagination-color": "#FC5B62",
   },
 }));
@@ -23,15 +23,15 @@ const Wrapper = styled(Box)(({ theme }) => ({
 export default function BeautySpotSection() {
   return (
     <Wrapper>
-      <Box mb="45px">
-        <Box display="flex" justifyContent="center" mb="25px">
+      <Box sx={{ mb: 6 }}>
+        <Box sx={{ display: "flex", justifyContent: "center", mb: 2 }}>
           <CenterDivider />
         </Box>
-        <Box textAlign="center">
+        <Box sx={{ textAlign: "center" }}>
           <Typography variant="h2">
             Các Địa Danh Nổi Tiếng Hà Giang - Tham Quan Thực Tế Ảo 3D
           </Typography>
-          <Typography variant="h4" fontWeight="300">
+          <Typography variant="h4" sx={{ fontWeight: 300 }}>
             Khám phá những địa danh nổi tiếng của Hà Giang qua không gian thực
             tế ảo 3D vô cùng hấp dẫn & thú vị.
           </Typography>
@@ -83,7 +83,7 @@ export default function BeautySpotSection() {
       </Swiper>
 
       <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
-        <Box width="134px">
+        <Box sx={{  width: 134 }}>
           <OvalButton value="Xem tất cả" />
         </Box>
       </Box>

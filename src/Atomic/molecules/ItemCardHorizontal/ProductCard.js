@@ -15,10 +15,10 @@ const ImageContainer = styled(Grid)(({ theme, image }) => ({
     backgroundSize: "100%",
     "& .readmore": {
       display: "block",
-      backgroundColor: theme.palette.white,
-      color: "#222222",
-      padding: "5px 10px",
-      borderRadius: "15px",
+      backgroundColor: theme.palette.background.white,
+      color: theme.palette.text.main,
+      padding: theme.spacing(1),
+      borderRadius: theme.spacing(4)
     },
   },
 }));
@@ -26,89 +26,61 @@ const ImageContainer = styled(Grid)(({ theme, image }) => ({
 export default function ItemCardHorizontal({ data }) {
   return (
     <Card>
-      <Grid container minHeight="300px">
+      <Grid container sx={{ minHeight: 300 }}>
         <ImageContainer item lg={5} md={5} sm={12} xs={12} image={data.image}>
-          <Box height="100%" color="white">
-            <Box display="flex" p="20px 20px" justifyContent="flex-end">
-              <Box
-                sx={{ backgroundColor: "background.dark" }}
-                borderRadius="3px"
-                p="5px 10px"
-              >
-                <Typography variant="body2" color="#cccccc" fontWeight="600">
+          <Box sx={{ height: "100%" }}>
+            <Box sx={{ display: "flex", p: 3, justifyContent: "flex-end" }}>
+              <Box sx={{ backgroundColor: "background.dark", borderRadius: "3px", p: 1 }}>
+                <Typography variant="body2" sx={{ fontWeight: "600", color: "text.white" }}>
                   {data.label}
                 </Typography>
               </Box>
             </Box>
-            <Box display="flex" justifyContent="center" mt="80px">
+            <Box sx={{ display: "flex", justifyContent: "center", mt: 9 }}>
               <Link
                 href={"/product-detail/" + data.id}
                 className="readmore"
-                display="none"
                 variant="subtitle1"
+                sx={{ display: "none", fontSize: 12 }}
               >
                 Xem thêm
               </Link>
             </Box>
-          </Box>
+          </Box> 
         </ImageContainer>
         <Grid item lg={7} md={7} sm={12} xs={12}>
-          <Box
-            display="flex"
-            flexDirection="column"
-            justifyContent="space-between"
-            height="100%"
-          >
-            <Box p="30px" position="relative">
-              <Box position="absolute" right="20px" top="15px">
+          <Box sx={{ display: "flex", flexDirection: "column",justifyContent: "space-between", height: "100%" }}>
+            <Box sx={{ p: 3, position: "relative" }}>
+              <Box sx={{ position: "absolute", right: 30, top: 15 }}>
                 <HeartButton bgColor="rgb(18, 25, 33, 0.15)" color="#555555" />
               </Box>
-              <Box fontSize="20px" mb="5px">
+              <Box sx={{ fontSize: 20, mb: 1 }}>
                 <AdvancedLink href={"/product-detail/" + data.id} value={data.title} />
               </Box>
-              <Typography
-                variant="body1"
-                fontWeight="300"
-                mb="24px"
-                color="text.light"
-              >
+              <Typography variant="body1" sx={{ fontWeight: "300", pb: 1 }}>
                 {data.description}
               </Typography>
-              <Typography variant="body1" fontWeight="300" color="text.light">
+              <Typography variant="body1" sx={{ fontWeight: "300", color: "text.light" }}>
                 Giá
-                <Typography
-                  color="green"
-                  fontWeight="600"
-                  display="inline"
-                  ml="5px"
-                >
+                <Typography sx={{ color: "green", display: "inline", ml: 1 }}>
                   {data.price}₫
                 </Typography>
                 / {data.unit}
               </Typography>
             </Box>
-            <Box
-              display="flex"
-              justifyContent="space-between"
-              p="10px 20px"
-              sx={{ borderTop: "1px solid rgb(18, 25, 33, 0.1)" }}
-            >
+            <Box sx={{ borderTop: "shape.border", display: "flex", justifyContent: "space-between", px: 3, py: 1 }} >
               <Box display="flex" alignItems="center">
                 <VisibilityIcon sx={{ fontSize: "20px" }} />
-                <Typography fontWeight="300" ml="5px">
+                <Typography sx={{ fontWeight: "300", ml: 1 }}>
                   {data.view} lượt xem
                 </Typography>
               </Box>
-              <Box display="flex">
-                <Box pr="8px">
-                  <Typography
-                    fontSize="12px"
-                    fontWeight="500"
-                    textAlign="right"
-                  >
+              <Box sx={{ display:"flex" }}>
+                <Box sx={{ pr: 1 }}>
+                  <Typography sx={{ fontSize: 12, textAlign: "right"}}>
                     Tuyệt vời
                   </Typography>
-                  <Typography fontSize="11px" fontWeight="300">
+                  <Typography sx={{ fontSize: 11,  fontWeight: 300 }}>
                     {data.review} Đánh giá
                   </Typography>
                 </Box>

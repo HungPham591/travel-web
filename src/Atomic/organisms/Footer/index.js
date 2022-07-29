@@ -29,74 +29,69 @@ const selectValue = {
 };
 
 const Wrapper = styled(Box)(({ theme }) => ({
-  backgroundColor: theme.palette.black,
+  backgroundColor: theme.palette.common.black,
   color: theme.palette.text.footer,
   display: "flex",
   flexDirection: "column",
   justifyContent: "space-between",
-  padding: "60px 0px 35px 0px",
+  padding: theme.spacing(3) 
 }));
 
 const LinkButton = styled(Link)(({ theme }) => ({
-  textDecoration: "none",
   display: "flex",
   alignItems: "center",
   color: theme.palette.text.footer,
   transition: "all 0.3s ease-in-out",
   "&: hover": {
-    marginLeft: "5px",
+    marginLeft: theme.spacing(1),
     color: theme.palette.secondary.main,
     "& .arrow": {
       display: "inline",
-      fontSize: "18px",
-      marginLeft: "5px",
+      fontSize: theme.typography.h7.fontSize,
+      marginLeft: theme.spacing(1),
     },
   },
 }));
 
 const NewButton = styled(Button)(({ theme }) => ({
+  backgroundColor: theme.palette.secondary.main,
+  color: theme.palette.common.white,
+  borderRadius: theme.shape.halfBorderRadius,
+  fontWeight: theme.typography.fontWeightBold,
+  transition: "all 0.3s ease-in-out",
   width: "inherit",
   height: "inherit",
-  borderRadius: "0px 3px 3px 0px",
-  fontWeight: "600",
-  transition: "all 0.3s ease-in-out",
-  backgroundColor: theme.palette.secondary.main,
   "&:hover": {
-    backgroundColor: theme.palette.yellow,
+    backgroundColor: theme.palette.common.yellow,
     color: theme.palette.text.main,
   },
 }));
 
 const LinkBasic = styled(Link)(({ theme }) => ({
-  textDecoration: "none",
   color: theme.palette.text.footer,
   "&: hover": {
-    color: theme.palette.white,
+    color: theme.palette.common.white,
   },
 }));
 
 const ResponsiveBox = styled(Box)(({ theme }) => ({
-  marginLeft: "80px",
+  marginLeft: theme.spacing(10),
   [theme.breakpoints.down("md")]: {
-    marginLeft: "0px",
+    marginLeft: 0,
   }
 }));
 
-export default function index() {
+export default function Footer() {
   return (
     <Wrapper>
-      <Container sx={{ backgroundColor: "black" }}>
-        <Grid container spacing={5} mb="55px">
+      <Container>
+        <Grid container spacing={5} sx={{ mb: 7 }}>
           <Grid item lg={5} md={5} sm={12} xs={12}>
-            <Box mb="30px" width="150px">
+            <Box sx={{ width: 150, mb: 4 }}>
               <CardMedia image="/Images/logo.svg" component="img" alt="Logo" />
             </Box>
-            <Box mb="39px">
-              <Typography
-                color="text.footer"
-                lineHeight="22.4px"
-                variant="body1"
-              >
+            <Box sx={{ mb: 5 }}>
+              <Typography variant="body1" sx={{ color: "text.footer", lineHeight: 2 }}>
                 Hà Giang ở cực Bắc, cuốn hút lòng người vì núi đá vôi hùng vĩ,
                 cao nguyên Đồng Văn huyền thoại bên bờ sông Lô, những cung đường
                 uốn lượn, những ruộng bậc thang đẹp như tranh, nhà Vương trầm
@@ -104,33 +99,20 @@ export default function index() {
                 duyên dở dang.
               </Typography>
             </Box>
-            <Box
-              fontSize="25px"
-              display="flex"
-              flexWrap="wrap"
-              alignItems="center"
-            >
-              <Typography
-                variant="body1"
-                color="white"
-                mr="24px"
-                sx={{
-                  display: "inline",
-                  letterSpacing: "2px",
-                }}
-              >
+            <Box sx={{ fontSize: "25px", display: "flex", flexWrap: "wrap", alignItems: "center", gap: 3 }}>
+              <Typography variant="body1" sx={{ display: "inline", letterSpacing: "2px", color: "common.white"}}>
                 KẾT NỐI CHÚNG TÔI TRÊN
               </Typography>
-              <LinkBasic href="#" mr="24px">
+              <LinkBasic href="#">
                 <FacebookIcon />
               </LinkBasic>
-              <LinkBasic href="#" mr="24px">
+              <LinkBasic href="#">
                 <TwitterIcon />
               </LinkBasic>
-              <LinkBasic href="#" mr="24px">
+              <LinkBasic href="#">
                 <GoogleplusIcon />
               </LinkBasic>
-              <LinkBasic href="#" mr="24px">
+              <LinkBasic href="#">
                 <PinterestIcon />
               </LinkBasic>
               <LinkBasic href="#">
@@ -138,18 +120,12 @@ export default function index() {
               </LinkBasic>
             </Box>
           </Grid>
-          <Grid item mt="25px" lg={3} md={3} sm={5} xs={12}>
+          <Grid item lg={3} md={3} sm={5} xs={12} sx={{ mt: 3 }}>
             <ResponsiveBox>
-              <Typography variant="h7" color="white">
+              <Typography variant="h7" sx={{ color: "common.white" }}>
                 Thông tin
               </Typography>
-              <Box
-                display="flex"
-                flexDirection="column"
-                fontSize="14px"
-                gap="5px"
-                mt="25px"
-              >
+              <Box sx={{ display: "flex", fontSize: "14px", flexDirection: "column", gap: 1, mt: 3 }}>
                 <LinkButton href="/about">
                   Giới thiệu
                   <ArrowRightAltIcon className="arrow" sx={{ display: "none" }} />
@@ -173,16 +149,15 @@ export default function index() {
               </Box>
             </ResponsiveBox>
           </Grid>
-          <Grid item mt="25px" lg={4} md={4} sm={7} xs={12}>
-            <Box display="flex" flexDirection="column" mb="25px">
-              <Typography variant="h7" color="white" mb="25px">
+          <Grid item lg={4} md={4} sm={7} xs={12} sx={{ mt: 3 }}>
+            <Box sx={{ display: "flex", flexDirection: "column", mb: 3 }}>
+              <Typography variant="h7" sx={{ color: "common.white", mb: 3 }}>
                 Thông tin liên hệ
               </Typography>
-              <Box fontSize="14px" mb="5px" display="flex" alignItems="center">
+              <Box sx={{ mb: 1, display: "flex", alignItems: "center", fontSize: "14px" }}>
                 <PhoneIphoneIcon />
                 <LinkBasic
-                  ml="5px"
-                  sx={{ "&: hover": { color: "secondary.main" } }}
+                  sx={{ ml: 1, "&: hover": { color: "secondary.main" } }}
                   href="#"
                 >
                   + 61 23 8093 3400
@@ -191,8 +166,7 @@ export default function index() {
               <Box fontSize="14px" display="flex" alignItems="center">
                 <EmailIcon />
                 <LinkBasic
-                  ml="10px"
-                  sx={{ "&: hover": { color: "secondary.main" } }}
+                  sx={{ ml: 1, "&: hover": { color: "secondary.main" } }}
                   href="#"
                 >
                   info@hagiang.com.vn
@@ -200,60 +174,50 @@ export default function index() {
               </Box>
             </Box>
             <Box>
-              <Typography variant="body1" mb="15px" color="white">
+              <Typography variant="body1" sx={{ mb: 2, color: "common.white" }}>
                 Nhận bản tin
               </Typography>
               <form>
-                <Box display="flex">
+                <Box sx={{ display: "flex" }}>
                   <InputBase
-                    color="secondary"
-                    display="inline"
+                    placeholder="Email của bạn"
                     sx={{
-                      backgroundColor: "rgba(255, 255, 255, 0.06)",
-                      color: "#fff",
+                      backgroundColor: "background.inputBase",
+                      color: "common.white",
                       opacity: "0.7",
                       padding: "3px",
                     }}
                   />
-                  <NewButton variant="contained">Đăng kí</NewButton>
+                  <NewButton>Đăng kí</NewButton>
                 </Box>
               </form>
             </Box>
           </Grid>
         </Grid>
 
-        <Divider
-          color="#ededed"
-          sx={{ opacity: "0.3", marginBottom: "30px" }}
-        />
+        <Divider sx={{ backgroundColor: "common.divider", opacity: "0.3", mb: 4 }} />
 
-        <Box
-          display="flex"
-          justifyContent="space-between"
-          alignItems="center"
-          flexWrap="wrap"
-          gap="30px"
-        >
-          <Box display="flex" gap="10px">
-            <Box display="flex">
+        <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 3 }}>
+          <Box sx={{ display: "flex", gap: 1 }}>
+            <Box sx={{ display: "flex"}}>
               <Dropdown values={selectValue.language}>
-                <LanguageIcon fontSize="20px" />
+                <LanguageIcon sx={{ fontSize: "20px" }} />
               </Dropdown>
             </Box>
-            <Box display="flex">
+            <Box sx={{ display: "flex" }}>
               <Dropdown values={selectValue.unit}>
-                <KeyboardArrowDownIcon fontSize="20px" />
+                <KeyboardArrowDownIcon sx={{ fontSize: "20px" }} />
               </Dropdown>
             </Box>
             <Box width="146px">
               <CardMedia image="Images/payment.svg" component="img" alt="Payment Icon" />
             </Box>
           </Box>
-          <Box display="flex" gap="10px" fontSize="13px">
+          <Box sx={{ display: "flex", gap: 1, fontSize: "13px" }}>
             <LinkBasic href="#">Terms and conditions</LinkBasic>
-            <Typography fontWeight="100">|</Typography>
+            <Typography>|</Typography>
             <LinkBasic href="#">Privacy</LinkBasic>
-            <Typography fontWeight="100">|</Typography>
+            <Typography>|</Typography>
             <Typography>© Panagea</Typography>
           </Box>
         </Box>

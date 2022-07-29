@@ -2,22 +2,22 @@ import React from "react";
 import { styled, Button } from "@mui/material";
 
 const NewButton = styled(Button)(({ theme }) => ({
-  width: "100%",
-  height: "50px",
-  borderRadius: "3px 3px 3px 3px",
-  fontWeight: "600",
-  transition: "all 0.3s ease-in-out",
   backgroundColor: theme.palette.secondary.main,
+  fontWeight: theme.typography.fontWeightMedium,
+  borderRadius: theme.shape.borderRadius,
+  marginTop: theme.spacing(5),
+  padding: theme.spacing(1),
+  width: "inherit",
+  color: theme.palette.common.white,
   "&:hover": {
-    backgroundColor: theme.palette.yellow,
-    color: theme.palette.text.main,
+    backgroundColor: theme.palette.primary.main,
   },
 }));
 
 export default function RectangleButton({ value }) {
   return (
-    <>
-      <NewButton variant="contained">{value}</NewButton>
-    </>
+      <NewButton>
+        {value}
+      </NewButton>
   );
 }
