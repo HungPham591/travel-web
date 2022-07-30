@@ -201,12 +201,12 @@ export default function Footer() {
           <Box sx={{ display: "flex", gap: 1 }}>
             <Box sx={{ display: "flex"}}>
               <Dropdown values={selectValue.language}>
-                <LanguageIcon sx={{ fontSize: "20px" }} />
+                <LanguageIcon sx={{ fontSize: 20, color: "white" }} />
               </Dropdown>
             </Box>
             <Box sx={{ display: "flex" }}>
               <Dropdown values={selectValue.unit}>
-                <KeyboardArrowDownIcon sx={{ fontSize: "20px" }} />
+                <KeyboardArrowDownIcon sx={{ fontSize: 20, color: "white" }} />
               </Dropdown>
             </Box>
             <Box width="146px">

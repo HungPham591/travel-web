@@ -55,7 +55,7 @@ export default function Dropdown({ values, children }) {
       >
         {values.map((value, index) => {
           return (
-            <MenuItem key={index} onClick={() => handleChange(value)} sx={{ fontSize: "12px" }}>
+            <MenuItem key={index} onClick={() => handleChange(value)} sx={{ fontSize: 12 }}>
               {value}
             </MenuItem>
           );

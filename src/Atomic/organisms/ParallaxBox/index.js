@@ -20,16 +20,16 @@ export default function ParallaxBox({ content }) {
 
   return (
     <Wrapper image={content.image}>
-      <Box display="flex" alignItems="center" height="100%">
+      <Box sx={{ display: "flex", alignItems: "center", height: "100%" }}>
         <Container sx={{ display: 'flex', justifyContent: "flex-end" }}>
-          <Box backgroundColor="black" color="white" p="45px" maxWidth="465px">
-            <Typography variant="h3" color="white" fontWeight="500" mb="8px">
+          <Box sx={{ backgroundColor: "black", color: "white", p: 6, maxWidth: 465 }}>
+            <Typography variant="h3" sx={{ color: "white", fontWeight: 500, mb: 1 }}>
               {content.title}
             </Typography>
-            <Typography color="white" opacity="0.7">
+            <Typography sx={{ color: "text.footer"}}>
               {content.description}
             </Typography>
-            <Box width="207px">
+            <Box sx={{ width: 207 }}>
               <OvalButton value={content.button} onClick={handleClickOpen} />
             </Box>
           </Box>

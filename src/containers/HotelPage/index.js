@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Box, Grid, Container } from "@mui/material";
-import HeroBanner from "../../Atomic/organisms/HeroBanner2/ContainerPage";
+import HeroBanner from "../../Atomic/organisms/HeroBanner/ContainerPage";
 import FilterBox from "../../Atomic/organisms/FilterBox";
 import SearchBox from "../../Atomic/organisms/SearchBox";
 import ItemCardVertical from "../../Atomic/molecules/ItemCardVertical/HotelCard";
@@ -23,7 +23,7 @@ function HotelPage() {
 
   return (
     <>
-      <Box height="450px">
+      <Box sx={{ height: 450 }}>
         <HeroBanner
           title="KHÁCH SẠN & CHỖ Ở TẠI HÀ GIANG"
           image="/Images/hotelBanner.jpg"
@@ -34,13 +34,13 @@ function HotelPage() {
         <FilterBox toggle={toggle} setToggle={setToggle} />
       </Container>
 
-      <Box bgcolor="background.white" pt="15px" pb="25px">
+      <Box sx={{ bgcolor: "background.white", pt: 2, pb: 3 }}>
         <Container>
-          <Box display="flex" justifyContent="center" mb="30px">
+          <Box sx={{ display: "flex", justifyContent: "center", mb: 4 }}>
             <SearchBox searchField={searchField} />
           </Box>
 
-          <Box mb="30px">
+          <Box sx={{ mb: 4 }}>
           <Grid container spacing={3}>
                 {toggle ? 
                 hotelData.map( data => 
@@ -49,18 +49,18 @@ function HotelPage() {
                 </Grid>
                ) :
                hotelData.map( data => 
-               <Grid key={data.id} item width="100%">
+               <Grid key={data.id} item sx={{ width: "100%" }}>
                    <ItemCardHorizontal data={data}  />
                 </Grid>
                )
               }
             </Grid>
-            <Box width="134px" mx="auto" mt="20px">
+            <Box sx={{ width: 134, mx: "auto", mt: 3 }}>
               <OvalButton value="Xem thêm" />
             </Box>
           </Box>
 
-          <Box mb="140px">
+          <Box sx={{ mb: 8 }}>
             <ImageBanner />
           </Box>
 
@@ -70,7 +70,7 @@ function HotelPage() {
         </Container>
       </Box>
 
-      <Container sx={{ padding: "60px" }}>
+      <Container sx={{ p: 8 }}>
         <HelpperBox />
       </Container>
     </>

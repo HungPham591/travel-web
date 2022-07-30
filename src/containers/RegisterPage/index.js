@@ -37,120 +37,111 @@ function RegisterPage() {
   return (
     <CustomContainer>
       <Wrapper>
-        <Box maxWidth="430px" height="100vh" backgroundColor="white">
-          <Box
-            width="100%"
-            height="82px"
-            p="20px 140px"
-            textAlign="center"
-            borderBottom="2px solid rgb(18, 25, 33, 0.05)"
-          >
+        <Box sx={{ maxWidth: 430, height: "100vh", backgroundColor: "white" }}>
+          <Box sx={{ width: "100%", height: 82, py: 3, px: 17, textAlign: "center", borderBottom: "2px solid rgb(18, 25, 33, 0.05)" }}>
             <Link href="/">
-              <Box color="black" width="150px">
+              <Box sx={{ color: "black", width: 150 }}>
                 <CardMedia image="/Images/logoblack.svg" alt="logo" component="img" />
               </Box>
             </Link>
           </Box>
           <form>
-            <Grid container mt="25px" gap="16px" width="100%">
-              <Grid item mx="auto" width="310px">
+            <Grid container sx={{ mt: 3, gap: 2, width: "100%" }}>
+              <Grid item sx={{ mx: "auto", width: 310 }}>
                 <FormLabel variant="body1">Tên của bạn</FormLabel>
                 <TextField
                   size="small"
-                  color="primary"
                   fullWidth
                   required
+                  sx={{ color: "primary" }}
                   InputProps={{
                     startAdornment: (
                       <InputAdornment position="start">
-                        <PersonOutlineIcon sx={{ fontSize: "21px" }} />
+                        <PersonOutlineIcon sx={{ fontSize: 21 }} />
                       </InputAdornment>
                     ),
                   }}
                 />
               </Grid>
-              <Grid item mx="auto" width="310px">
+              <Grid item sx={{ mx: "auto", width: 310 }}>
                 <FormLabel variant="body1">Họ và tên đệm</FormLabel>
                 <TextField
                   size="small"
-                  color="primary"
+                  sx={{ color: "primary" }}
                   fullWidth
                   required
                   InputProps={{
                     startAdornment: (
                       <InputAdornment position="start">
-                        <PersonOutlineIcon sx={{ fontSize: "21px" }} />
+                        <PersonOutlineIcon sx={{ fontSize: 21 }} />
                       </InputAdornment>
                     ),
                   }}
                 />
               </Grid>
-              <Grid item mx="auto" width="310px">
+              <Grid item sx={{ mx: "auto", width: 310 }}>
                 <FormLabel variant="body1">Địa chỉ Email</FormLabel>
                 <TextField
                   size="small"
-                  color="primary"
+                  sx={{ color: "primary" }}
                   fullWidth
                   required
                   InputProps={{
                     startAdornment: (
                       <InputAdornment position="start">
-                        <EmailOutlinedIcon sx={{ fontSize: "21px" }} />
+                        <EmailOutlinedIcon sx={{ fontSize: 21 }} />
                       </InputAdornment>
                     ),
                   }}
                 />
               </Grid>
-              <Grid item mx="auto" width="310px">
+              <Grid item sx={{ mx: "auto", width: 310 }}>
                 <FormLabel variant="body1">Mật khẩu</FormLabel>
                 <TextField
                   size="small"
-                  color="primary"
+                  sx={{ color: "primary" }}
                   fullWidth
                   required
                   InputProps={{
                     startAdornment: (
                       <InputAdornment position="start">
-                        <HttpsOutlinedIcon sx={{ fontSize: "21px" }} />
+                        <HttpsOutlinedIcon sx={{ fontSize: 21 }} />
                       </InputAdornment>
                     ),
                   }}
                 />
               </Grid>
-              <Grid item mx="auto" width="310px">
+              <Grid item sx={{ mx: "auto", width: 310 }}>
                 <FormLabel variant="body1">Nhập lại mật khẩu</FormLabel>
                 <TextField
                   size="small"
-                  color="primary"
+                  sx={{ color: "primary" }}
                   fullWidth
                   required
                   InputProps={{
                     startAdornment: (
                       <InputAdornment position="start">
-                        <HttpsOutlinedIcon sx={{ fontSize: "21px" }} />
+                        <HttpsOutlinedIcon sx={{ fontSize: 21 }} />
                       </InputAdornment>
                     ),
                   }}
                 />
               </Grid>
-              <Grid item mx="auto" mt="10px" width="310px" height="44px">
+              <Grid item sx={{ mx: "auto",  mt: 1, width: 310, height: 44 }}>
                 <OvalButton value="Đăng ký" />
               </Grid>
-              <Box m="20px auto">
-                <Typography display="inline" mr="5px" fontWeight="300">
+              <Box sx={{ mx: "auto", my: 3 }}>
+                <Typography sx={{ display: "inline", mr: 1, fontWeight: 300 }}>
                   Bạn đã có tài khoản chưa?
                 </Typography>
-                <Link
-                  href="/login"
-                  sx={{ textDecoration: "none", cursor: "pointer" }}
-                >
+                <Link href="/login">
                   Đăng nhập
                 </Link>
               </Box>
             </Grid>
           </form>
-          <Box width="100%" textAlign="center">
-            <Typography fontWeight="300">© Panagea</Typography>
+          <Box sx={{ width: "100%", textAlign: "center" }}>
+            <Typography sx={{ fontWeight: 300 }}>© Panagea</Typography>
           </Box>
         </Box>
       </Wrapper>

@@ -74,36 +74,40 @@ function AdventurePage() {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen="1"
         />
-        <Box position="absolute" top="0px" bottom="0px" left="0px" right="0px">
+        <Box sx={{ position: "absolute", top: 0, bottom: 0, left: 0, right: 0 }}>
           <Box
-            height="100%"
-            color="white"
-            align="center"
-            display="flex"
-            flexDirection="column"
-            alignItems="center"
-            justifyContent="center"
-            sx={{ backgroundColor: "background.main" }}
+            sx={{ 
+              backgroundColor: "background.main", 
+              height: "100%",
+              color: "white",
+              align: "center",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center"
+            }}
           >
             <Container>
-              <Typography color="white" mb="15px">
+              <Typography sx={{ color: "white", mb: 2 }}>
                 THAM QUAN THỰC TẾ ẢO 3D
               </Typography>
-              <Typography variant="h1" fontWeight="700">
+              <Typography variant="h1" sx={{ fontWeight: "bold" }}>
                 CÁC ĐỊA DANH NỔI TIẾNG HÀ GIANG
               </Typography>
               <Typography
                 variant="h4"
-                maxWidth="680px"
-                fontWeight="300"
-                color="white"
-                mb="30px"
+                sx={{ 
+                  maxWidth: 680,
+                  fontWeight: 300,
+                  color: "white",
+                  mb: 4 
+                }}
               >
                 Khám phá những địa danh nổi tiếng của Hà Giang qua không gian
                 thực tế ảo 3D vô cùng hấp dẫn & thú vị.
               </Typography>
               <Link href="/place-detail">
-                <Box width="179px">
+                <Box sx={{ width: 180 }}>
                   <RectangleButton value="Khám phá ngay!" />
                 </Box>
               </Link>
@@ -118,14 +122,14 @@ function AdventurePage() {
         <FilterBox toggle={toggle} setToggle={setToggle} />
       </Container>
 
-      <Box bgcolor="background.white" pb="100px" pt="15px">
+      <Box sx={{ bgcolor: "background.white", pb: 13, pt: 2 }}>
         <Container>
-          <Box px="6px">
-            <Box display="flex" justifyContent="center" mb="30px">
+          <Box sx={{ px: 1 }}>
+            <Box sx={{ display: "flex", justifyContent: "center", mb: 4 }}>
               <SearchBox searchField={searchField} />
             </Box>
 
-            <Box mb="100px">
+            <Box sx={{ mb: 13 }}>
               <Grid container spacing={3}>
                 {toggle
                   ? placeData.map((data) => (
@@ -134,17 +138,17 @@ function AdventurePage() {
                       </Grid>
                     ))
                   : placeData.map((data) => (
-                      <Grid key={data.id} item width="100%">
+                      <Grid key={data.id} item sx={{ width: "100%" }}>
                         <ItemCardHorizontal data={data} />
                       </Grid>
                     ))}
               </Grid>
-              <Box width="134px" mx="auto" mt="20px">
+              <Box sx={{ width: 134, mt: 3, m: "auto" }}>
                 <OvalButton value="Xem thêm" />
               </Box>
             </Box>
 
-            <Box mb="60px">
+            <Box sx={{ mb: 8 }}>
               <ImageBanner />
             </Box>
 
@@ -155,7 +159,7 @@ function AdventurePage() {
         </Container>
       </Box>
 
-      <Box height="650px">
+      <Box sx={{ height: 650 }}>
         <ParallaxBox content={content.ParallaxBox} />
       </Box>
     </>

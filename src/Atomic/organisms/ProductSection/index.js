@@ -6,16 +6,16 @@ import { Typography, Box, Link, Grid } from "@mui/material";
 export default function ProductSection({ content, data }) {
   return (
     <Box>
-      <Box mb="25px">
+      <Box sx={{ mb: 3 }}>
         <HorizontalDivider />
       </Box>
-      <Box mb="22px">
+      <Box sx={{ mb: 3 }}>
         <Typography variant="h4">{content.title}</Typography>
-        <Typography variant="subtitle1" fontWeight="300" fontSize="18px">
+        <Typography variant="subtitle1" sx={{ fontWeight: 300, fontSize: 18 }}>
           {content.description}
         </Typography>
       </Box>
-      <Grid container spacing={3} mb="26px">
+      <Grid container spacing={3} sx={{ mb: 3 }}>
         {data.map((item, index) => {
           if (index < 4) {
             return (
@@ -30,8 +30,7 @@ export default function ProductSection({ content, data }) {
       <Link
         href="#"
         variant="body1"
-        fontWeight="600"
-        sx={{ textDecoration: "none", "&: hover": { color: "black" } }}
+        sx={{ fontWeight: 600, "&: hover": { color: "black" } }}
       >
         Xem tất cả (175) &gt;
       </Link>

@@ -5,14 +5,14 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 import Dropdown from "../../molecules/Dropdown";
 
 const Wrapper = styled(Grid)(({ theme }) => ({
-  borderRadius: "20px",
+  borderRadius: 20,
   flexWrap: "nowrap",
   [theme.breakpoints.down("md")]: {
     flexDirection: "column",
     border: "none",
-    marginLeft: "0px",
+    marginLeft: 0,
     gap: theme.spacing(2),
-    maxWidth: "600px",
+    maxWidth: 600,
   },
 }));
 
@@ -21,11 +21,11 @@ const SearchField = styled(Grid)(({ theme }) => ({
   display: "flex",
   justifyContent: "space-between",
   height: theme.spacing(6),
-  padding: "5px 5px 5px 10px",
+  padding: theme.spacing(1),
   borderRight: "1px solid rgb(18, 25, 33, 0.2 )",
   boxShadow: "1px 1px 5px rgb(18, 25, 33, 0.2 )",
   [theme.breakpoints.down("md")]: {
-    borderRadius: "5px",
+    borderRadius: theme.shape.borderRadius,
     border: "none",
   },
 }));
@@ -33,15 +33,16 @@ const NewButton = styled(Button)(({ theme }) => ({
   width: "100%",
   height: theme.spacing(6),
   borderRadius: "0px 5px 5px 0px",
-  fontWeight: "600",
+  fontWeight: 600,
   transition: "all 0.3s ease-in-out",
   backgroundColor: theme.palette.secondary.main,
+  color: theme.palette.text.white,
   "&:hover": {
-    backgroundColor: theme.palette.yellow,
+    backgroundColor: theme.palette.common.yellow,
     color: theme.palette.text.main,
   },
   [theme.breakpoints.down("md")]: {
-    borderRadius: "5px",
+    borderRadius: theme.shape.borderRadius,
     border: "none",
   },
 }));
@@ -62,7 +63,7 @@ export default function SearchBox({ searchField }) {
           <IconButton
             type="submit"
             aria-label="search"
-            sx={{ color: "#999999", fontSize: "1.5rem" }}
+            sx={{ color: "common.grey", fontSize: 24 }}
           >
             <SearchIcon />
           </IconButton>
@@ -80,7 +81,7 @@ export default function SearchBox({ searchField }) {
           <IconButton
             type="submit"
             aria-label="search"
-            sx={{ color: "#999999", fontSize: "1.5rem" }}
+            sx={{ color: "common.grey", fontSize: 24 }}
           >
             <SearchIcon />
           </IconButton>
@@ -92,7 +93,7 @@ export default function SearchBox({ searchField }) {
           <IconButton
             type="submit"
             aria-label="search"
-            sx={{ color: "#999999", fontSize: "1.5rem" }}
+            sx={{ color: "common.grey", fontSize: 24 }}
           >
             <LocationOnIcon />
           </IconButton>
@@ -102,7 +103,7 @@ export default function SearchBox({ searchField }) {
         <Dropdown values={searchField.selectBox} />
       </SearchField>
       <Grid item lg={2} md={2} sm={12} xs={12}>
-        <NewButton variant="contained">{searchField.buttonValue}</NewButton>
+        <NewButton>{searchField.buttonValue}</NewButton>
       </Grid>
     </Wrapper>
   );

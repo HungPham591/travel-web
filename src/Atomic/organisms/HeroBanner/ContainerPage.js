@@ -10,17 +10,16 @@ const HeroImage = styled(Box)(
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center'
-        // position:'relative'
     })
 );
 const Title = styled(Typography)(
     ({ theme }) => ({
         color: "white",
         textAlign: "center",
-        fontSize: "42px",
+        fontSize: 42,
         fontWeight: 700,
         [theme.breakpoints.down("sm")]: {
-            fontSize: "32px"
+            fontSize: 32
         }
     })
 );
@@ -29,17 +28,17 @@ const CustomDivider = styled(Box)(
     ({ theme }) => ({
         borderRadius: theme.shape.borderRadius,
         backgroundColor: theme.palette.warning.main,
-        width: "80px",
-        height: "4px",
+        width: 80,
+        height: 4,
     })
 )
-function HerroBanner(props) {
+export default function HerroBanner(props) {
     const { image, title } = props;
     return (
         <HeroImage image={image}>
             <Container>
-                <Box data-aos="fade-up" data-aos-duration="800" data-aos-once={true} display={"flex"} alignItems={"center"} flexDirection={"column"}>
-                    <Box paddingY={"20px"}>
+                <Box data-aos="fade-up" data-aos-duration="800" data-aos-once={true} sx={{ display: "flex", alignItems: "center", flexDirection: "column" }}>
+                    <Box sx={{ py: 3 }}>
                         <CustomDivider />
                     </Box>
                     <Title variant="h1">
@@ -50,4 +49,3 @@ function HerroBanner(props) {
         </HeroImage>
     );
 }
-export default HerroBanner;

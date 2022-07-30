@@ -85,37 +85,36 @@ function HomePage() {
           allowFullScreen="1"
           
         />
-        <Box position="absolute" top="0px" bottom="0px" left="0px" right="0px">
+        <Box sx={{ position: "absolute", top: 0, bottom: 0, left: 0, right: 0 }}>
           <Box
-            height="100%"
-            color="white"
-            align="center"
-            display="flex"
-            flexDirection="column"
-            alignItems="center"
-            justifyContent="center"
-            sx={{ backgroundColor: "background.main" }}
+            sx={{ 
+              backgroundColor: "background.main",
+              height: "100%",
+              color: "white",
+              align: "center",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center"
+            }}
           >
             <Container>
-              <Box px="6px">
+              <Box sx={{ px: 1 }}>
                 <Typography
                   variant="h1"
-                  fontWeight="700"
-                  textAlign="center"
-                  mb="5px"
+                  sx={{ 
+                    fontWeight: 700,
+                    textAlign: "center",
+                    mb: 1
+                   }}
                 >
                   THAM QUAN & KHÁM PHÁ HÀ GIANG
                 </Typography>
-                <Typography
-                  variant="h6"
-                  color="white"
-                  textAlign="center"
-                  mb="15px"
-                >
+                <Typography variant="h6" sx={{ color: "white", textAlign: "center", mb: 2 }}>
                   Du lịch Hà Giang với công nghệ 4.0 & thực tế ảo 3D cực kỳ hấp
                   dẫn - Tất Cả Trong Một
                 </Typography>
-                <Box display="flex" justifyContent="center">
+                <Box sx={{ display: "flex", justifyContent: "center" }}>
                   <SearchBox searchField={searchField} />
                 </Box>
               </Box>
@@ -124,12 +123,12 @@ function HomePage() {
         </Box>
       </Box>
 
-      <Box bgcolor="background.white" py="95px">
+      <Box sx={{ bgcolor: "background.white", py: 12 }}>
         <Container>
-          <Box mb="124px">
+          <Box sx={{ mb: 16 }}>
             <BeautySpotSection />
           </Box>
-          <Box display="flex" flexDirection="column" gap="45px" mb="45px">
+          <Box sx={{ display: "flex", flexDirection: "column", gap: 6, mb: 6 }}>
             <ProductSection content={content.tour} data={tourData} />
             <ProductSection content={content.hotel} data={hotelData} />
             <ProductSection content={content.restaurant} data={restaurantData} />
@@ -141,13 +140,13 @@ function HomePage() {
           </Box>
         </Container>
       </Box>
-      <Box backgroundColor="white" py="80px">
+      <Box sx={{ backgroundColor: "white", py: 10 }}>
         <Container>
           <NewsSection />
         </Container>
       </Box>
 
-      <Box height="650px">
+      <Box sx={{ height: 650 }}>
         <ParallaxBox content={content.ParallaxBox} />
       </Box>
     </>
