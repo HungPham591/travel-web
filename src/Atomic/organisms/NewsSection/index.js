@@ -15,7 +15,7 @@ export default function NewsSection() {
         <Typography variant="h3">
           Tin Tức & Bài Viết Mới
         </Typography>
-        <Typography variant="h4" sx={{ fontWeight: "300" }}>
+        <Typography variant="h4" sx={{ fontWeight: 300 }}>
           Tìm hiểu các thông tin mới nhất về Hà Giang.
         </Typography>
       </Box>

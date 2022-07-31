@@ -26,7 +26,7 @@ function TourPage() {
       <Box sx={{ height: 450 }}>
         <HeroBanner
           title="TOUR DU LỊCH HÀ GIANG"
-          image="/Images/tourBanner.webp"
+          image="/Images/banner/tourBanner.webp"
         />
       </Box>
 

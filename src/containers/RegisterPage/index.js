@@ -16,7 +16,7 @@ import React from "react";
 import OvalButton from "../../Atomic/atoms/Button/OvalButton";
 
 const Wrapper = styled("div")(({ theme }) => ({
-  backgroundImage: `url("/Images/hotelBanner.jpg")`,
+  backgroundImage: `url("/Images/banner/hotelBanner.jpg")`,
   backgroundSize: "cover",
   width: "inherit",
   minHeight: "100vh",

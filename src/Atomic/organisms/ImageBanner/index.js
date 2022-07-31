@@ -3,7 +3,7 @@ import { styled, Typography, Box, Link } from "@mui/material";
 import RectangleButton from "../../atoms/Button";
 
 const Wrapper = styled(Box)(({ theme }) => ({
-  backgroundImage: `linear-gradient(230deg, rgba(0,0,0,0) 60%, rgba(0,0,0,1) 100%), url("/Images/VRBanner.jpg")`,
+  backgroundImage: `linear-gradient(230deg, rgba(0,0,0,0) 60%, rgba(0,0,0,1) 100%), url("/Images/banner/vrBanner.jpg")`,
   color: theme.palette.white,
   backgroundRepeat: "no-repeat",
   backgroundSize: "cover",

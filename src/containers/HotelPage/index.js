@@ -26,7 +26,7 @@ function HotelPage() {
       <Box sx={{ height: 450 }}>
         <HeroBanner
           title="KHÁCH SẠN & CHỖ Ở TẠI HÀ GIANG"
-          image="/Images/hotelBanner.jpg"
+          image="/Images/banner/hotelBanner.jpg"
         />
       </Box>
 

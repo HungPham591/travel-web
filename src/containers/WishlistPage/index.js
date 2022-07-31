@@ -12,7 +12,7 @@ function WishListPage() {
       <Box sx={{ height: 450 }}>
         <HeroBanner
           title="Trang yêu thích"
-          image="http://icdn.dantri.com.vn/zoom/1200_630/2017/ngam-binh-minh-dep-vn-3-1508582820854.jpg"
+          image="/Images/banner/tourBanner.webp"
         />
       </Box>
 

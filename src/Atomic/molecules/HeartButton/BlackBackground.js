@@ -23,9 +23,9 @@ function HeartButton({ bgColor, color }) {
       onClick={handleClick}
     >
       {active ? (
-        <FavoriteIcon sx={{ color: "secondary.main", fontSize: "18px", }} />
+        <FavoriteIcon sx={{ color: "secondary.main", fontSize: 18 }} />
       ) : (
-        <FavoriteBorderIcon sx={{ color: `${color}`, fontSize: "18px", }} />
+        <FavoriteBorderIcon sx={{ color: `${color}`, fontSize: 18 }} />
       )}
     </Box>
   );

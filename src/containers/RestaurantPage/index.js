@@ -24,7 +24,7 @@ function RestaurantPage() {
       <Box sx={{ height: 450 }}>
         <HeroBanner
           title="ĐỊA ĐIỂM ĂN UỐNG TẠI HÀ GIANG"
-          image="/Images/restaurantBanner.jpg"
+          image="/Images/banner/restaurantBanner.jpg"
         />
       </Box>
 

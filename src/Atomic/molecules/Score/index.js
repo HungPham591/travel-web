@@ -1,7 +1,7 @@
 import React from "react";
-import { styled, Typography } from "@mui/material";
+import { styled, Typography, Box } from "@mui/material";
 
-const Wrapper = styled("div")(({ theme }) => ({
+const Wrapper = styled(Box)(({ theme }) => ({
   backgroundColor: theme.palette.primary.main,
   height: 34,
   width: 41,

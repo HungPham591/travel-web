@@ -31,7 +31,7 @@ const content = {
   },
   ParallaxBox: {
     title: "Mùa hoa tam giác mạch đẹp say lòng người tại Hà Giang",
-    image: "/Images/parallaxBg2.jpg",
+    image: "/Images/banner/parallaxBg2.jpg",
     description:
       "Khác với hoa tam giác mạch ở các nơi khác, ở Hà Giang loại hoa này có màu phơn phớt hồng như đôi má của người thiếu nữ. Hoa mang vẻ đẹp dân dã, mọc trải dài thành cánh đồng, chênh vênh trên những mỏm đá...",
     button: "Tham quan 3D ngay",
@@ -66,7 +66,7 @@ function AdventurePage() {
 
   return (
     <>
-      <Box position="relative" height="650px" overflow="hidden">
+      <Box sx={{ position: "relative", height: 650, overflow: "hidden" }}>
         <Iframe
           src="https://www.youtube.com/embed/BU5kFRM9Sa8?rel=0&autoplay=1&mute=1&loop=1&controls=0"
           title="YouTube video player"

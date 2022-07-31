@@ -24,7 +24,7 @@ function ProductPage() {
       <Box sx={{ height: 450 }}>
         <HeroBanner
           title="ĐẶC SẢN ĐỊA PHƯƠNG HÀ GIANG"
-          image="/Images/productBanner.jpg"
+          image="/Images/banner/productBanner.jpg"
         />
       </Box>
 

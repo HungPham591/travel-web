@@ -34,7 +34,7 @@ const Wrapper = styled(Box)(({ theme }) => ({
   display: "flex",
   flexDirection: "column",
   justifyContent: "space-between",
-  padding: theme.spacing(3) 
+  paddingX: theme.spacing(3) 
 }));
 
 const LinkButton = styled(Link)(({ theme }) => ({
@@ -209,7 +209,7 @@ export default function Footer() {
                 <KeyboardArrowDownIcon sx={{ fontSize: 20, color: "white" }} />
               </Dropdown>
             </Box>
-            <Box width="146px">
+            <Box sx={{ width: 146 }}>
               <CardMedia image="Images/payment.svg" component="img" alt="Payment Icon" />
             </Box>
           </Box>

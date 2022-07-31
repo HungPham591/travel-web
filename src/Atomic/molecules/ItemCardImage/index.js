@@ -28,11 +28,11 @@ export default function ItemCardImage({ data }) {
             <Box sx={{ display: "flex", color: "white", flexDirection: "column", p: 2 }}>
               {data.rating &&
                 <Box>
-                  <Rating name="read-only" value={data.rating} readOnly sx={{ color: 'white', fontSize: "12px" }} />
+                  <Rating name="read-only" value={data.rating} readOnly sx={{ color: 'white', fontSize: 12 }} />
                 </Box>
               }
-              <Typography variant="subtitle1" color="white">{data.subtitle}</Typography>
-              <Typography variant="subtitle1" lineHeight="21.6px" color="white" fontSize="18px" fontWeight="500">
+              <Typography variant="subtitle1" sx={{ color: "white" }}>{data.subtitle}</Typography>
+              <Typography variant="subtitle1" sx={{ lineHeight: "21.6px", color: "white", fontSize: 18, fontWeight: 500 }}>
                 {data.title}
               </Typography>
             </Box>

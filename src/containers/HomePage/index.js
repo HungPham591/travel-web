@@ -41,7 +41,7 @@ const content = {
   },
   ParallaxBox: {
     title: "Tham Quan Không Gian Thực Tế Ảo 3D Ở Đồng Văn - Mèo Vạc",
-    image: "/Images/parallaxBg1.jpg",
+    image: "/Images/banner/parallaxBg1.jpg",
     description: "Bao quanh đèo là trời, mây và núi non nên du khách có thể thong thả ngắm cảnh, chụp ảnh. Ở chân đèo, bạn ghé thăm Bảo tàng con đường Hạnh Phúc, tìm hiểu về lịch sử xây dựng đầy khó khăn của quốc lộ 4C, từ thành phố Hà Giang đi Đồng Văn, Mèo Vạc.",
     button: "Tham quan 3D ngay",
   }
@@ -76,7 +76,7 @@ const Iframe = styled("iframe")(({ theme }) => ({
 function HomePage() {
   return (
     <>
-      <Box position="relative" overflow="hidden" minHeight="650px" width="100%">
+      <Box sx={{ position: "relative", overflow: "hidden", minHeight: 650, width: "100%" }}>
         <Iframe
           src="https://www.youtube.com/embed/BU5kFRM9Sa8?rel=0&autoplay=1&mute=1&loop=1&controls=0"
           title="YouTube video player"

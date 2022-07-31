@@ -50,9 +50,9 @@ export default function Dropdown({ values }) {
       >
         <Typography>{selected}</Typography>
         {open ? (
-          <KeyboardArrowUpIcon sx={{ fontSize: "30px", color: "common.grey" }} />
+          <KeyboardArrowUpIcon sx={{ fontSize: 30, color: "common.grey" }} />
         ) : (
-          <KeyboardArrowDownIcon sx={{ fontSize: "30px", color: "common.grey" }} />
+          <KeyboardArrowDownIcon sx={{ fontSize: 30, color: "common.grey" }} />
         )}
       </Button>
       <NewPopper
