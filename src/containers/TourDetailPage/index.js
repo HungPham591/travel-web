@@ -72,28 +72,28 @@ const timelineData = [
         title: "Hà Giang",
         placeName: "Cổng trời Quản Bạ",
         description: "Hà Giang là mảnh đất nơi có những cao nguyên đá hùng vĩ trong sương mờ vào mỗi buổi sáng.",
-        image: "/Images/tourPage1.jpg"
+        image: "/Images/tourpage/tourPage1.jpg"
     },
     {
         time: "26.05.2022",
         title: "Cổng trời Quản Bạ",
         placeName: "Thị trấn Yên Minh",
         description: "Hà Giang là mảnh đất nơi có những cao nguyên đá hùng vĩ trong sương mờ vào mỗi buổi sáng.",
-        image: "/Images/tourPage2.jpg"
+        image: "/Images/tourpage/tourPage2.jpg"
     },
     {
         time: "27.05.2022",
         title: "Thị trấn Yên Minh",
         placeName: "phố cổ Đồng Văn",
         description: "Hà Giang là mảnh đất nơi có những cao nguyên đá hùng vĩ trong sương mờ vào mỗi buổi sáng.",
-        image: "/Images/tourPage3.jpg"
+        image: "/Images/tourpage/tourPage3.jpg"
     },
     {
         time: "28.05.2022",
         title: "Đồng Văn",
         placeName: "Mèo Vạc",
         description: "Hà Giang là mảnh đất nơi có những cao nguyên đá hùng vĩ trong sương mờ vào mỗi buổi sáng.",
-        image: "/Images/tourPage4.jpg"
+        image: "/Images/tourpage/tourPage4.jpg"
     }
 ];
 

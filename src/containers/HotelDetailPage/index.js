@@ -93,17 +93,17 @@ const secondNavLink = [
 ]
 const hotelDetails = [
     {
-        image: "/Images/hotelDetail1.jpg",
+        image: "/Images/hotelDetail/hotelDetail1.jpg",
         title: "Phòng đơn",
         description: "Mọi đặt phòng đều được bảo vệ miễn phí trong trường hợp Chủ nhà hủy, thông tin nhà/phòng cho thuê không chính xác và những vấn đề khác như sự cố trong quá trình nhận phòng."
     },
     {
-        image: "/Images/hotelDetail2.jpg",
+        image: "/Images/hotelDetail/hotelDetail2.jpg",
         title: "Phòng đôi",
         description: "Mọi đặt phòng đều được bảo vệ miễn phí trong trường hợp Chủ nhà hủy, thông tin nhà/phòng cho thuê không chính xác và những vấn đề khác như sự cố trong quá trình nhận phòng."
     },
     {
-        image: "/Images/hotelDetail3.jpg",
+        image: "/Images/hotelDetail/hotelDetail3.jpg",
         title: "Phòng đặc biệt",
         description: "Mọi đặt phòng đều được bảo vệ miễn phí trong trường hợp Chủ nhà hủy, thông tin nhà/phòng cho thuê không chính xác và những vấn đề khác như sự cố trong quá trình nhận phòng."
     }
