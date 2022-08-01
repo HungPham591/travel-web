@@ -3,7 +3,7 @@ export const placeData = [
     id: "1",
     label: "THẮNG CẢNH",
     image: "/Images/adventurePage/adventurePage1.jpg",
-    banner: "/Images/placeDetailBanner.jpg",
+    banner: "/Images/pageBanner/placeDetailBanner.jpg",
     title: "Hoàng Su Phì",
     description:
       "Tại Hoàng Su Phì ruộng bậc thang bắc lên tận mây trời, lác đác xen các thửa ruộng vàng óng là những mái nhà nhỏ nhắn của bà con dân tộc ẩn trong lùm cây.",
@@ -17,7 +17,7 @@ export const placeData = [
     id: "2",
     label: "DANH LAM",
     image: "/Images/adventurePage/adventurePage2.jpg",
-    banner: "/Images/tourDetailBanner.jpg",
+    banner: "/Images/pageBanner/tourDetailBanner.jpg",
     title: "Đèo Mã Pí Lèng",
     description:
       "Đèo Mã Pí Lèng nằm trên con đường Hạnh Phúc nối liền Đồng Văn và Mèo Vạc. Đây được biết đến là cung đường đẹp nhất vùng cao nguyên đá.",
@@ -31,7 +31,7 @@ export const placeData = [
     id: "3",
     label: "BẢO TÀNG",
     image: "/Images/adventurePage/adventurePage3.jpg",
-    banner: "/Images/hotelDetailBanner.jpg",
+    banner: "/Images/pageBanner/hotelDetailBanner.jpg",
     title: "Cao nguyên đá Đồng Văn",
     description:
       "Cao nguyên đá Đồng Văn là địa danh không còn xa lạ chút nào đối với tất cả người dân Việt Nam. Nếu đến Hà Giang mà bạn không đến thăm công viên địa chất nổi tiếng trên toàn thế giới này thì quả là một điều quá phí hoài.",
@@ -45,7 +45,7 @@ export const placeData = [
     id: "4",
     label: "THẮNG CẢNH",
     image: "/Images/adventurePage/adventurePage4.jpg",
-    banner: "/Images/restaurantDetailBanner.jpg",
+    banner: "/Images/pageBanner/restaurantDetailBanner.jpg",
     title: "Thung lũng Sủng Là",
     description:
       "Sủng Là được biết đến như một trong những địa điểm du lịch Hà Giang nổi tiếng với các vườn hoa khoe sắc. Thung lũng Sủng Là là bông hoa giữa cao nguyên đá, cuốn hút du khách bởi vẻ đẹp mộc mạc.",
@@ -59,7 +59,7 @@ export const placeData = [
     id: "5",
     label: "DANH LAM",
     image: "/Images/adventurePage/adventurePage5.jpg",
-    banner: "/Images/productDetailBanner.jpg",
+    banner: "/Images/pageBanner/productDetailBanner.jpg",
     title: "Dinh Thự họ Vương – dinh thự vua Mèo",
     description:
       "Dinh thự họ Vương nằm trên đỉnh một quả đồi nhỏ, nơi đây cửa vào có hàng cây samu cổ thụ, thẳng tắp. Dinh thự mang kiến trúc độc đáo, có sự ảnh hưởng của ba nền kiến trúc: Trung Quốc, người dân tộc Mông và Pháp.",
@@ -73,7 +73,7 @@ export const placeData = [
     id: "6",
     label: "DI TÍCH LỊCH SỬ",
     image: "/Images/adventurePage/adventurePage6.jpg",
-    banner: "/Images/placeDetailBanner.jpg",
+    banner: "/Images/pageBanner/placeDetailBanner.jpg",
     title: "Phó Bảng – Yên Minh",
     description:
       "Phó Bảng là nơi có những ngôi nhà cổ với kiến trúc độc đáo. Những thửa ruộng nằm cạnh hai bên đường đi ở Phó Bảng ngập tràn hoa tam giác mạch.",
@@ -90,7 +90,7 @@ export const tourData = [
     id: "1",
     label: "TRỌN GÓI",
     image: "/Images/tourPage/tourPage1.jpg",
-    banner: "/Images/tourDetailBanner.jpg",
+    banner: "/Images/pageBanner/tourDetailBanner.jpg",
     title: "Tour khám phá Hà Giang - Nho Quế hùng vĩ 3 ngày 2 đêm",
     description: "Tự hào là nhà tổ chức tour Hà Giang chất lượng số 1 trên thị trường. Hãy đồng hành cùng PYS Travel để có một chuyến đi ấn tượng, vui vẻ, an toàn và đáng nhớ! Mùa xuân Hà Giang là sắc đào sắc mận nở trắng trời, mùa thu là những thửa ruộng bậc thang vàng óng ả, và khi mùa đông đến cả Hà Giang lại chìm trong sắc hồng dịu ngọt của những cánh đồng tam giác mạch mênh mang nơi miền biên viễn.",
     tourCode: "NDHAN200-006-260522XE-V",
@@ -110,7 +110,7 @@ export const tourData = [
     id: "2",
     label: "GIA ĐÌNH",
     image: "/Images/tourPage/tourPage2.jpg",
-    banner: "/Images/hotelDetailBanner.jpg",
+    banner: "/Images/pageBanner/hotelDetailBanner.jpg",
     title: "Du lịch Miền Bắc Hà Nội - Hà Giang - Lũng Cú - Cao Bằng",
     description: "Tự hào là nhà tổ chức tour Hà Giang chất lượng số 1 trên thị trường. Hãy đồng hành cùng PYS Travel để có một chuyến đi ấn tượng, vui vẻ, an toàn và đáng nhớ! Mùa xuân Hà Giang là sắc đào sắc mận nở trắng trời, mùa thu là những thửa ruộng bậc thang vàng óng ả, và khi mùa đông đến cả Hà Giang lại chìm trong sắc hồng dịu ngọt của những cánh đồng tam giác mạch mênh mang nơi miền biên viễn.",
     tourCode: "NDHAN200-006-260522XE-V",
@@ -130,7 +130,7 @@ export const tourData = [
     id: "3",
     label: "TRỌN GÓI",
     image: "/Images/tourPage/tourPage3.jpg",
-    banner: "/Images/restaurantDetailBanner.jpg",
+    banner: "/Images/pageBannerrestaurantDetailBanner.jpg",
     title: "Du lịch Hà Giang - Quản Bạ - Đồng Văn - Lũng Cú - Sông Nho Quế",
     description: "Tự hào là nhà tổ chức tour Hà Giang chất lượng số 1 trên thị trường. Hãy đồng hành cùng PYS Travel để có một chuyến đi ấn tượng, vui vẻ, an toàn và đáng nhớ! Mùa xuân Hà Giang là sắc đào sắc mận nở trắng trời, mùa thu là những thửa ruộng bậc thang vàng óng ả, và khi mùa đông đến cả Hà Giang lại chìm trong sắc hồng dịu ngọt của những cánh đồng tam giác mạch mênh mang nơi miền biên viễn.",
     tourCode: "NDHAN200-006-260522XE-V",
@@ -150,7 +150,7 @@ export const tourData = [
     id: "4",
     label: "GIA ĐÌNH",
     image: "/Images/tourPage/tourPage4.jpg",
-    banner: "/Images/productDetailBanner.jpg",
+    banner: "/Images/pageBanner/productDetailBanner.jpg",
     title: "Hà Giang - Lũng Cú - Đồng Văn - Nơi đá nở hoa ( Khách sạn 3* & 4*)",
     description: "Tự hào là nhà tổ chức tour Hà Giang chất lượng số 1 trên thị trường. Hãy đồng hành cùng PYS Travel để có một chuyến đi ấn tượng, vui vẻ, an toàn và đáng nhớ! Mùa xuân Hà Giang là sắc đào sắc mận nở trắng trời, mùa thu là những thửa ruộng bậc thang vàng óng ả, và khi mùa đông đến cả Hà Giang lại chìm trong sắc hồng dịu ngọt của những cánh đồng tam giác mạch mênh mang nơi miền biên viễn.",
     tourCode: "NDHAN200-006-260522XE-V",
@@ -170,7 +170,7 @@ export const tourData = [
     id: "5",
     label: "TOUR LẺ",
     image: "/Images/tourPage/tourPage5.jpg",
-    banner: "/Images/placeDetailBanner.jpg",
+    banner: "/Images/pageBanner/placeDetailBanner.jpg",
     title: "Du lịch Tết Nguyên Đán Hà Nội - Hà Giang - Đồng Văn - Lũng Cú - Cao Bằng - Thác Bản Giốc",
     description: "Tự hào là nhà tổ chức tour Hà Giang chất lượng số 1 trên thị trường. Hãy đồng hành cùng PYS Travel để có một chuyến đi ấn tượng, vui vẻ, an toàn và đáng nhớ! Mùa xuân Hà Giang là sắc đào sắc mận nở trắng trời, mùa thu là những thửa ruộng bậc thang vàng óng ả, và khi mùa đông đến cả Hà Giang lại chìm trong sắc hồng dịu ngọt của những cánh đồng tam giác mạch mênh mang nơi miền biên viễn.",
     tourCode: "NDHAN200-006-260522XE-V",
@@ -188,7 +188,7 @@ export const tourData = [
     id: "6",
     label: "TRỌN GÓI",
     image: "/Images/tourPage/tourPage6.jpg",
-    banner: "/Images/tourDetailBanner.jpg",
+    banner: "/Images/pageBanner/tourDetailBanner.jpg",
     title: "Hà Giang-Lũng Cú - Đồng Văn - Hoa xuân miền Đông Bắc (Sản Phẩm Chọn Lọc, Tiết Kiệm Thời gian)",
     description: "Tự hào là nhà tổ chức tour Hà Giang chất lượng số 1 trên thị trường. Hãy đồng hành cùng PYS Travel để có một chuyến đi ấn tượng, vui vẻ, an toàn và đáng nhớ! Mùa xuân Hà Giang là sắc đào sắc mận nở trắng trời, mùa thu là những thửa ruộng bậc thang vàng óng ả, và khi mùa đông đến cả Hà Giang lại chìm trong sắc hồng dịu ngọt của những cánh đồng tam giác mạch mênh mang nơi miền biên viễn.",
     tourCode: "NDHAN200-006-260522XE-V",
@@ -209,7 +209,7 @@ export const hotelData = [
     id: "1",
     label: "HOMESTAY",
     image: "/Images/hotelPage/hotelPage1.jpg",
-    banner: "/Images/restaurantDetailBanner.jpg",
+    banner: "/Images/pageBanner/restaurantDetailBanner.jpg",
     rating: 5,
     title: "Family Homestay Đồng Văn",
     address: "Thôn Đoàn Kết, thị trấn Đồng Văn, huyện Đồng Văn, tỉnh Hà Giang.",
@@ -225,7 +225,7 @@ export const hotelData = [
     id: "2",
     label: "FARMSTAY",
     image: "/Images/hotelPage/hotelPage2.jpg",
-    banner: "/Images/productDetailBanner.jpg",
+    banner: "/Images/pageBanner/productDetailBanner.jpg",
     rating: 5,
     title: "Đồng Quê Homestay Hà Giang",
     address: "Thôn Hạ Thành – Xã Phương Độ, tỉnh Hà Giang",
@@ -241,7 +241,7 @@ export const hotelData = [
     id: "3",
     label: "HOMESTAY",
     image: "/Images/hotelPage/hotelPage3.jpg",
-    banner: "/Images/placeDetailBanner.jpg",
+    banner: "/Images/pageBanner/placeDetailBanner.jpg",
     rating: 5,
     title: "Ban Tuy Homestay",
     address: "Làng văn hóa Du Lịch Bản Tùy, Xã Ngọc Đường, TP. Hà Giang",
@@ -257,7 +257,7 @@ export const hotelData = [
     id: "4",
     label: "HOTEL",
     image: "/Images/hotelPage/hotelPage4.jpg",
-    banner: "/Images/tourDetailBanner.jpg",
+    banner: "/Images/pageBanner/tourDetailBanner.jpg",
     rating: 5,
     title: "Hoang Kim Hotel",
     address:
@@ -274,7 +274,7 @@ export const hotelData = [
     id: "5",
     label: "HOTEL",
     image: "/Images/hotelPage/hotelPage5.jpg",
-    banner: "/Images/hotelDetailBanner.jpg",
+    banner: "/Images/pageBanner/hotelDetailBanner.jpg",
     rating: 5,
     title: "Mông Lodge Mèo Vạc",
     address:
@@ -290,7 +290,7 @@ export const hotelData = [
     id: "6",
     label: "HOMESTAY",
     image: "/Images/hotelPage/hotelPage6.jpg",
-    banner: "/Images/restaurantDetailBanner.jpg",
+    banner: "/Images/pageBanner/restaurantDetailBanner.jpg",
     rating: 5,
     title: "Homestay Nam Tran",
     address: "Thôn Tha, thành phố Hà Giang",
@@ -308,7 +308,7 @@ export const restaurantData = [
     id: "1",
     label: "NHÀ HÀNG",
     image: "/Images/restaurantPage/restaurantPage1.jpg",
-    banner: "/Images/restaurantDetailBanner.jpg",
+    banner: "/Images/pageBanner/restaurantDetailBanner.jpg",
     title: "Quán nhà Sàn cơm dân tộc bản địa",
     address: "18 Nguyễn Văn Linh, TP. Hà Giang",
     description:
@@ -324,7 +324,7 @@ export const restaurantData = [
     id: "2",
     label: "NHÀ HÀNG",
     image: "/Images/restaurantPage/restaurantPage2.jpg",
-    banner: "/Images/restaurantDetailBanner.jpg",
+    banner: "/Images/pageBanner/restaurantDetailBanner.jpg",
     title: "Nhà hàng Âu Việt",
     address: "Tổ 3, thị xã Đồng Văn, Đồng Văn, Hà Giang",
     description:
@@ -340,7 +340,7 @@ export const restaurantData = [
     id: "3",
     label: "QUÁN ĂN",
     image: "/Images/restaurantPage/restaurantPage3.jpg",
-    banner: "/Images/restaurantDetailBanner.jpg",
+    banner: "/Images/pageBanner/restaurantDetailBanner.jpg",
     title: "Nhà hàng cá Sông Lô",
     address: "Sùng Dúng Lù, P. Quang Trung, TP. Hà Giang",
     description:
@@ -356,7 +356,7 @@ export const restaurantData = [
     id: "4",
     label: "NHÀ HÀNG",
     image: "/Images/restaurantPage/restaurantPage4.jpg",
-    banner: "/Images/restaurantDetailBanner.jpg",
+    banner: "/Images/pageBanner/restaurantDetailBanner.jpg",
     title: "Quán ăn ngon Hà Giang Nhà hàng Sơn Thúy",
     address: "161 Trần Hưng Đạo, Trần Phú, TP. Hà Giang",
     description:
@@ -372,7 +372,7 @@ export const restaurantData = [
     id: "5",
     label: "NHÀ HÀNG",
     image: "/Images/restaurantPage/restaurantPage5.jpg",
-    banner: "/Images/restaurantDetailBanner.jpg",
+    banner: "/Images/pageBanner/restaurantDetailBanner.jpg",
     title: "Nhà hàng Ngói Đỏ",
     address: "Tổ I- P. Nguyễn Trãi, TP.Hà Giang",
     description:
@@ -387,7 +387,7 @@ export const restaurantData = [
     id: "6",
     label: "QUÁN ĂN",
     image: "/Images/restaurantPage/restaurantPage6.jpg",
-    banner: "/Images/restaurantDetailBanner.jpg",
+    banner: "/Images/pageBanner/restaurantDetailBanner.jpg",
     title: "Quán ăn ngon Hà Giang bán thắng dền",
     address: "Đến Ngọc Đường, TP.Hà Giang",
     description:
@@ -404,8 +404,8 @@ export const productData = [
   {
     id: "1",
     label: "THỰC PHẨM",
-    image: "/Images//productPage/productPage1.jpg",
-    banner: "/Images/productDetailBanner.jpg",
+    image: "/Images/productPage/productPage1.jpg",
+    banner: "/Images/pageBanner/productDetailBanner.jpg",
     title: "Thịt trâu, lợn gác bếp",
     description:
       "Việc được lai rai món thịt gác bếp dai dai sẽ thật là ngon. Đặc biệt là khi thưởng thức món ăn này lúc nhậu thì ngon tuyệt cú mèo. Bạn sẽ cảm nhận được hương vị thơm ngon của các món thịt gác bếp nơi đây. Rất nhiều du khách đã chọn lựa món ăn đặc sản Hà Giang làm quà này để tặng cho người thân, bạn bè của mình.",
@@ -420,8 +420,8 @@ export const productData = [
   {
     id: "2",
     label: "THỰC PHẨM",
-    image: "/Images//productPage/productPage2.jpg",
-    banner: "/Images/productDetailBanner.jpg",
+    image: "/Images/productPage/productPage2.jpg",
+    banner: "/Images/pageBanner/productDetailBanner.jpg",
     title: "Mật ong bạc hà",
     description:
       "Mật ong bạc hà Hà Giang được biết đến là loại đặc sản quý giá chỉ có tại vùng cao nguyên núi đá Hà Giang. Nếu lần đầu nghe đến mật ong bạc hà Hà Giang thì cùng chúng mình tìm hiểu về loại mật ong đặc sắc này bạn nhé.",
@@ -436,8 +436,8 @@ export const productData = [
   {
     id: "3",
     label: "NÔNG SẢN",
-    image: "/Images//productPage/productPage3.jpg",
-    banner: "/Images/productDetailBanner.jpg",
+    image: "/Images/productPage/productPage3.jpg",
+    banner: "/Images/pageBanner/productDetailBanner.jpg",
     title: "Cam sành Bắc Quang",
     description:
       "Đã từ lâu, cam sành trở thành một đặc sản nức tiếng mỗi khi người đi xa về gần nhắc đến đất Bắc Quang, thứ đến mới là chè. Có được điều đó là bởi vùng đất này có những điều kiện khí hậu, thổ nhưỡng không giống với bất cứ vùng đất nào để tạo nên những trái cam mang hương vị riêng biệt, vô cùng ngọt ngào và hấp dẫn của miền núi rừng phía nam của tỉnh Hà Giang.",
@@ -452,8 +452,8 @@ export const productData = [
   {
     id: "4",
     label: "QUÀ BIẾU",
-    image: "/Images//productPage/productPage5.jpg",
-    banner: "/Images/productDetailBanner.jpg",
+    image: "/Images/productPage/productPage5.jpg",
+    banner: "/Images/pageBanner/productDetailBanner.jpg",
     title: "Shan tuyết – Chè Hà Giang nổi tiếng",
     description:
       "Đây là loại chè thân gỗ cổ thụ và lá thì mọc theo từng chùm rất độc đáo. Loại chè Hà Giang này rất nổi tiếng và thường được khách du lịch mua về làm quà trong những chuyến đi du lịch tới đây. Khác với các loại chè ở những nơi khác, Shan tuyết lại có hương vị hoàn toàn khác biệt.",
@@ -468,8 +468,8 @@ export const productData = [
   {
     id: "5",
     label: "BÁNH KẸO",
-    image: "/Images//productPage/productPage4.jpg",
-    banner: "/Images/productDetailBanner.jpg",
+    image: "/Images/productPage/productPage4.jpg",
+    banner: "/Images/pageBanner/productDetailBanner.jpg",
     title: "Bánh tam giác mạch",
     description:
       "Nhắc tới Hà Giang, bạn sẽ không thể bỏ qua món ăn có tên gọi là tam giác mạch. Đây là món ăn ngon mang đậm hương vị của vùng quê nơi đây. Nó được làm từ hạt lúa mạch phơi khô. Sau đó xay ra làm bột.",
@@ -483,8 +483,8 @@ export const productData = [
   {
     id: "6",
     label: "THỰC PHẨM",
-    image: "/Images//productPage/productPage6.jpg",
-    banner: "/Images/productDetailBanner.jpg",
+    image: "/Images/productPage/productPage6.jpg",
+    banner: "/Images/pageBanner/productDetailBanner.jpg",
     title: "Lạp xưởng Hà Giang",
     description:
       "Món lạp xưởng tại đây có hương vị hoàn toàn khác biệt so với các nơi khác. Đây là món ăn được người dân vùng núi tự tay làm. Vào mỗi dịp tết đến, người dân nơi đây lại nô nức làm món ăn này bởi đây là dịp tại đây thường diễn ra mổ lợn rất nhiều.",
@@ -501,7 +501,7 @@ export const newsData = [
   {
     id: "1",
     image: "/Images/newsCard/newsCard1.jpg",
-    banner: "/Images/hotelDetailBanner.jpg",
+    banner: "/Images/pageBanner/hotelDetailBanner.jpg",
     userName: "PHƯỢT PRO",
     date: "10.07.2022",
     title: "Kinh nghiệm du lịch Hà Giang 2022 từ A đến Z: di chuyển, lưu trú, ăn chơi, đặc sản...",
@@ -511,7 +511,7 @@ export const newsData = [
   {
     id: "2",
     image: "/Images/newsCard/newsCard2.jpg",
-    banner: "/Images/placeDetailBanner.jpg",
+    banner: "/Images/pageBanner/placeDetailBanner.jpg",
     userName: "KHÁNH TRẦN",
     date: "10.07.2022",
     title: "Năm ngày lang thang Hà Giang - Cao Bằng",
@@ -521,7 +521,7 @@ export const newsData = [
   {
     id: "3",
     image: "/Images/newsCard/newsCard3.jpg",
-    banner: "/Images/hotelDetailBanner.jpg",
+    banner: "/Images/pageBanner/hotelDetailBanner.jpg",
     userName: "DẤU CHÂN",
     date: "10.07.2022",
     title: "Hoa đào nở muộn ở Hà Giang",
@@ -531,7 +531,7 @@ export const newsData = [
   {
     id: "4",
     image: "/Images/newsCard/newsCard4.jpg",
-    banner: "/Images/tourDetailBanner.jpg",
+    banner: "/Images/pageBanner/tourDetailBanner.jpg",
     userName: "HA GIANG TRAVEL",
     date: "10.07.2022",
     title: "Du xuân Hà Giang ở 5 bản làng nguyên sơ",

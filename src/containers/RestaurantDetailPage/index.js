@@ -13,37 +13,37 @@ import ReviewBox from "../../Atomic/organisms/ReviewBox";
 import SecondNav from "../../Atomic/organisms/SecondNav";
 
 const images = [
-    '/Images/hotelDetailBanner.jpg',
-    '/Images/placeDetailBanner.jpg',
-    '/Images/productDetailBanner.jpg',
-    '/Images/restaurantDetailBanner.jpg',
-    '/Images/tourDetailBanner.jpg',
+    '/Images/pageBanner/hotelDetailBanner.jpg',
+    '/Images/pageBanner/placeDetailBanner.jpg',
+    '/Images/pageBanner/productDetailBanner.jpg',
+    '/Images/pageBanner/restaurantDetailBanner.jpg',
+    '/Images/pageBanner/tourDetailBanner.jpg',
 ];
 const reviewData = [
     {
         stars: 4,
-        avatar: "/Images/avatar1.jpg",
+        avatar: "/Images/avatar/avatar1.jpg",
         account: "Admin",
         time: "April 03, 2016",
         content: "Sản phẩm rất tốt hơn cả mong đợi. Dịch vụ rất tuyệt vời, nếu có cơ hội tôi sẽ quay lại và ủng hộ vì sự chu đáo và nhiệt tình này",
     },
     {
         stars: 4,
-        avatar: "/Images/avatar2.jpg",
+        avatar: "/Images/avatar/avatar2.jpg",
         account: "Ahsan",
         time: "April 01, 2016",
         content: "Sản phẩm rất tốt hơn cả mong đợi. Dịch vụ rất tuyệt vời, nếu có cơ hội tôi sẽ quay lại và ủng hộ vì sự chu đáo và nhiệt tình này",
     },
     {
         stars: 5,
-        avatar: "/Images/avatar3.jpg",
+        avatar: "/Images/avatar/avatar3.jpg",
         account: "Sara",
         time: "March 31, 2016",
         content: "Sản phẩm rất tốt hơn cả mong đợi. Dịch vụ rất tuyệt vời, nếu có cơ hội tôi sẽ quay lại và ủng hộ vì sự chu đáo và nhiệt tình này",
     },
     {
         stars: 5,
-        avatar: "/Images/avatar1.jpg",
+        avatar: "/Images/avatar/avatar1.jpg",
         account: "Admin",
         time: "April 03, 2016",
         content: "Sản phẩm rất tốt hơn cả mong đợi. Dịch vụ rất tuyệt vời, nếu có cơ hội tôi sẽ quay lại và ủng hộ vì sự chu đáo và nhiệt tình này",

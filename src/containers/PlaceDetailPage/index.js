@@ -195,7 +195,7 @@ function PlaceDetailPage() {
                             </DescriptionBox>
                         </Stack>
                     </Grid>
-                    <Grid lg={4} md={4} sm={12} xs={12} item>
+                    <Grid item lg={4} md={4} sm={12} xs={12}>
                         <DetailBookingBox data={pageData} />
                     </Grid>
                 </Grid>
