@@ -101,7 +101,7 @@ function LoginDialog(props) {
                     <Typography color={"white"} className={classes.buttonTitle} noWrap> Đăng nhập với Google</Typography>
                 </SocialButton>
                 <Box sx={{ position: "relative" }}>
-                    <Typography fontStyle={"italic"} sx={{ position: "absolute", left: "42%", top: "-10px", bgcolor: "white", zIndex: 1, paddingX: 1 }}>Hoặc</Typography>
+                    <Typography sx={{ fontStyle: "italic", position: "absolute", left: "42%", top: "-10px", bgcolor: "white", zIndex: 1, paddingX: 1 }}>Hoặc</Typography>
                     <Divider sx={{ position: "absolute", left: 0, top: 0, right: 0 }} />
                 </Box>
                 <TextField label="Email" size='small' fullWidth type={"email"} InputProps={{ startAdornment: < MailOutlineIcon /> }} />
