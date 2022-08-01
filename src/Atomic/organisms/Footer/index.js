@@ -34,7 +34,8 @@ const Wrapper = styled(Box)(({ theme }) => ({
   display: "flex",
   flexDirection: "column",
   justifyContent: "space-between",
-  paddingX: theme.spacing(3) 
+  paddingTop: theme.spacing(8),
+  paddingBottom: theme.spacing(4),
 }));
 
 const LinkButton = styled(Link)(({ theme }) => ({
