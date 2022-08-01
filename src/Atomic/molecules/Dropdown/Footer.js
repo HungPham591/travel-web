@@ -35,7 +35,7 @@ export default function Dropdown({ values, children }) {
           width: "100%",
           display: "flex",
           justifyContent: "space-between",
-          backgroundColor: "rgba(255, 255, 255, 0.06)",
+          backgroundColor: "background.inputBase",
           color: "text.primary",
           opacity: "0.7",
         }}

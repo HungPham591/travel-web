@@ -11,7 +11,7 @@ export default function ProductSection({ content, data }) {
       </Box>
       <Box sx={{ mb: 3 }}>
         <Typography variant="h4">{content.title}</Typography>
-        <Typography variant="subtitle1" sx={{ fontWeight: 300, fontSize: 18 }}>
+        <Typography variant="subtitle1" sx={{ fontWeight: 300, fontSize: 18, color: "text.light" }}>
           {content.description}
         </Typography>
       </Box>

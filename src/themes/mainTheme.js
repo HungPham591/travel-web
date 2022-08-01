@@ -32,6 +32,7 @@ const theme = createTheme({
         background: {
             default: "#F8F8F8",
             main: "rgb(18, 25, 33, 0.3)",
+            light: "rgb(18, 25, 33, 0.1)",
             dark: "rgb(18, 25, 33, 0.5)",
             white: "#f8f8f8",
             inputBase: "rgba(255, 255, 255, 0.06)"
