@@ -2,7 +2,7 @@ import React from "react";
 import ItemCardNews from "../../molecules/ItemCardNews";
 import { Typography, Box, Link, Grid } from "@mui/material";
 import CenterDivider from "../../molecules/Divider/CenterDivider";
-import OvalButton from "../../atoms/Button/OvalButton";
+import OvalButton from "../../atoms/AdvancedButton/OvalButton";
 import { newsData } from "../../../api/fakeData";
 
 export default function NewsSection() {
@@ -29,7 +29,7 @@ export default function NewsSection() {
       <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
         <Link href="#">
           <Box sx={{ width: 150 }}>
-            <OvalButton value="Xem tất cả" />
+            <OvalButton>Xem tất cả</OvalButton>
           </Box>
         </Link>
       </Box>

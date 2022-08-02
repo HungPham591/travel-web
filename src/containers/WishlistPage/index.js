@@ -2,8 +2,8 @@ import React from "react";
 import { Container, Box, Grid } from "@mui/material";
 import HeroBanner from "../../Atomic/organisms/HeroBanner/ContainerPage";
 import ItemCardVertical from "../../Atomic/molecules/ItemCardVertical/WishListCard";
-import OvalButton from "../../Atomic/atoms/Button/OvalButton";
-import HelpperBox from "../../Atomic/organisms/HelpperBox";
+import OvalButton from "../../Atomic/atoms/AdvancedButton/OvalButton";
+import HelperBox from "../../Atomic/organisms/HelperBox";
 import { tourData } from "../../api/fakeData";
 
 function WishListPage() {
@@ -34,7 +34,7 @@ function WishListPage() {
       </Box>
 
       <Container sx={{ p: 8 }}>
-        <HelpperBox />
+        <HelperBox />
       </Container>
     </>
   );

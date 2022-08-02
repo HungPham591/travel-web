@@ -4,8 +4,8 @@ import HeroBanner from "../../Atomic/organisms/HeroBanner/ContainerPage";
 import FilterBox from "../../Atomic/organisms/FilterBox";
 import SearchBox from "../../Atomic/organisms/SearchBox";
 import ItemCardVertical from "../../Atomic/molecules/ItemCardVertical/ProductCard";
-import OvalButton from "../../Atomic/atoms/Button/OvalButton";
-import HelpperBox from "../../Atomic/organisms/HelpperBox";
+import OvalButton from "../../Atomic/atoms/AdvancedButton/OvalButton";
+import HelperBox from "../../Atomic/organisms/HelperBox";
 import ItemCardHorizontal from "../../Atomic/molecules/ItemCardHorizontal/ProductCard";
 import { productData } from "../../api/fakeData";
 
@@ -60,7 +60,7 @@ function ProductPage() {
       </Box>
 
       <Container sx={{ p: 8 }}>
-        <HelpperBox />
+        <HelperBox />
       </Container>
     </>
   );

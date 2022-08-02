@@ -1,6 +1,6 @@
 import React from "react";
 import { styled, Box, Typography, Container } from "@mui/material";
-import OvalButton from "../../atoms/Button/OvalButton";
+import OvalButton from "../../atoms/AdvancedButton/OvalButton";
 import AdventureDialog from "../IframeDialog";
 
 const Wrapper = styled(Box)(({ theme, image }) => ({
@@ -30,7 +30,7 @@ export default function ParallaxBox({ content }) {
               {content.description}
             </Typography>
             <Box sx={{ width: 207 }}>
-              <OvalButton value={content.button} onClick={handleClickOpen} />
+              <OvalButton onClick={handleClickOpen}>{content.button} </OvalButton>
             </Box>
           </Box>
           <AdventureDialog open={open} setOpen={setOpen} />

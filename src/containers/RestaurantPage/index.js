@@ -4,8 +4,8 @@ import HeroBanner from "../../Atomic/organisms/HeroBanner/ContainerPage";
 import FilterBox from "../../Atomic/organisms/FilterBox";
 import SearchBox from "../../Atomic/organisms/SearchBox";
 import ItemCardVertical from "../../Atomic/molecules/ItemCardVertical/RestaurantCard";
-import OvalButton from "../../Atomic/atoms/Button/OvalButton";
-import HelpperBox from "../../Atomic/organisms/HelpperBox";
+import OvalButton from "../../Atomic/atoms/AdvancedButton/OvalButton";
+import HelperBox from "../../Atomic/organisms/HelperBox";
 import ItemCardHorizontal from "../../Atomic/molecules/ItemCardHorizontal/RestaurantCard";
 import { restaurantData } from "../../api/fakeData";
 
@@ -53,14 +53,14 @@ function RestaurantPage() {
                   ))}
             </Grid>
             <Box sx={{ width: 134, mx: "auto", mt: 2 }}>
-              <OvalButton value="Xem thêm" />
+              <OvalButton>Xem thêm</OvalButton>
             </Box>
           </Box>
         </Container>
       </Box>
 
       <Container sx={{ p: 8 }}>
-        <HelpperBox />
+        <HelperBox />
       </Container>
     </>
   );

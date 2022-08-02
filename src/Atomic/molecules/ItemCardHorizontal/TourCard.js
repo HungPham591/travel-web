@@ -3,7 +3,6 @@ import { styled, Box, Typography, Link, Grid, Card } from "@mui/material";
 import Score from "../../molecules/Score";
 import HeartButton from "../../molecules/HeartButton/BlackBackground";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
-import AdvancedLink from "../../atoms/AdvancedLink";
 
 const ImageContainer = styled(Grid)(({ theme, image }) => ({
   backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(${image})`,
@@ -55,7 +54,7 @@ export default function ItemCardHorizontal({ data }) {
                 <HeartButton bgColor="rgb(18, 25, 33, 0.15)" color="#555555" />
               </Box>
               <Box sx={{ fontSize: 20, mb: 1 }}>
-                <AdvancedLink href={"/tour-detail/" + data.id} value={data.title} />
+                <Link href={"/tour-detail/" + data.id} sx={{ "&: hover": { color: "black" } }}>{data.title}</Link>
               </Box>
               <Typography sx={{ fontWeight: 300, color: "text.light", mt: 1 }} >
                 Mã tour:

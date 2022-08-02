@@ -2,9 +2,9 @@ import React from "react";
 import { styled, Box, Typography } from "@mui/material";
 import { Pagination, Keyboard, Mousewheel } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-import ItemCardVertical from "../../molecules/ItemCardVertical";
+import ItemCardVertical from "../../molecules/ItemCardVertical/AdventureCard";
 import CenterDivider from "../../molecules/Divider/CenterDivider";
-import OvalButton from "../../atoms/Button/OvalButton";
+import OvalButton from "../../atoms/AdvancedButton/OvalButton";
 import { placeData } from "../../../api/fakeData";
 
 // Import Swiper styles
@@ -84,7 +84,7 @@ export default function BeautySpotSection() {
 
       <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
         <Box sx={{  width: 134 }}>
-          <OvalButton value="Xem tất cả" />
+          <OvalButton>Xem tất cả</OvalButton>
         </Box>
       </Box>
     </Wrapper>

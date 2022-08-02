@@ -13,7 +13,7 @@ import {
   CardMedia,
 } from "@mui/material";
 import React from "react";
-import OvalButton from "../../Atomic/atoms/Button/OvalButton";
+import OvalButton from "../../Atomic/atoms/AdvancedButton/OvalButton";
 
 const Wrapper = styled("div")(({ theme }) => ({
   backgroundImage: `url("/Images/banner/hotelBanner.jpg")`,

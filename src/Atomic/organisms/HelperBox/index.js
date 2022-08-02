@@ -9,7 +9,7 @@ const Wrapper = styled(Grid)(({ theme }) => ({
   justifyContent: "space-around",
 }));
 
-export default function HelpperBox() {
+export default function HelperBox() {
   return (
     <Wrapper container spacing={3}>
       <Grid item lg={4} md={4} sm={12} xs={12}>

@@ -4,7 +4,6 @@ import Score from "../../molecules/Score";
 import HeartButton from "../../molecules/HeartButton/BlackBackground";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
-import AdvancedLink from "../../atoms/AdvancedLink";
 
 const ImageContainer = styled(Box)(({ theme, image }) => ({
   backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(${image})`,
@@ -61,10 +60,7 @@ export default function ItemCardVertical({ data }) {
             <Rating name="read-only" value="5" readOnly />
           </Box>
           <Box sx={{ fontSize: 20, mb: 1 }}>
-            <AdvancedLink
-              href={"/hotel-detail/" + data.id}
-              value={data.title}
-            />
+            <Link href={"/hotel-detail/" + data.id} sx={{ "&: hover": { color: "black" } }}>{data.title}</Link>
           </Box>
           <Box sx={{ mb: 2 }}>
                 <LocationOnIcon sx={{ fontSize: 13, mr: 1 }} />

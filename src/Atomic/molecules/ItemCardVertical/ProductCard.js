@@ -9,7 +9,6 @@ import {
 import Score from "../../molecules/Score";
 import HeartButton from "../../molecules/HeartButton/BlackBackground";
 import VisibilityIcon from "@mui/icons-material/Visibility";
-import AdvancedLink from "../../atoms/AdvancedLink";
 
 const ImageContainer = styled(Box)(({ theme, image }) => ({
   backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(${image})`,
@@ -63,10 +62,7 @@ export default function ItemCardVertical({ data }) {
       <Box>
         <Box sx={{ height: 300, p: 3 }}>
           <Box sx={{ fontSize: 20, mb: 1 }}>
-            <AdvancedLink
-              href={"/product-detail/" + data.id}
-              value={data.title}
-            />
+            <Link href={"/product-detail/" + data.id} sx={{ "&: hover": { color: "black" } }}>{data.title}</Link>
           </Box>
           <Typography variant="body1" sx={{ fontWeight: "300", pb: 1 }}>
                 {data.description}

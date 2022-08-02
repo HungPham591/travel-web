@@ -8,7 +8,7 @@ import PhoneIphoneIcon from "@mui/icons-material/PhoneIphone";
 import EmailIcon from "@mui/icons-material/Email";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
-import Dropdown from "../../molecules/Dropdown/Footer";
+import FooterDropdown from "../../molecules/Dropdown/FooterDropdown";
 import {
   styled,
   Typography,
@@ -201,14 +201,14 @@ export default function Footer() {
         <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 3 }}>
           <Box sx={{ display: "flex", gap: 1 }}>
             <Box sx={{ display: "flex"}}>
-              <Dropdown values={selectValue.language}>
+              <FooterDropdown values={selectValue.language}>
                 <LanguageIcon sx={{ fontSize: 20, color: "white" }} />
-              </Dropdown>
+              </FooterDropdown>
             </Box>
             <Box sx={{ display: "flex" }}>
-              <Dropdown values={selectValue.unit}>
+              <FooterDropdown values={selectValue.unit}>
                 <KeyboardArrowDownIcon sx={{ fontSize: 20, color: "white" }} />
-              </Dropdown>
+              </FooterDropdown>
             </Box>
             <Box sx={{ width: 146 }}>
               <CardMedia image="Images/payment.svg" component="img" alt="Payment Icon" />

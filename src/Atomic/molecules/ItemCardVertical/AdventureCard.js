@@ -9,10 +9,9 @@ import {
 } from "@mui/material";
 import HahaIcon from "../../../icons/hahaIcon";
 import ShareIcon from "@mui/icons-material/Share";
-import Score from "../../molecules/Score";
-import OvalButton from "../../atoms/Button/OvalButton";
-import HeartButton from "../../molecules/HeartButton/BlackBackground";
-import AdvancedLink from "../../atoms/AdvancedLink";
+import Score from "../Score";
+import OvalButton from "../../atoms/AdvancedButton/OvalButton";
+import HeartButton from "../HeartButton/BlackBackground";
 
 const ImageContainer = styled(Box)(({ theme, image }) => ({
   backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(${image})`,
@@ -73,14 +72,14 @@ export default function ItemCardVertical({ data }) {
       </ImageContainer>
       <CardContent sx={{ m: 2, height: 280 }}>
         <Box sx={{ fontSize: 20, mb: 1 }}>
-          <AdvancedLink href={"/place-detail/" + data.id} value={data.title} />
+          <Link href={"/place-detail/" + data.id} sx={{ "&: hover": { color: "black" } }}>{data.title}</Link>
         </Box>
         <Typography variant="body1" sx={{ color: "text.main", fontWeight: 400 }}>
           {data.description}
         </Typography>
         <Link href={"/place-detail/" + data.id}>
           <Box sx={{ width: 142 }}>
-            <OvalButton value="Tham quan" />
+            <OvalButton>Tham quan</OvalButton>
           </Box>
         </Link>
       </CardContent>

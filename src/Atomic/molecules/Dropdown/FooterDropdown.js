@@ -10,7 +10,7 @@ const NewPopper = styled(Popper)(({ theme }) => ({
 }));
 
 
-export default function Dropdown({ values, children }) {
+export default function FooterDropdown({ values, children }) {
   const [toggle, setToggle] = useState(true);
   const [selected, setSelected] = useState(values[0]);
   const [anchorEl, setAnchorEl] = useState(null);

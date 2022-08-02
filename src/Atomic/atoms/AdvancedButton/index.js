@@ -4,21 +4,22 @@ import { styled, Button } from "@mui/material";
 const NewButton = styled(Button)(({ theme }) => ({
   backgroundColor: theme.palette.secondary.main,
   fontWeight: theme.typography.fontWeightMedium,
-  color: theme.palette.common.white,
-  borderRadius: theme.spacing(4),
+  borderRadius: theme.shape.borderRadius,
   marginTop: theme.spacing(5),
   padding: theme.spacing(1),
   width: "inherit",
+  color: theme.palette.common.white,
   "&:hover": {
-    backgroundColor: theme.palette.common.yellow,
-    color: theme.palette.text.main,
+    backgroundColor: theme.palette.primary.main,
   },
 }));
 
-export default function OvalButton({ value, onClick }) {
+export default function AdvancedButton(props) {
+  const { children } = props;
+
   return (
-      <NewButton onClick={onClick}>
-        {value}
+      <NewButton {...props}>
+        {children}
       </NewButton>
   );
 }

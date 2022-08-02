@@ -4,10 +4,10 @@ import HeroBanner from "../../Atomic/organisms/HeroBanner/ContainerPage";
 import FilterBox from "../../Atomic/organisms/FilterBox";
 import SearchBox from "../../Atomic/organisms/SearchBox";
 import ItemCardVertical from "../../Atomic/molecules/ItemCardVertical/HotelCard";
-import OvalButton from "../../Atomic/atoms/Button/OvalButton";
+import OvalButton from "../../Atomic/atoms/AdvancedButton/OvalButton";
 import ImageBanner from "../../Atomic/organisms/ImageBanner";
 import BeautySpotSection from "../../Atomic/organisms/BeautySpotSection";
-import HelpperBox from "../../Atomic/organisms/HelpperBox";
+import HelperBox from "../../Atomic/organisms/HelperBox";
 import ItemCardHorizontal from "../../Atomic/molecules/ItemCardHorizontal/HotelCard";
 import { hotelData } from "../../api/fakeData";
 
@@ -71,7 +71,7 @@ function HotelPage() {
       </Box>
 
       <Container sx={{ p: 8 }}>
-        <HelpperBox />
+        <HelperBox />
       </Container>
     </>
   );

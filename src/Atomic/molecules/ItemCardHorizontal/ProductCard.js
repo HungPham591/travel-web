@@ -2,7 +2,6 @@ import React from "react";
 import { styled, Box, Typography, Link, Grid, Card } from "@mui/material";
 import Score from "../../molecules/Score";
 import HeartButton from "../../molecules/HeartButton/BlackBackground";
-import AdvancedLink from "../../atoms/AdvancedLink";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 
 const ImageContainer = styled(Grid)(({ theme, image }) => ({
@@ -55,7 +54,7 @@ export default function ItemCardHorizontal({ data }) {
                 <HeartButton bgColor="rgb(18, 25, 33, 0.15)" color="#555555" />
               </Box>
               <Box sx={{ fontSize: 20, mb: 1 }}>
-                <AdvancedLink href={"/product-detail/" + data.id} value={data.title} />
+                <Link href={"/product-detail/" + data.id} sx={{ "&: hover": { color: "black" } }}>{data.title}</Link>
               </Box>
               <Typography variant="body1" sx={{ fontWeight: "300", pb: 1 }}>
                 {data.description}

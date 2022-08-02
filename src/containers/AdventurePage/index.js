@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { Typography, Grid, Box, Link, Container, styled } from "@mui/material";
-import RectangleButton from "../../Atomic/atoms/Button";
+import AdvancedButton from "../../Atomic/atoms/AdvancedButton";
 import FilterBox from "../../Atomic/organisms/FilterBox";
 import SearchBox from "../../Atomic/organisms/SearchBox";
-import ItemCardVertical from "../../Atomic/molecules/ItemCardVertical";
+import ItemCardVertical from "../../Atomic/molecules/ItemCardVertical/AdventureCard";
 import ParallaxBox from "../../Atomic/organisms/ParallaxBox";
 import ImageBanner from "../../Atomic/organisms/ImageBanner";
-import OvalButton from "../../Atomic/atoms/Button/OvalButton";
+import OvalButton from "../../Atomic/atoms/AdvancedButton/OvalButton";
 import ProductSection from "../../Atomic/organisms/ProductSection";
 import ItemCardHorizontal from "../../Atomic/molecules/ItemCardHorizontal/AdventureCard";
 import { placeData, tourData } from "../../api/fakeData";
@@ -108,7 +108,7 @@ function AdventurePage() {
               </Typography>
               <Link href="/place-detail">
                 <Box sx={{ width: 180 }}>
-                  <RectangleButton value="Khám phá ngay!" />
+                  <AdvancedButton>Khám phá ngay!</AdvancedButton>
                 </Box>
               </Link>
             </Container>
@@ -144,7 +144,7 @@ function AdventurePage() {
                     ))}
               </Grid>
               <Box sx={{ width: 134, mt: 3, m: "auto" }}>
-                <OvalButton value="Xem thêm" />
+                <OvalButton>Xem thêm</OvalButton>
               </Box>
             </Box>
 
