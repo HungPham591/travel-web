@@ -48,7 +48,7 @@ const LinkButton = styled(Link)(({ theme }) => ({
     color: theme.palette.secondary.main,
     "& .arrow": {
       display: "inline",
-      fontSize: theme.typography.h7.fontSize,
+      // fontSize: theme.typography.h7.fontSize,
       marginLeft: theme.spacing(1),
     },
   },
@@ -200,7 +200,7 @@ export default function Footer() {
 
         <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 3 }}>
           <Box sx={{ display: "flex", gap: 1 }}>
-            <Box sx={{ display: "flex"}}>
+            <Box sx={{ display: "flex" }}>
               <FooterDropdown values={selectValue.language}>
                 <LanguageIcon sx={{ fontSize: 20, color: "white" }} />
               </FooterDropdown>

@@ -61,7 +61,7 @@ function DetailCheckoutBox(props) {
                     </PurchaseButton>
                 </Grid>
                 <Grid item xl={12} lg={12} md={12} sm={12} xs={12} >
-                    <Typography sx={{ textAlign: "center" }} variant="subtitle1">Bước này không có trả phí</Typography>
+                    <Typography sx={{ textAlign: "center" }} variant="subtitle2">Bước này không có trả phí</Typography>
                 </Grid>
             </Grid>
         </StickyBox>

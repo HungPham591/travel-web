@@ -8,11 +8,11 @@ import MuiGrid from '@mui/material/Grid';
 import MuiTypography from '@mui/material/Typography';
 import { useEffect, useState } from 'react';
 import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom';
-import AllProjectRoutes from '../../../routes/AllProjectRoutes';
-import BackendRoutes from '../../../routes/BackendRoutes';
+import allProjectRoutes from '../../../routes/allProjectRoutes';
+import backendRoutes from '../../../routes/backendRoutes';
 
 const CustomAppBar = styled(MuiAppBar)(
-    ({ theme, show, active }) => ({
+    ({ show, active }) => ({
         ...(!show && {
             transition: "none",
             color: "white",
@@ -25,7 +25,7 @@ const CustomAppBar = styled(MuiAppBar)(
     })
 )
 const AppBarTypography = styled(MuiTypography)(
-    ({ theme, show, display }) => ({
+    ({ show, display }) => ({
         whiteSpace: "nowrap",
         ...(!show && {
             color: "white"
@@ -45,7 +45,7 @@ const AppBarMenuTypography = styled(MuiTypography)(
     })
 )
 const CustomGrid = styled(MuiGrid)(
-    ({ theme, display, center }) => ({
+    ({ display, center }) => ({
         display: "flex",
         ...(display === 0 && {
             display: 'none'
@@ -59,18 +59,18 @@ const CustomGrid = styled(MuiGrid)(
     })
 )
 const MenuButton = styled(CustomGrid)(
-    ({ theme }) => ({
+    () => ({
         alignItems: 'center',
     })
 )
 const LogoBox = styled(Box)(
-    ({ theme }) => ({
+    () => ({
         display: "flex",
         alignItems: "center",
     })
 )
 const CustomIconButton = styled(IconButton)(
-    ({ theme, show, display }) => ({
+    ({ show, display }) => ({
         ...(!show && {
             color: "white"
         }),
@@ -102,7 +102,7 @@ function Header(props) {
     };
 
     useEffect(() => {
-        if ((location.pathname !== '/map' && location.pathname !== '/login' && AllProjectRoutes.map(value => value.path).includes(location.pathname)) || location.pathname.includes('detail')) {
+        if ((location.pathname !== '/map' && location.pathname !== '/login' && allProjectRoutes.map(value => value.path).includes(location.pathname)) || location.pathname.includes('detail')) {
             window.addEventListener('scroll', handleScroll, { passive: true });
             handleScroll();
             return () => window.removeEventListener('scroll', handleScroll);
@@ -148,7 +148,7 @@ function Header(props) {
                     <Grid item lg={9} md={9} sm={3} xs={3} sx={{ display: "flex", alignItems: "center", justifyContent: "end" }} >
                         <Stack direction="row" sx={{ alignItems: "center" }} spacing={2}>
                             {
-                                BackendRoutes.map((value, index) => {
+                                backendRoutes.map((value, index) => {
                                     if (value.element?.length === 0) {
                                         return (
                                             <AppBarTypography key={index} display={!isMedium ? 1 : 0} show={showAppbar ? 1 : 0}>

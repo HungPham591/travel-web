@@ -1,6 +1,6 @@
 import { createTheme } from "@mui/material/styles";
 
-const theme = createTheme({
+const mainTheme = createTheme({
     palette: {
         primary: {
             main: '#0054A6',
@@ -27,7 +27,7 @@ const theme = createTheme({
             grey: "#999999",
             black: "#121921",
             gray: "#e1e1e1",
-            divider :"#ededed"
+            divider: "#ededed"
         },
         background: {
             default: "#F8F8F8",
@@ -44,7 +44,6 @@ const theme = createTheme({
         fontWeightLight: 500,
         allVariants: {
             fontSize: "14px",
-            // color: "#555555"
         },
         body1: {
             color: "#555555",
@@ -53,14 +52,6 @@ const theme = createTheme({
         },
         button: {
             textTransform: 'none'
-        },
-        subtitle1: {
-            fontSize: "12px",
-            color: "#999999",
-        },
-        subtitle2: {
-            fontSize: "13px",
-            color: "#999999",
         },
         h1: {
             fontSize: '42px',
@@ -81,11 +72,7 @@ const theme = createTheme({
             color: "#333333"
         },
         h6: {
-            fontSize: "21px",
-            color: "#555555"
-        },
-        h7: {
-            fontSize: "18px",
+            fontSize: "19px",
             color: "#555555"
         },
     },
@@ -103,25 +90,12 @@ const theme = createTheme({
         halfBorderRadius: "0 5px 5px 0",
         border: "2px solid rgb(18, 25, 33, 0.1)"
     },
-    transitions: {
-        duration: {
-            standard: 300
-        }
-    },
     components: {
-        // MuiContainer: {
-        //     styleOverrides: {
-        //         maxWidthLg: "1440px",
-        //     },
-        // },
         MuiDrawer: {
             styleOverrides: {
                 paper: {
                     backgroundColor: "#F3F3F3"
                 },
-                root: {
-                    // opacity: 0.3
-                }
             }
         },
         MuiOutlinedInput: {
@@ -188,4 +162,4 @@ const theme = createTheme({
 });
 
 
-export default theme;
+export default mainTheme;

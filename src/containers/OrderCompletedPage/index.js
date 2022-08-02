@@ -97,7 +97,7 @@ function CartPage() {
                     ))}
                 </Stepper>
                 <Typography sx={{ textAlign: "center", color: "white", mt: 2, mb: 1 }} variant='h4' >Hoàn tất đặt hàng!</Typography>
-                <Typography sx={{ textAlign: "center", color: "white" }}>Bạn sẽ nhận được email xác nhận tại mail@example.com</Typography>
+                <Typography sx={{ textAlign: "center", color: "white" }} >Bạn sẽ nhận được email xác nhận tại mail@example.com</Typography>
             </Container>
         </HeroImage>
     )

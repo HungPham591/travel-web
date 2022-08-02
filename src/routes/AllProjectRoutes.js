@@ -19,7 +19,7 @@ import TourDetailPage from "../containers/TourDetailPage";
 import TourPage from "../containers/TourPage";
 import WishlistPage from "../containers/WishlistPage";
 
-const AllProjectRoutes = [
+const allProjectRoutes = [
     {
         path: '/cart',
         element: <CartPage />
@@ -107,4 +107,4 @@ const AllProjectRoutes = [
     },
 ];
 
-export default AllProjectRoutes;
+export default allProjectRoutes;

@@ -2,7 +2,7 @@ import { Box, Stack, styled, Typography } from '@mui/material';
 import React from 'react';
 
 const CustomImage = styled("img")(
-    ({ theme, image, islast }) => ({
+    ({ image, islast }) => ({
         width: "100%",
         height: "100%",
         backgroundSize: "cover",
@@ -16,7 +16,7 @@ const CustomImage = styled("img")(
     })
 )
 const TitleBox = styled(Box)(
-    ({ theme, islast }) => ({
+    ({ islast }) => ({
         position: "absolute",
         left: 0,
         right: 0,
@@ -32,7 +32,7 @@ const TitleBox = styled(Box)(
     })
 )
 const ImageContainer = styled(Box)(
-    ({ theme }) => ({
+    () => ({
         width: "120px",
         height: "120px",
         cursor: "pointer",
@@ -60,7 +60,7 @@ function ImageGridBox(props) {
                             >
                                 <CustomImage className='image' image={value} islast={index === maxLength - 1 ? 1 : 0} />
                                 <TitleBox islast={index === maxLength - 1 ? 1 : 0}>
-                                    <Typography fontSize={"24px"} color={"white"}>+{images.length - maxLength}</Typography>
+                                    <Typography sx={{ fontSize: "24px", color: "white" }}>+{images.length - maxLength}</Typography>
                                 </TitleBox>
                             </ImageContainer>
                         )

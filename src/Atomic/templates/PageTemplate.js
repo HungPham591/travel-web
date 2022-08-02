@@ -15,7 +15,7 @@ function PageTemplate(props) {
     return (
         <>
             <LoginDialog open={loginDialogOpen} setOpen={setLoginDialogOpen} />
-            <Box minHeight={"100vh"} >
+            <Box sx={{ minHeight: '100vh' }}>
                 <Drawer open={drawerOpen} setOpen={setDrawerOpen} />
                 <Box>
                     <Header setDrawerOpen={setDrawerOpen} setLoginDialogOpen={setLoginDialogOpen} />

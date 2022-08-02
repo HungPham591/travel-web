@@ -11,14 +11,14 @@ import ListItemText from '@mui/material/ListItemText';
 import { withStyles } from '@mui/styles';
 import React, { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import BackendRoutes from '../../../routes/BackendRoutes';
+import backendRoutes from '../../../routes/backendRoutes';
 
 
 const anchor = 'left';
 
 
 const CustomListItemIcon = styled(ListItemIcon)(
-    ({ theme, display }) => ({
+    ({ display }) => ({
         display: "flex",
         justifyContent: "flex-end",
         ...(!display && {
@@ -27,7 +27,7 @@ const CustomListItemIcon = styled(ListItemIcon)(
     })
 )
 const StyledDrawer = styled(Drawer)(
-    ({ theme }) => ({
+    () => ({
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-between"
@@ -101,7 +101,7 @@ function CustomDrawer(props) {
                     <Divider />
                     <Box>
                         {
-                            BackendRoutes.map((value, index) => {
+                            backendRoutes.map((value, index) => {
                                 return (
                                     <Box key={index}>
                                         <ListItem disablePadding>

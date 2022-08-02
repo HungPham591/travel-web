@@ -14,7 +14,7 @@ const reviewValue = [
     { label: "4", value: 4 },
     { label: '5', value: 5 },
 ]
-function LeaveReviewBox(props) {
+function LeaveReviewBox() {
     return (
         <Grid container spacing={2}>
             <Grid item lg={6} md={6} xs={12} sm={6}>

@@ -1,4 +1,4 @@
-const BackendRoutes = [
+const backendRoutes = [
     {
         label: "Trang chủ",
         path: '/',
@@ -63,4 +63,4 @@ const BackendRoutes = [
     },
 ];
 
-export default BackendRoutes;
+export default backendRoutes;

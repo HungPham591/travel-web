@@ -213,7 +213,7 @@ function MapPage(props) {
                         </AccordionSummary>
                         <Divider />
                         <AccordionDetails>
-                            <Typography variant='h7' sx={{ fontWeight: 500 }}>Danh mục</Typography>
+                            <Typography variant='h6' sx={{ fontWeight: 500 }}>Danh mục</Typography>
                             <Grid container sx={{ mb: 2 }} >
                                 <Grid item sx={{ display: "flex", flexDirection: "column" }} lg={6} md={6} sm={6} xs={12} >
                                     <FormControlLabel control={<Checkbox defaultChecked />} label="Tất cả (945)" />
@@ -228,7 +228,7 @@ function MapPage(props) {
 
                                 </Grid>
                             </Grid>
-                            <Typography variant='h7' sx={{ mb: 2 }}>Khoảng cách</Typography>
+                            <Typography variant='h6' sx={{ mb: 2 }}>Khoảng cách</Typography>
                             <Box>
                                 <Typography sx={{ display: "inline" }}>Bán kính xung quanh địa điểm đã chọn </Typography>
                                 <Typography sx={{ fontWeight: 600, color: 'secondary.main', display: "inline" }} >{sliderValue}</Typography>

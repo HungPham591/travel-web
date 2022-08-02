@@ -131,7 +131,7 @@ const heroBanner = () => {
         <HeroImage image="https://prototype.hahalolo.com/hagiang/img/pattern_1.svg">
             <Container>
                 <Stepper activeStep={0} connector={<ColorlibConnector />} alternativeLabel>
-                    {steps.map((label, index) => (
+                    {steps.map(label => (
                         <Step key={label}>
                             <StepLabel
                                 StepIconComponent={ColorlibStepIcon}
@@ -160,7 +160,7 @@ const tableData = [
         ),
         discount: "0%",
         price: "24,71$",
-        actions: <IconButton><DeleteIcon sx={{ color: 'secondary.main' }} /></IconButton>
+        actions: <IconButton><DeleteIcon sx={{ color: theme => theme.palette.secondary.main }} /></IconButton>
     },
     {
         item: (
@@ -171,7 +171,18 @@ const tableData = [
         ),
         discount: "0%",
         price: "24,71$",
-        actions: <IconButton><DeleteIcon sx={{ color: 'secondary.main' }} /></IconButton>
+        actions: <IconButton><DeleteIcon sx={{ color: theme => theme.palette.secondary.main }} /></IconButton>
+    },
+    {
+        item: (
+            <Box sx={{ display: "flex", alignItems: theme => theme.palette.secondary.main }}>
+                <CustomAvatar >A</CustomAvatar>
+                <Typography >Persius delenit has cu</Typography>
+            </Box>
+        ),
+        discount: "0%",
+        price: "24,71$",
+        actions: <IconButton><DeleteIcon sx={{ color: theme => theme.palette.secondary.main }} /></IconButton>
     },
     {
         item: (
@@ -182,18 +193,7 @@ const tableData = [
         ),
         discount: "0%",
         price: "24,71$",
-        actions: <IconButton><DeleteIcon sx={{ color: 'secondary.main' }} /></IconButton>
-    },
-    {
-        item: (
-            <Box sx={{ display: "flex", alignItems: "center" }}>
-                <CustomAvatar >A</CustomAvatar>
-                <Typography >Persius delenit has cu</Typography>
-            </Box>
-        ),
-        discount: "0%",
-        price: "24,71$",
-        actions: <IconButton><DeleteIcon sx={{ color: 'secondary.main' }} /></IconButton>
+        actions: <IconButton><DeleteIcon sx={{ color: theme => theme.palette.secondary.main }} /></IconButton>
     }
 ];
 const tableCellAlign = [
@@ -267,9 +267,9 @@ function CartPage() {
                                     variant="outlined"
                                     size="small"
                                 />
-                                <Button variant='outlined' sx={{ whiteSpace: "nowrap", color: 'common.grey', borderColor: 'common.grey' }}>Áp dụng mã giảm giá</Button>
+                                <Button variant='outlined' sx={{ whiteSpace: "nowrap", color: theme => theme.palette.common.grey, borderColor: theme => theme.palette.common.grey }}>Áp dụng mã giảm giá</Button>
                             </Box>
-                            <Button variant='outlined' sx={{ color: 'common.grey', borderColor: 'common.grey' }}>Cập nhật giỏ hàng</Button>
+                            <Button variant='outlined' sx={{ color: theme => theme.palette.common.grey, borderColor: theme => theme.palette.common.grey }}>Cập nhật giỏ hàng</Button>
 
                         </Box>
                     </Grid>

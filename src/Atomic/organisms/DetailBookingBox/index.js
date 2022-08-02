@@ -207,15 +207,15 @@ function DetailBookingBox(props) {
                             </AddToWishListButton>
                         </Grid>
                         <Grid item xs={12}>
-                            <Typography textAlign="center" variant="subtitle1">Bước này không có trả phí</Typography>
+                            <Typography textAlign="center" variant="subtitle2">Bước này không có trả phí</Typography>
                         </Grid>
                     </Grid>
                 </Grid>
             </StickyBoxBody>
             <Stack sx={{ paddingY: 2, justifyContent: "center" }} direction="row" spacing={2}>
-                <Button variant='outlined' sx={{ borderRadius: "50px", color: 'common.facebook', borderColor: 'common.facebook' }}><FacebookIcon />Share</Button>
-                <Button variant='outlined' sx={{ borderRadius: "50px", color: 'common.twitter', borderColor: 'common.twitter' }}><TwitterIcon />Share</Button>
-                <Button variant='outlined' sx={{ borderRadius: "50px", color: 'common.google', borderColor: 'common.google' }}><GoogleIcon />Share</Button>
+                <Button variant='outlined' sx={{ borderRadius: "50px", color: theme => theme.palette.common.facebook, borderColor: theme => theme.palette.common.facebook }}><FacebookIcon />Share</Button>
+                <Button variant='outlined' sx={{ borderRadius: "50px", color: theme => theme.palette.common.twitter, borderColor: theme => theme.palette.common.twitter }}><TwitterIcon />Share</Button>
+                <Button variant='outlined' sx={{ borderRadius: "50px", color: theme => theme.palette.common.google, borderColor: theme => theme.palette.common.google }}><GoogleIcon />Share</Button>
             </Stack>
         </StickyBox >
     )

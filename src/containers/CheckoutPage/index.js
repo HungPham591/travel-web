@@ -143,7 +143,7 @@ const detailBox = (index, title, children) => {
                 </DetailBoxTitleCircle>
                 <Box>
                     <Typography variant='h5' >{title}</Typography>
-                    <Typography variant='subtitle1'>Thông tin của bạn được giữ an toàn.</Typography>
+                    <Typography >Thông tin của bạn được giữ an toàn.</Typography>
                 </Box>
             </DetailBoxHeader>
             <Stack flexDirection={"row"}>
@@ -166,7 +166,7 @@ function CheckoutPage() {
                 <Grid container spacing={3}>
                     <Grid item lg={8} md={8} sm={12} xs={12}>
                         <Stack sx={{ gap: 3 }} >
-                            <Box sx={{ backgroundColor: "background.default", borderRadius: 1, padding: 2 }}>
+                            <Box sx={{ backgroundColor: theme => theme.palette.background.default, borderRadius: 1, padding: 2 }}>
                                 <Typography sx={{ display: "inline" }} >Đã có tài khoản? </Typography>
                                 <Link sx={{ display: "inline", fontSize: "14px" }} >Nhấp vào đây để đăng nhập</Link>
                             </Box>
@@ -225,7 +225,7 @@ function CheckoutPage() {
                                                 <TextField label="Mã bảo vệ" placeholder='CCV' size='small' variant='outlined' InputLabelProps={{ shrink: true }} />
                                                 <Box sx={{ display: "inline" }} >
                                                     <img src={'/Images/checkout/IconCcv.gif'} alt="ccv" style={{ marginLeft: "20px" }} />
-                                                    <Typography sx={{ fontSize: "12px", color: "#555555", display: "inline-block" }} >3 số cuối</Typography>
+                                                    <Typography sx={{ display: "inline-block" }} >3 số cuối</Typography>
                                                 </Box>
                                             </Grid>
                                             <Grid item lg={12} md={12} sm={12} xs={12} >
@@ -282,7 +282,7 @@ function CheckoutPage() {
                             <Divider />
                             <Box>
                                 <Typography variant='h5' sx={{ mb: 1 }}>Chính sách hủy đơn hàng</Typography>
-                                <Typography variant='body1'>Chúng tôi luôn tận tâm mang đến trải nghiệm khách hàng chất lượng cao và những sản phẩm tốt nhất cho khách hàng. Để tạo ra trải nghiệm tích cực cho khách hàng, chúng tôi áp dụng chính sách hủy đơn hàng. Người bán được phép tranh chấp về các vi phạm này trong vòng 3 ngày làm việc sau khi có tuyên bố vi phạm.</Typography>
+                                <Typography >Chúng tôi luôn tận tâm mang đến trải nghiệm khách hàng chất lượng cao và những sản phẩm tốt nhất cho khách hàng. Để tạo ra trải nghiệm tích cực cho khách hàng, chúng tôi áp dụng chính sách hủy đơn hàng. Người bán được phép tranh chấp về các vi phạm này trong vòng 3 ngày làm việc sau khi có tuyên bố vi phạm.</Typography>
                             </Box>
                         </Stack>
                     </Grid>

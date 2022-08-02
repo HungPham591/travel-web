@@ -107,14 +107,14 @@ function LoginDialog(props) {
                 <TextField label="Email" size='small' fullWidth type={"email"} InputProps={{ startAdornment: < MailOutlineIcon /> }} />
                 <TextField label="Mật khẩu" size='small' fullWidth type={"password"} InputProps={{ startAdornment: < LockOpenIcon /> }} />
                 <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center" }} >
-                    <FormControlLabel color='common.grey' control={<Checkbox />} label="Lưu mật khẩu" />
-                    <Typography><Link variant='subtitle2' color={"common.grey"} onClick={handleForgotPasswordClick}>Quên mật khẩu?</Link ></Typography>
+                    <FormControlLabel sx={{ color: theme => theme.palette.common.grey }} control={<Checkbox />} label="Lưu mật khẩu" />
+                    <Typography><Link variant='subtitle2' sx={{ color: theme => theme.palette.common.grey }} onClick={handleForgotPasswordClick}>Quên mật khẩu?</Link ></Typography>
                 </Box>
                 <LoginButton variant='contained' fullWidth>Đăng nhập</LoginButton>
                 <Box sx={{ textAlign: "center" }}>
                     <Typography sx={{ display: "inline" }}  >Không có tài khoản? </Typography>
                     <RouterLink to="/register" onClick={handleClose}>
-                        <Typography sx={{ display: "inline" }} color={"secondary.main"}>Đăng ký</Typography>
+                        <Typography sx={{ display: "inline", color: theme => theme.palette.secondary.main }}>Đăng ký</Typography>
                     </RouterLink>
                 </Box>
             </SignInFormBox>

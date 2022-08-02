@@ -30,7 +30,7 @@ const linearProcessWidthLabel = (value, label) => {
     return (
         <Box sx={{ display: "flex", gap: 2 }} >
             <LinearProgress style={{ height: 15, borderRadius: 2, flex: 1 }} variant="determinate" value={value} />
-            <Typography sx={{ width: "50px" }} variant="body2" color="text.secondary" noWrap>
+            <Typography sx={{ width: "50px", color: (theme) => theme.palette.text.secondary }} variant="body2" noWrap>
                 {label}
             </Typography>
         </Box>
@@ -49,7 +49,6 @@ function comment(imageUrl, star, time, content) {
             >
                 <Rating value={star} size="small" readOnly />
                 <Typography
-                    variant='subtitle1'
                     sx={{ fontStyle: "italic", mb: 1 }}
                 >
                     {time}
@@ -70,7 +69,7 @@ function ReviewBox(props) {
                 <Grid lg={3} md={3} xs={12} sm={12} item>
                     <Box sx={{
                         borderRadius: 1,
-                        backgroundColor: "primary.main",
+                        backgroundColor: (theme) => theme.palette.primary.main,
                         width: "100%",
                         height: "130px",
                         color: "white",
@@ -80,9 +79,9 @@ function ReviewBox(props) {
                     }}
                     >
                         <Box>
-                            <Typography variant='h1' sx={{ fontWeight: "bold", textAlign: "center", lineHeight: 1, color: "white" }} >8.5</Typography>
-                            <Typography sx={{ textAlign: "center", color: "white" }} >Tuyệt Vời</Typography>
-                            <Typography sx={{ textAlign: "center", color: "white" }} >Dựa trên {reviews?.length} đánh giá</Typography>
+                            <Typography variant='h1' sx={{ fontWeight: "bold", textAlign: "center", lineHeight: 1, color: "white" }}>8.5</Typography>
+                            <Typography sx={{ textAlign: "center", color: "white" }}>Tuyệt Vời</Typography>
+                            <Typography sx={{ textAlign: "center", color: "white" }}>Dựa trên {reviews?.length} đánh giá</Typography>
                         </Box>
                     </Box>
                 </Grid>
