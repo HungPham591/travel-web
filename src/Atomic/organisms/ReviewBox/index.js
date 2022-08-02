@@ -28,9 +28,9 @@ const Avatar = styled('img')(
 
 const linearProcessWidthLabel = (value, label) => {
     return (
-        <Box display={"flex"} gap={2}>
+        <Box sx={{ display: "flex", gap: 2 }} >
             <LinearProgress style={{ height: 15, borderRadius: 2, flex: 1 }} variant="determinate" value={value} />
-            <Typography width={"50px"} variant="body2" color="text.secondary" noWrap>
+            <Typography sx={{ width: "50px" }} variant="body2" color="text.secondary" noWrap>
                 {label}
             </Typography>
         </Box>
@@ -50,8 +50,7 @@ function comment(imageUrl, star, time, content) {
                 <Rating value={star} size="small" readOnly />
                 <Typography
                     variant='subtitle1'
-                    fontStyle={"italic"}
-                    marginBottom={1}
+                    sx={{ fontStyle: "italic", mb: 1 }}
                 >
                     {time}
                 </Typography>
@@ -66,7 +65,7 @@ function ReviewBox(props) {
     const { reviews } = props;
     const getRandomInt = () => Math.floor(Math.random() * (100 - 0 + 1));
     return (
-        <Stack gap={3}>
+        <Stack sx={{ gap: 3 }} >
             <Grid spacing={2} container>
                 <Grid lg={3} md={3} xs={12} sm={12} item>
                     <Box sx={{
@@ -81,13 +80,13 @@ function ReviewBox(props) {
                     }}
                     >
                         <Box>
-                            <Typography variant='h1' fontWeight={"bold"} textAlign={"center"} lineHeight={1} color={"white"}>8.5</Typography>
-                            <Typography textAlign={"center"} color={"white"}>Tuyệt Vời</Typography>
-                            <Typography textAlign={"center"} color={"white"}>Dựa trên {reviews?.length} đánh giá</Typography>
+                            <Typography variant='h1' sx={{ fontWeight: "bold", textAlign: "center", lineHeight: 1, color: "white" }} >8.5</Typography>
+                            <Typography sx={{ textAlign: "center", color: "white" }} >Tuyệt Vời</Typography>
+                            <Typography sx={{ textAlign: "center", color: "white" }} >Dựa trên {reviews?.length} đánh giá</Typography>
                         </Box>
                     </Box>
                 </Grid>
-                <Grid lg={9} md={9} xs={12} sm={12} display="flex" justifyContent={"space-between"} flexDirection="column" item>
+                <Grid lg={9} md={9} xs={12} sm={12} sx={{ display: "flex", justifyContent: "space-between", flexDirection: "column" }} item>
                     {linearProcessWidthLabel(getRandomInt(), "5 Sao")}
                     {linearProcessWidthLabel(getRandomInt(), "4 Sao")}
                     {linearProcessWidthLabel(getRandomInt(), "3 Sao")}

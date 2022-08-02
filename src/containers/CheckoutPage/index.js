@@ -13,10 +13,8 @@ const HeroImage = styled(Box)(
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
-        height: '450px',
-        [theme.breakpoints.down('sm')]: {
-            height: "350px"
-        },
+        height: "60vh",
+        maxHeight: '450px',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
@@ -226,7 +224,7 @@ function CheckoutPage() {
                                             <Grid item lg={6} md={6} sm={6} xs={12} >
                                                 <TextField label="Mã bảo vệ" placeholder='CCV' size='small' variant='outlined' InputLabelProps={{ shrink: true }} />
                                                 <Box sx={{ display: "inline" }} >
-                                                    <img src={'/Images/IconCcv.gif'} alt="ccv" style={{ marginLeft: "20px" }} />
+                                                    <img src={'/Images/checkout/IconCcv.gif'} alt="ccv" style={{ marginLeft: "20px" }} />
                                                     <Typography sx={{ fontSize: "12px", color: "#555555", display: "inline-block" }} >3 số cuối</Typography>
                                                 </Box>
                                             </Grid>
@@ -234,7 +232,7 @@ function CheckoutPage() {
                                                 <Divider sx={{ my: 3 }} />
                                                 <Typography sx={{ mb: 1 }} variant='h4'>Hoặc thanh toán với Paypal</Typography>
                                                 <Typography variant='body1' sx={{ mb: 3 }} >Nếu một đơn hàng không tới hoặc không khớp với mô tả của người bán, Paypal sẽ hoàn lại toàn bộ chi phí với những giao dịch hợp lệ.</Typography>
-                                                <img alt="paypal" src="/Images/paypalButton.png" />
+                                                <img alt="paypal" src="/Images/checkout/paypalButton.png" />
                                             </Grid>
                                         </Grid>
                                     )

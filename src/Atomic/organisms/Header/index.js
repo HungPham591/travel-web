@@ -142,7 +142,7 @@ function Header(props) {
                     </MenuButton>
                     <CustomGrid item lg={3} md={3} sm={6} xs={6} sx={{ display: "flex", alignItems: "center" }} center={isMedium ? 1 : 0} >
                         <LogoBox onClick={handleLogoClick}>
-                            <img alt='logo' src={showAppbar ? "/Images/logoblack.svg" : "/Images/logo.svg"} height={"36px"} />
+                            <img alt='logo' src={showAppbar ? "/Images/logo/logoblack.svg" : "/Images/logo/logo.svg"} height={"36px"} />
                         </LogoBox>
                     </CustomGrid>
                     <Grid item lg={9} md={9} sm={3} xs={3} sx={{ display: "flex", alignItems: "center", justifyContent: "end" }} >

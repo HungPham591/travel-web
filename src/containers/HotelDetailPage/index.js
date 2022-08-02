@@ -18,46 +18,46 @@ import HairDryerIcon from '../../icons/hairDryerIcon';
 import ShowerIcon from '../../icons/showerIcon';
 import SingleBedIcon from '../../icons/singleBedIcon';
 const images = [
-    '/Images/hotelDetailBanner.jpg',
-    '/Images/placeDetailBanner.jpg',
-    '/Images/productDetailBanner.jpg',
-    '/Images/restaurantDetailBanner.jpg',
-    '/Images/tourDetailBanner.jpg',
+    '/Images/pageBanner/hotelDetailBanner.jpg',
+    '/Images/pageBanner/placeDetailBanner.jpg',
+    '/Images/pageBanner/productDetailBanner.jpg',
+    '/Images/pageBanner/restaurantDetailBanner.jpg',
+    '/Images/pageBanner/tourDetailBanner.jpg',
 ];
 const videos = [
-    { video: '/Images/tourPage1.jpg', title: 'Lũng Cú' },
-    { video: '/Images/tourPage2.jpg', title: 'Đồng Văn' },
-    { video: '/Images/tourPage3.jpg', title: 'Mã Pí Lèng' },
-    { video: '/Images/tourPage4.jpg', title: 'Nho Quế' },
-    { video: '/Images/tourPage5.jpg', title: 'Dinh Nhà Vương' },
-    { video: '/Images/tourPage6.jpg', title: 'Cánh Đồng Hoa' },
+    { video: '/Images/tourpage/tourPage1.jpg', title: 'Lũng Cú' },
+    { video: '/Images/tourpage/tourPage2.jpg', title: 'Đồng Văn' },
+    { video: '/Images/tourpage/tourPage3.jpg', title: 'Mã Pí Lèng' },
+    { video: '/Images/tourpage/tourPage4.jpg', title: 'Nho Quế' },
+    { video: '/Images/tourpage/tourPage5.jpg', title: 'Dinh Nhà Vương' },
+    { video: '/Images/tourpage/tourPage6.jpg', title: 'Cánh Đồng Hoa' },
 ];
 
 const reviewData = [
     {
         stars: 4,
-        avatar: "/Images/avatar1.jpg",
+        avatar: "/Images/avatar/avatar1.jpg",
         account: "Admin",
         time: "April 03, 2016",
         content: "Sản phẩm rất tốt hơn cả mong đợi. Dịch vụ rất tuyệt vời, nếu có cơ hội tôi sẽ quay lại và ủng hộ vì sự chu đáo và nhiệt tình này",
     },
     {
         stars: 4,
-        avatar: "/Images/avatar2.jpg",
+        avatar: "/Images/avatar/avatar2.jpg",
         account: "Ahsan",
         time: "April 01, 2016",
         content: "Sản phẩm rất tốt hơn cả mong đợi. Dịch vụ rất tuyệt vời, nếu có cơ hội tôi sẽ quay lại và ủng hộ vì sự chu đáo và nhiệt tình này",
     },
     {
         stars: 5,
-        avatar: "/Images/avatar3.jpg",
+        avatar: "/Images/avatar/avatar3.jpg",
         account: "Sara",
         time: "March 31, 2016",
         content: "Sản phẩm rất tốt hơn cả mong đợi. Dịch vụ rất tuyệt vời, nếu có cơ hội tôi sẽ quay lại và ủng hộ vì sự chu đáo và nhiệt tình này",
     },
     {
         stars: 5,
-        avatar: "/Images/avatar1.jpg",
+        avatar: "/Images/avatar/avatar1.jpg",
         account: "Admin",
         time: "April 03, 2016",
         content: "Sản phẩm rất tốt hơn cả mong đợi. Dịch vụ rất tuyệt vời, nếu có cơ hội tôi sẽ quay lại và ủng hộ vì sự chu đáo và nhiệt tình này",
@@ -93,17 +93,17 @@ const secondNavLink = [
 ]
 const hotelDetails = [
     {
-        image: "/Images/hotelDetail1.jpg",
+        image: "/Images/hotelDetail/hotelDetail1.jpg",
         title: "Phòng đơn",
         description: "Mọi đặt phòng đều được bảo vệ miễn phí trong trường hợp Chủ nhà hủy, thông tin nhà/phòng cho thuê không chính xác và những vấn đề khác như sự cố trong quá trình nhận phòng."
     },
     {
-        image: "/Images/hotelDetail2.jpg",
+        image: "/Images/hotelDetail/hotelDetail2.jpg",
         title: "Phòng đôi",
         description: "Mọi đặt phòng đều được bảo vệ miễn phí trong trường hợp Chủ nhà hủy, thông tin nhà/phòng cho thuê không chính xác và những vấn đề khác như sự cố trong quá trình nhận phòng."
     },
     {
-        image: "/Images/hotelDetail3.jpg",
+        image: "/Images/hotelDetail/hotelDetail3.jpg",
         title: "Phòng đặc biệt",
         description: "Mọi đặt phòng đều được bảo vệ miễn phí trong trường hợp Chủ nhà hủy, thông tin nhà/phòng cho thuê không chính xác và những vấn đề khác như sự cố trong quá trình nhận phòng."
     }

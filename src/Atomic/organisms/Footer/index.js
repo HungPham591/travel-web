@@ -89,7 +89,7 @@ export default function Footer() {
         <Grid container spacing={5} sx={{ mb: 7 }}>
           <Grid item lg={5} md={5} sm={12} xs={12}>
             <Box sx={{ width: 150, mb: 4 }}>
-              <CardMedia image="/Images/logo.svg" component="img" alt="Logo" />
+              <CardMedia image="/Images/logo/logo.svg" component="img" alt="Logo" />
             </Box>
             <Box sx={{ mb: 5 }}>
               <Typography variant="body1" sx={{ color: "text.footer", lineHeight: 2 }}>
@@ -101,7 +101,7 @@ export default function Footer() {
               </Typography>
             </Box>
             <Box sx={{ fontSize: "25px", display: "flex", flexWrap: "wrap", alignItems: "center", gap: 3 }}>
-              <Typography variant="body1" sx={{ display: "inline", letterSpacing: "2px", color: "common.white"}}>
+              <Typography variant="body1" sx={{ display: "inline", letterSpacing: "2px", color: "common.white" }}>
                 KẾT NỐI CHÚNG TÔI TRÊN
               </Typography>
               <LinkBasic href="#">
@@ -211,7 +211,7 @@ export default function Footer() {
               </FooterDropdown>
             </Box>
             <Box sx={{ width: 146 }}>
-              <CardMedia image="Images/payment.svg" component="img" alt="Payment Icon" />
+              <CardMedia image="/Images/checkout/payment.svg" component="img" alt="Payment Icon" />
             </Box>
           </Box>
           <Box sx={{ display: "flex", gap: 1, fontSize: "13px" }}>

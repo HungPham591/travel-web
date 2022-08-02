@@ -3,12 +3,10 @@ import React, { useEffect, useState } from 'react';
 
 const HeroContainer = styled(Box)(
     ({ theme }) => ({
-        height: "550px",
+        height: "60vh",
+        maxHeight: "550px",
         overflow: "hidden",
         position: 'relative',
-        [theme.breakpoints.down('md')]: {
-            height: "500px"
-        },
     })
 )
 const HeroImage = styled('img')(

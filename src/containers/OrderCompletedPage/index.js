@@ -10,10 +10,8 @@ const HeroImage = styled(Box)(
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
-        height: '600px',
-        [theme.breakpoints.down('sm')]: {
-            height: "500px"
-        },
+        maxHeight: '600px',
+        height: "100vh",
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
