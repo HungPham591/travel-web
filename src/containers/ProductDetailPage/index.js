@@ -60,7 +60,6 @@ function ProductDetailPage() {
     const [currentImageOpen, setCurrentImageOpen] = useState(null);
     const [imageDialogOpen, setImageDialogOpen] = useState(false);
     const params = useParams();
-    // const [pageData, setPageData] = useState(productData.find(item => item?.id === params?.id));
     const pageData = productData.find(item => item?.id === params?.id);
 
     const handleImageDialogClose = () => {

@@ -31,6 +31,7 @@ export default function BasicDateRangePicker() {
                 variant="outlined"
                 size="small"
                 onClick={handleClick}
+                sx={{ backgroundColor: "white" }}
                 InputProps={{ endAdornment: <CalendarTodayIcon /> }}
                 fullWidth
             />

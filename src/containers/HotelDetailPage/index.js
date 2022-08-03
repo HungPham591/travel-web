@@ -70,7 +70,6 @@ const IframeDialogBox = styled(Box)(
         position: "relative",
         overflow: "hidden",
         width: "100%",
-        paddingTop: "56.25%",
     })
 )
 const StyledRow = styled(Box)(({ theme }) => ({
@@ -170,17 +169,17 @@ function HotelDetailPage() {
                             <StyledRow key={index}>
                                 <Grid container spacing={3}>
                                     <Grid item lg={4} md={4} sm={4}>
-                                        <img style={{ width: "100%", height: "auto" }} src={value.image} className="img-fluid" alt="" />
+                                        <img style={{ width: "100%", height: "auto" }} src={value.image} alt="" />
                                     </Grid>
                                     <Grid item lg={8} md={8} sm={8}>
-                                        <Typography variant="h4" sx={{ mb: 1, fontSize: "18px" }}>{value.title}</Typography>
-                                        <Typography variant="body1" sx={{ mb: 2 }}>{value.description}</Typography>
+                                        <Typography variant="h5" sx={{ mb: 1 }}>{value.title}</Typography>
+                                        <Typography sx={{ mb: 2 }}>{value.description}</Typography>
                                         <Grid container spacing={2}>
-                                            <Grid item xl={6} lg={6} md={6} ms={6} xs={6} sx={{ display: "flex" }}><SingleBedIcon /><Typography variant="body1" sx={{ ml: 1 }} >Giường đơn</Typography></Grid>
-                                            <Grid item xl={6} lg={6} md={6} ms={6} xs={6} sx={{ display: "flex" }}><AirConditionIcon /><Typography variant="body1" sx={{ ml: 1 }} >Máy điều hòa</Typography></Grid>
-                                            <Grid item xl={6} lg={6} md={6} ms={6} xs={6} sx={{ display: "flex" }}><FreeWifiIcon /><Typography variant="body1" sx={{ ml: 1 }} >Wifi miễn phí</Typography></Grid>
-                                            <Grid item xl={6} lg={6} md={6} ms={6} xs={6} sx={{ display: "flex" }}><HairDryerIcon /><Typography variant="body1" sx={{ ml: 1 }} >Máy sấy tóc</Typography></Grid>
-                                            <Grid item xl={6} lg={6} md={6} ms={6} xs={6} sx={{ display: "flex" }}><ShowerIcon /><Typography variant="body1" sx={{ ml: 1 }} >Vòi sen</Typography></Grid>
+                                            <Grid item xl={6} lg={6} md={6} ms={6} xs={6} sx={{ display: "flex" }}><SingleBedIcon /><Typography sx={{ ml: 1 }} >Giường đơn</Typography></Grid>
+                                            <Grid item xl={6} lg={6} md={6} ms={6} xs={6} sx={{ display: "flex" }}><AirConditionIcon /><Typography sx={{ ml: 1 }} >Máy điều hòa</Typography></Grid>
+                                            <Grid item xl={6} lg={6} md={6} ms={6} xs={6} sx={{ display: "flex" }}><FreeWifiIcon /><Typography sx={{ ml: 1 }} >Wifi miễn phí</Typography></Grid>
+                                            <Grid item xl={6} lg={6} md={6} ms={6} xs={6} sx={{ display: "flex" }}><HairDryerIcon /><Typography sx={{ ml: 1 }} >Máy sấy tóc</Typography></Grid>
+                                            <Grid item xl={6} lg={6} md={6} ms={6} xs={6} sx={{ display: "flex" }}><ShowerIcon /><Typography sx={{ ml: 1 }} >Vòi sen</Typography></Grid>
                                         </Grid>
                                     </Grid>
                                 </Grid>

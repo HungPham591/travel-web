@@ -119,7 +119,7 @@ function CustomDrawer(props) {
                                             value?.element?.length > 0 ?
                                                 (
                                                     <Collapse in={subMenuOpen} unmountOnExit>
-                                                        <List component='div' sx={{ py: 0 }}>
+                                                        <List sx={{ py: 0 }}>
                                                             {
                                                                 subMenu.map((value, index) => {
                                                                     return (

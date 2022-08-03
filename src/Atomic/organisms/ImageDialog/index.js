@@ -16,7 +16,7 @@ const ImageDialogButton = styled(IconButton)(
     })
 );
 const ImageBox = styled(Box)(
-    ({ theme, image }) => ({
+    () => ({
         position: "relative",
         overflowY: "hidden",
         height: "100%",
@@ -24,7 +24,7 @@ const ImageBox = styled(Box)(
     })
 )
 const CustomImage = styled("img")(
-    ({ theme, image }) => ({
+    ({ image }) => ({
         position: "absolute",
         top: 0,
         left: 0,

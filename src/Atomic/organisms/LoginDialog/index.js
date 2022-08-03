@@ -17,7 +17,6 @@ const styles = {
         position: "absolute",
         left: 50,
         right: 50,
-        fontWeight: 500,
         color: "white",
         textAlign: "center"
     },
@@ -33,7 +32,6 @@ const LoginButton = styled(Button)(
     ({ theme }) => ({
         display: "block",
         backgroundColor: theme.palette.secondary.main,
-        fontWeight: 600,
     })
 )
 const DialogBody = styled(Box)(
@@ -94,11 +92,11 @@ function LoginDialog(props) {
             <SignInFormBox gap={2} open={isForgotPassword}>
                 <SocialButton socialname="facebook" variant='contained' fullWidth>
                     <FacebookIcon />
-                    <Typography color={"white"} className={classes.buttonTitle} noWrap> Đăng nhập với Facebook</Typography>
+                    <Typography sx={{ color: "white" }} className={classes.buttonTitle} noWrap> Đăng nhập với Facebook</Typography>
                 </SocialButton>
                 <SocialButton socialname="google" variant='contained' fullWidth>
                     <GoogleIcon />
-                    <Typography color={"white"} className={classes.buttonTitle} noWrap> Đăng nhập với Google</Typography>
+                    <Typography sx={{ color: "white" }} className={classes.buttonTitle} noWrap> Đăng nhập với Google</Typography>
                 </SocialButton>
                 <Box sx={{ position: "relative" }}>
                     <Typography sx={{ fontStyle: "italic", position: "absolute", left: "42%", top: "-10px", bgcolor: "white", zIndex: 1, paddingX: 1 }}>Hoặc</Typography>
@@ -132,7 +130,7 @@ function LoginDialog(props) {
 
     return (
         <Dialog disableScrollLock={true} onClose={handleClose} open={open}>
-            <Box sx={{ display: "flex", justifyContent: "space-between", bgcolor: "background.default" }}>
+            <Box sx={theme => ({ display: "flex", justifyContent: "space-between", bgcolor: theme.palette.background.default })}>
                 <DialogTitle >Đăng Nhập</DialogTitle>
                 <Box sx={{ display: "block", mt: "auto", mb: "auto" }} >
                     <CloseDialogButton onClick={handleClose}>

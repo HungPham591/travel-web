@@ -76,7 +76,7 @@ const ColorlibStepIconRoot = styled('div')(({ theme, ownerState }) => ({
 }));
 
 const DetailBoxHeader = styled(Box)(
-    ({ theme }) => ({
+    () => ({
         width: "100%",
         display: "flex",
     })
@@ -139,11 +139,11 @@ const detailBox = (index, title, children) => {
         <Stack spacing={2}>
             <DetailBoxHeader>
                 <DetailBoxTitleCircle>
-                    <Typography sx={{ color: "white", fontSize: "18px", fontWeight: 600 }} >{index}</Typography>
+                    <Typography variant="h5" sx={{ color: "white" }} >{index}</Typography>
                 </DetailBoxTitleCircle>
                 <Box>
                     <Typography variant='h5' >{title}</Typography>
-                    <Typography >Thông tin của bạn được giữ an toàn.</Typography>
+                    <Typography variant='subtitle2' sx={theme => ({ color: theme.palette.grey[600] })}>Thông tin của bạn được giữ an toàn.</Typography>
                 </Box>
             </DetailBoxHeader>
             <Stack flexDirection={"row"}>
@@ -168,7 +168,7 @@ function CheckoutPage() {
                         <Stack sx={{ gap: 3 }} >
                             <Box sx={{ backgroundColor: theme => theme.palette.background.default, borderRadius: 1, padding: 2 }}>
                                 <Typography sx={{ display: "inline" }} >Đã có tài khoản? </Typography>
-                                <Link sx={{ display: "inline", fontSize: "14px" }} >Nhấp vào đây để đăng nhập</Link>
+                                <Link sx={{ display: "inline" }} >Nhấp vào đây để đăng nhập</Link>
                             </Box>
                             {
                                 detailBox(
@@ -230,8 +230,8 @@ function CheckoutPage() {
                                             </Grid>
                                             <Grid item lg={12} md={12} sm={12} xs={12} >
                                                 <Divider sx={{ my: 3 }} />
-                                                <Typography sx={{ mb: 1 }} variant='h4'>Hoặc thanh toán với Paypal</Typography>
-                                                <Typography variant='body1' sx={{ mb: 3 }} >Nếu một đơn hàng không tới hoặc không khớp với mô tả của người bán, Paypal sẽ hoàn lại toàn bộ chi phí với những giao dịch hợp lệ.</Typography>
+                                                <Typography sx={{ mb: 1 }} variant='h5'>Hoặc thanh toán với Paypal</Typography>
+                                                <Typography sx={{ mb: 3 }} >Nếu một đơn hàng không tới hoặc không khớp với mô tả của người bán, Paypal sẽ hoàn lại toàn bộ chi phí với những giao dịch hợp lệ.</Typography>
                                                 <img alt="paypal" src="/Images/checkout/paypalButton.png" />
                                             </Grid>
                                         </Grid>

@@ -26,7 +26,6 @@ function LeaveReviewBox() {
             <Grid item lg={6} md={6} xs={12} sm={6}>
                 <Autocomplete
                     disablePortal
-                    id="combo-box-demo"
                     options={reviewValue}
                     renderInput={(params) => <TextField {...params} label="Đánh giá" size='small' InputLabelProps={{ shrink: true }} required fullWidth />}
                 />

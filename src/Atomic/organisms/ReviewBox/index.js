@@ -30,7 +30,7 @@ const linearProcessWidthLabel = (value, label) => {
     return (
         <Box sx={{ display: "flex", gap: 2 }} >
             <LinearProgress style={{ height: 15, borderRadius: 2, flex: 1 }} variant="determinate" value={value} />
-            <Typography sx={{ width: "50px", color: (theme) => theme.palette.text.secondary }} variant="body2" noWrap>
+            <Typography sx={theme => ({ width: theme.spacing(5), color: (theme) => theme.palette.text.secondary })} variant="subtitle2" noWrap>
                 {label}
             </Typography>
         </Box>
@@ -40,20 +40,24 @@ function comment(imageUrl, star, time, content) {
     return (
         <CommentWrapper>
             <Avatar image={imageUrl} />
-            <Box sx={{
-                border: 1,
-                padding: 2,
-                borderRadius: 1,
-                borderColor: "grey.300"
-            }}
+            <Box
+                sx={theme => ({
+                    border: 1,
+                    padding: 2,
+                    borderRadius: 1,
+                    borderColor: theme.palette.grey[300]
+                })}
             >
                 <Rating value={star} size="small" readOnly />
                 <Typography
+                    variant='subtitle2'
                     sx={{ fontStyle: "italic", mb: 1 }}
                 >
                     {time}
                 </Typography>
-                <Typography>
+                <Typography
+                    variant='subtitle1'
+                >
                     {content}
                 </Typography>
             </Box>
@@ -67,21 +71,22 @@ function ReviewBox(props) {
         <Stack sx={{ gap: 3 }} >
             <Grid spacing={2} container>
                 <Grid lg={3} md={3} xs={12} sm={12} item>
-                    <Box sx={{
-                        borderRadius: 1,
-                        backgroundColor: (theme) => theme.palette.primary.main,
-                        width: "100%",
-                        height: "130px",
-                        color: "white",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: 'center'
-                    }}
+                    <Box
+                        sx={theme => ({
+                            borderRadius: 1,
+                            backgroundColor: theme.palette.primary.main,
+                            width: "100%",
+                            height: theme.spacing(15),
+                            color: "white",
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: 'center'
+                        })}
                     >
                         <Box>
-                            <Typography variant='h1' sx={{ fontWeight: "bold", textAlign: "center", lineHeight: 1, color: "white" }}>8.5</Typography>
-                            <Typography sx={{ textAlign: "center", color: "white" }}>Tuyệt Vời</Typography>
-                            <Typography sx={{ textAlign: "center", color: "white" }}>Dựa trên {reviews?.length} đánh giá</Typography>
+                            <Typography variant='h3' sx={{ fontWeight: "bold", textAlign: "center", color: "white" }}>8.5</Typography>
+                            <Typography variant='subtitle2' sx={{ textAlign: "center", color: "white" }}>Tuyệt Vời</Typography>
+                            <Typography variant='subtitle2' sx={{ textAlign: "center", color: "white" }}>Dựa trên {reviews?.length} đánh giá</Typography>
                         </Box>
                     </Box>
                 </Grid>
@@ -94,7 +99,7 @@ function ReviewBox(props) {
                 </Grid>
             </Grid>
             <Divider />
-            <Grid spacing={2} container>
+            <Grid container spacing={2}>
                 {
                     reviews.map((value, index) => (
                         <Grid item key={index}>

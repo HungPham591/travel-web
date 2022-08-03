@@ -62,11 +62,10 @@ const reviewData = [
 
 
 const IframeBox = styled(MuiBox)(
-    ({ theme }) => ({
+    () => ({
         position: "relative",
         overflow: "hidden",
         width: "100%",
-        paddingTop: "56.25%",
     })
 )
 

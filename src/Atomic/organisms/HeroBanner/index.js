@@ -2,7 +2,7 @@ import { Box, Button, Container, styled, Typography } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 
 const HeroContainer = styled(Box)(
-    ({ theme }) => ({
+    () => ({
         height: "60vh",
         maxHeight: "550px",
         overflow: "hidden",
@@ -10,7 +10,7 @@ const HeroContainer = styled(Box)(
     })
 )
 const HeroImage = styled('img')(
-    ({ theme, image, start }) => ({
+    ({ image, start }) => ({
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("${image}")`,
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
@@ -77,7 +77,7 @@ function HerroBanner(props) {
                 <Box sx={{ py: 2 }} >
                     <CustomDivider />
                 </Box>
-                <Typography variant="h4" sx={{ color: "white", textAlign: "center", fontWeight: 700 }} >
+                <Typography variant="h3" sx={{ color: "white", textAlign: "center", fontWeight: 600 }} >
                     {title}
                 </Typography>
             </TitleBox>
