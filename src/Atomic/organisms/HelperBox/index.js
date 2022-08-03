@@ -1,7 +1,7 @@
 import React from "react";
 import { styled, Grid, Typography, Link, Box } from "@mui/material";
 import HelpIcon from "../../../icons/HelpIcon";
-import WalletIcon from "../../../icons/WalletIcon";
+import WalletIcon from "../../../icons/walletIcon";
 import NoteIcon from "../../../icons/NoteIcon";
 
 const Wrapper = styled(Grid)(({ theme }) => ({
