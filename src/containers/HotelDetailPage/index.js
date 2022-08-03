@@ -12,11 +12,11 @@ import LeaveReviewBox from "../../Atomic/organisms/LeaveReviewBox";
 import ReviewBox from "../../Atomic/organisms/ReviewBox";
 import SecondNav from "../../Atomic/organisms/SecondNav";
 import VideoGridBox from "../../Atomic/organisms/VideoGridBox";
-import AirConditionIcon from '../../icons/airConditionIcon';
-import FreeWifiIcon from '../../icons/freeWifiIcon';
-import HairDryerIcon from '../../icons/hairDryerIcon';
-import ShowerIcon from '../../icons/showerIcon';
-import SingleBedIcon from '../../icons/singleBedIcon';
+import AirConditionIcon from '../../icons/AirConditionIcon';
+import FreeWifiIcon from '../../icons/FreeWifiIcon';
+import HairDryerIcon from '../../icons/HairDryerIcon';
+import ShowerIcon from '../../icons/ShowerIcon';
+import SingleBedIcon from '../../icons/SingleBedIcon';
 const images = [
     '/Images/pageBanner/hotelDetailBanner.jpg',
     '/Images/pageBanner/placeDetailBanner.jpg',

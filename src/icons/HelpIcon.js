@@ -1,8 +1,8 @@
 import React from "react";
 import { SvgIcon } from "@mui/material";
-import { ReactComponent as Icon } from "./walletIcon.svg";
+import { ReactComponent as Icon } from "./HelpIcon.svg";
 
-export default function WalletIcon(props) {
+export default function HelpIcon(props) {
   return (
     <SvgIcon
       component={Icon}

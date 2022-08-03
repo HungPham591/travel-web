@@ -7,7 +7,7 @@ import {
   Typography,
   Box,
 } from "@mui/material";
-import HahaIcon from "../../../icons/hahaIcon";
+import HahaIcon from "../../../icons/HahaIcon";
 import ShareIcon from "@mui/icons-material/Share";
 import Score from "../Score";
 import OvalButton from "../../atoms/AdvancedButton/OvalButton";
@@ -96,7 +96,7 @@ export default function ItemCardVertical({ data }) {
         </Box>
         <Box sx={{ display: "flex", mt: 1 }}>
           <Box sx={{ textAlign: "right", mr: 1 }}>
-            <Typography variant="subtitle1" sx={{ color:"text.light" }}>
+            <Typography variant="subtitle1" sx={{ color: "text.light" }}>
               Tuyệt vời
             </Typography>
             <Typography sx={{ fontSize: 11 }}>{data.review} đánh giá</Typography>

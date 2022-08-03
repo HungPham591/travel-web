@@ -1,8 +1,8 @@
 import React from 'react';
 import { SvgIcon } from '@mui/material';
-import { ReactComponent as Icon } from './hairDryerIcon.svg';
+import { ReactComponent as Icon } from './ShowerIcon.svg';
 
-export default function HairDryerIcon(props) {
+export default function ShowerIcon(props) {
     return (
         <SvgIcon component={Icon} {...props} inheritViewBox={true} sx={{ width: '25px', height: '25px', }} />
     )
