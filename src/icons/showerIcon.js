@@ -1,6 +1,6 @@
 import React from 'react';
 import { SvgIcon } from '@mui/material';
-import { ReactComponent as Icon } from './showerIcon.svg';
+import { ReactComponent as Icon } from './ShowerIcon.svg';
 
 export default function ShowerIcon(props) {
     return (

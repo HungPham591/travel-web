@@ -3,7 +3,7 @@ import { stepConnectorClasses } from '@mui/material/StepConnector';
 import { Container } from '@mui/system';
 import { useNavigate } from 'react-router-dom';
 import DetailCheckoutBox from '../../Atomic/organisms/DetailCheckoutBox';
-import PaymentIcon from '../../icons/paymentIcon';
+import PaymentIcon from '../../icons/PaymentIcon';
 
 
 const HeroImage = styled(Box)(

@@ -77,7 +77,7 @@ function HerroBanner(props) {
                 <Box sx={{ py: 2 }} >
                     <CustomDivider />
                 </Box>
-                <Typography sx={{ color: "white", textAlign: "center", fontWeight: 700 }} variant="h1">
+                <Typography variant="h4" sx={{ color: "white", textAlign: "center", fontWeight: 700 }} >
                     {title}
                 </Typography>
             </TitleBox>

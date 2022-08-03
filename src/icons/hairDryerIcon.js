@@ -1,6 +1,6 @@
 import React from 'react';
 import { SvgIcon } from '@mui/material';
-import { ReactComponent as Icon } from './hairDryerIcon.svg';
+import { ReactComponent as Icon } from './HairDryerIcon.svg';
 
 export default function HairDryerIcon(props) {
     return (

@@ -2,7 +2,7 @@ import React from "react";
 import { styled, Box, Typography, Link, Grid, Card } from "@mui/material";
 import Score from "../../molecules/Score";
 import HeartButton from "../../molecules/HeartButton/BlackBackground";
-import HahaIcon from "../../../icons/hahaIcon";
+import HahaIcon from "../../../icons/HahaIcon";
 import ShareIcon from "@mui/icons-material/Share";
 
 const ImageContainer = styled(Grid)(({ theme, image }) => ({

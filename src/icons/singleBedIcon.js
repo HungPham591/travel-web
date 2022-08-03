@@ -1,6 +1,6 @@
 import React from 'react';
 import { SvgIcon } from '@mui/material';
-import { ReactComponent as Icon } from './singleBedIcon.svg';
+import { ReactComponent as Icon } from './SingleBedIcon.svg';
 
 export default function SingleBedIcon(props) {
     return (

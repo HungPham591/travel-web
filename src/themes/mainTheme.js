@@ -40,19 +40,19 @@ const mainTheme = createTheme({
     },
     typography: {
         fontFamily: "'Poppins', Helvetica, sans-serif",
-        fontWeightRegular: 500,
-        fontWeightLight: 500,
-        allVariants: {
-            fontSize: "14px",
-        },
-        body1: {
-            color: "#555555",
-            fontWeight: 400,
-            fontSize: '14px',
-        },
-        button: {
-            textTransform: 'none'
-        },
+        // fontWeightRegular: 500,
+        // fontWeightLight: 500,
+        // allVariants: {
+        //     fontSize: "14px",
+        // },
+        // body1: {
+        //     color: "#555555",
+        //     fontWeight: 400,
+        //     fontSize: '14px',
+        // },
+        // button: {
+        //     textTransform: 'none'
+        // },
         // h1: {
         //     fontSize: '42px',
         // },
@@ -91,20 +91,20 @@ const mainTheme = createTheme({
         border: "2px solid rgb(18, 25, 33, 0.1)"
     },
     components: {
-        MuiDrawer: {
-            styleOverrides: {
-                paper: {
-                    backgroundColor: "#F3F3F3"
-                },
-            }
-        },
-        MuiOutlinedInput: {
-            styleOverrides: {
-                root: {
-                    backgroundColor: "white"
-                }
-            }
-        },
+        // MuiDrawer: {
+        //     styleOverrides: {
+        //         paper: {
+        //             backgroundColor: "#F3F3F3"
+        //         },
+        //     }
+        // },
+        // MuiOutlinedInput: {
+        //     styleOverrides: {
+        //         root: {
+        //             backgroundColor: "white"
+        //         }
+        //     }
+        // },
         MuiPaper: {
             styleOverrides: {
                 root: {
@@ -112,22 +112,22 @@ const mainTheme = createTheme({
                 }
             },
         },
-        MuiLink: {
-            styleOverrides: {
-                root: ({ theme }) => ({
-                    color: theme.palette.secondary.main,
-                    textDecoration: "none",
-                    cursor: "pointer"
-                })
-            }
-        },
-        MuiInputLabel: {
-            styleOverrides: {
-                root: {
-                    marginBottom: "3px",
-                }
-            }
-        },
+        // MuiLink: {
+        //     styleOverrides: {
+        //         root: ({ theme }) => ({
+        //             color: theme.palette.secondary.main,
+        //             textDecoration: "none",
+        //             cursor: "pointer"
+        //         })
+        //     }
+        // },
+        // MuiInputLabel: {
+        //     styleOverrides: {
+        //         root: {
+        //             marginBottom: "3px",
+        //         }
+        //     }
+        // },
         MuiDialog: {
             defaultProps: {
                 PaperProps: {

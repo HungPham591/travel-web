@@ -1,6 +1,6 @@
 import React from "react";
 import { SvgIcon } from "@mui/material";
-import { ReactComponent as Icon } from "./helpIcon.svg";
+import { ReactComponent as Icon } from "./HelpIcon.svg";
 
 export default function HelpIcon(props) {
   return (

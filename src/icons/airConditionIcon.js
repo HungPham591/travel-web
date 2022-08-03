@@ -1,6 +1,6 @@
 import React from 'react';
 import { SvgIcon } from '@mui/material';
-import { ReactComponent as Icon } from './airConditionIcon.svg';
+import { ReactComponent as Icon } from './AirConditionIcon.svg';
 
 export default function AirConditionIcon(props) {
     return (

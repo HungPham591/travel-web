@@ -1,6 +1,6 @@
 import React from 'react';
 import { SvgIcon } from '@mui/material';
-import { ReactComponent as Icon } from './freeWifiIcon.svg';
+import { ReactComponent as Icon } from './FreeWifiIcon.svg';
 
 export default function FreeWifiIcon(props) {
     return (

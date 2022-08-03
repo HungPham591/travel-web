@@ -1,6 +1,6 @@
 import React from 'react';
 import { SvgIcon } from '@mui/material';
-import { ReactComponent as Icon } from './hahaIcon.svg';
+import { ReactComponent as Icon } from './HahaIcon.svg';
 
 export default function GoogleplusIcon(props) {
   return (
