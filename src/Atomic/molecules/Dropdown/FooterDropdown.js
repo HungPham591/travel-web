@@ -6,9 +6,7 @@ const NewPopper = styled(Popper)(({ theme }) => ({
   maxHeight: 100,
   minWidth: 50,
   overflow: "auto",
-  borderTop: "1 solid common.white",
 }));
-
 
 export default function FooterDropdown({ values, children }) {
   const [toggle, setToggle] = useState(true);
@@ -31,31 +29,32 @@ export default function FooterDropdown({ values, children }) {
   return (
     <>
       <Button
-        sx={{
-          width: "100%",
-          display: "flex",
-          justifyContent: "space-between",
-          backgroundColor: "background.inputBase",
-          color: "text.primary",
-          opacity: "0.7",
-        }}
-        color="text"
         aria-controls={open ? "basic-menu" : undefined}
         aria-haspopup="true"
         aria-expanded={open ? "true" : undefined}
         onClick={handleClick}
+        sx={(theme) => ({
+          width: "100%",
+          display: "flex",
+          justifyContent: "space-between",
+          backgroundColor: theme.palette.background.inputBase,
+          color: theme.text.primary,
+          opacity: "0.7",
+        })}
       >
-        <Typography variant="subtitle1" sx={{ mr: 1, color: "common.white" }}>{selected}</Typography>
+        <Typography variant="subtitle1" sx={(theme) => ({ maginRight: theme.spacing(1), color: theme.palette.white.main })}>
+          {selected}
+        </Typography>
         {children}
       </Button>
-      <NewPopper
-        id={id}
-        open={open}
-        anchorEl={anchorEl}
-      >
+      <NewPopper id={id} open={open} anchorEl={anchorEl}>
         {values.map((value, index) => {
           return (
-            <MenuItem key={index} onClick={() => handleChange(value)} sx={{ fontSize: 12 }}>
+            <MenuItem
+              key={index}
+              onClick={() => handleChange(value)}
+              sx={{ fontSize: 12 }}
+            >
               {value}
             </MenuItem>
           );

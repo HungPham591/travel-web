@@ -9,13 +9,11 @@ const NewPopper = styled(Popper)(({ theme }) => ({
   minWidth: 320,
   overflow: "auto",
   zIndex: "20",
-  borderTop: "1 solid common.white",
   [theme.breakpoints.down("md")]: {
     maxWidth: 590,
   },
   [theme.breakpoints.down("sm")]: {
     width: "90%",
-    borderTop: "none",
   }
 }));
 
@@ -50,9 +48,9 @@ export default function Dropdown({ values }) {
       >
         <Typography>{selected}</Typography>
         {open ? (
-          <KeyboardArrowUpIcon sx={{ fontSize: 30, color: "common.grey" }} />
+          <KeyboardArrowUpIcon sx={(theme) => ({ fontSize: 30, color: theme.palette.common.grey })} />
         ) : (
-          <KeyboardArrowDownIcon sx={{ fontSize: 30, color: "common.grey" }} />
+          <KeyboardArrowDownIcon sx={(theme) => ({ fontSize: 30, color: theme.palette.common.grey })} />
         )}
       </Button>
       <NewPopper

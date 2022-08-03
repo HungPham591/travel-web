@@ -1,7 +1,7 @@
 import React from "react";
 import { styled, Box, Typography, Link, Grid, Card } from "@mui/material";
 import Score from "../../molecules/Score";
-import HeartButton from "../../molecules/HeartButton/BlackBackground";
+import HeartButton from "../HeartButton/CustomBackgroundHearButton";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 
 const ImageContainer = styled(Grid)(({ theme, image }) => ({

@@ -3,14 +3,14 @@ import React, { useState } from "react";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 
-function HeartButton({ bgColor, color }) {
+function CustomBackgroundHearButton({ bgColor, color }) {
   const [active, setActive] = useState(false);
   const handleClick = () => {
     setActive(!active);
   };
   return (
     <Box
-      sx={{
+      sx={(theme) => ({
         cursor: "pointer",
         height: 30,
         width: 30,
@@ -19,11 +19,11 @@ function HeartButton({ bgColor, color }) {
         justifyContent: "center",
         borderRadius: "3px",
         backgroundColor: `${bgColor}`
-      }}
+      })}
       onClick={handleClick}
     >
       {active ? (
-        <FavoriteIcon sx={{ color: "secondary.main", fontSize: 18 }} />
+        <FavoriteIcon sx={(theme) => ({ color: theme.palette.secondary.main, fontSize: 18 })} />
       ) : (
         <FavoriteBorderIcon sx={{ color: `${color}`, fontSize: 18 }} />
       )}

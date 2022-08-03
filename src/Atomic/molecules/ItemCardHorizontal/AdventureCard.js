@@ -30,13 +30,13 @@ export default function ItemCardHorizontal({ data }) {
         <ImageContainer item lg={5} md={5} sm={12} xs={12} image={data.image}>
           <Box sx={{ height: "100%" }}>
             <Box sx={{ display: "flex", p: 3, justifyContent: "flex-end" }}>
-              <Box sx={{ backgroundColor: "background.dark", borderRadius: "3px", p: 1 }}>
-                <Typography variant="body2" sx={{ fontWeight: "600", color: "text.white" }}>
+              <Box sx={(theme) => ({ backgroundColor: theme.palette.background.dark, borderRadius: "3px", padding: theme.space.padding(1) })}>
+                <Typography variant="body2" sx={(theme) => ({ fontWeight: 600, color: theme.palette.text.white })}>
                   {data.label}
                 </Typography>
               </Box>
             </Box>
-            <Box sx={{ display: "flex", justifyContent: "center", mt: 6 }}>
+            <Box sx={(theme) => ({ display: "flex", justifyContent: "center", marginTop: theme.spacing(6) })}>
               <Link
                 href={"/place-detail/" + data.id}
                 className="readmore"

@@ -1,7 +1,7 @@
 import React from "react";
 import { styled, Box, Typography, Link, Grid, Card } from "@mui/material";
 import Score from "../../molecules/Score";
-import HeartButton from "../../molecules/HeartButton/BlackBackground";
+import HeartButton from "../HeartButton/CustomBackgroundHearButton";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 

@@ -99,13 +99,13 @@ function HomePage() {
             }}
           >
             <Container>
-              <Box sx={{ px: 1 }}>
+              <Box sx={{ paddingX: 1 }}>
                 <Typography
                   variant="h1"
                   sx={{ 
                     fontWeight: 700,
                     textAlign: "center",
-                    mb: 1
+                    marginBottom: 1
                    }}
                 >
                   THAM QUAN & KHÁM PHÁ HÀ GIANG
@@ -123,12 +123,12 @@ function HomePage() {
         </Box>
       </Box>
 
-      <Box sx={{ bgcolor: "background.white", py: 12 }}>
+      <Box sx={{ bgcolor: "background.white", paddingY: 12 }}>
         <Container>
-          <Box sx={{ mb: 16 }}>
+          <Box sx={{ marginBottom: 16 }}>
             <BeautySpotSection />
           </Box>
-          <Box sx={{ display: "flex", flexDirection: "column", gap: 6, mb: 6 }}>
+          <Box sx={{ display: "flex", flexDirection: "column", gap: 6, marginBottom: 6 }}>
             <ProductSection content={content.tour} data={tourData} />
             <ProductSection content={content.hotel} data={hotelData} />
             <ProductSection content={content.restaurant} data={restaurantData} />
@@ -140,7 +140,7 @@ function HomePage() {
           </Box>
         </Container>
       </Box>
-      <Box sx={{ backgroundColor: "white", py: 10 }}>
+      <Box sx={{ backgroundColor: "white", paddingY: 10 }}>
         <Container>
           <NewsSection />
         </Container>
