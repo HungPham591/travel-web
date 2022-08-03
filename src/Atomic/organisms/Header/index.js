@@ -10,7 +10,7 @@ import { useEffect, useState } from 'react';
 import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom';
 import allProjectRoutes from '../../../routes/allProjectRoutes';
 import backendRoutes from '../../../routes/backendRoutes';
-
+//
 const CustomAppBar = styled(MuiAppBar)(
     ({ show, active }) => ({
         ...(!show && {
