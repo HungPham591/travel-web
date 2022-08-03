@@ -1,11 +1,9 @@
-import { useTheme } from '@emotion/react';
 import { Box, Stack, styled } from '@mui/material';
 import MuiButton from '@mui/material/Button';
 import MuiTypography from '@mui/material/Typography';
 import { Container } from '@mui/system';
 import { useState } from 'react';
 import { Link as ScrollLink } from 'react-scroll';
-import useAppBarHeight from '../../_settings/appbarHeight';
 
 
 const CustomButton = styled(MuiButton)(
@@ -40,7 +38,7 @@ function SecondNav(props) {
         setActiveLink(index);
     }
     return (
-        <Box sx={{ borderBottom: 1, borderColor: 'grey.300', position: "sticky", top: useAppBarHeight(), zIndex: 1, width: "100%", bgcolor: "white" }}>
+        <Box sx={{ borderBottom: 1, borderColor: 'grey.300', position: "sticky", top: theme => theme.mixins.toolbar.minHeight, zIndex: 1, width: "100%", bgcolor: "white" }}>
             <Container>
                 <Stack sx={{ flexWrap: "wrap", py: 2, columnGap: 2 }} direction="row" >
                     {

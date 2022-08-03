@@ -1,16 +1,15 @@
+import FilterListIcon from '@mui/icons-material/FilterList';
 import RoomIcon from '@mui/icons-material/Room';
 import SearchIcon from '@mui/icons-material/Search';
 import { Accordion, AccordionDetails, AccordionSummary, Box, Button, Checkbox, Divider, FormControlLabel, Grid, MenuItem, Select, Slider, styled, TextField, ToggleButton, ToggleButtonGroup, Typography, useMediaQuery } from '@mui/material';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
+import { useTheme } from '@mui/styles';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import HeartButton from '../../Atomic/molecules/HeartButton2';
-import FilterListIcon from '@mui/icons-material/FilterList';
-import { useTheme } from '@mui/styles';
 import { tourData } from '../../api/fakeData';
-import useAppBarHeight from '../../Atomic/_settings/appbarHeight';
+import HeartButton from '../../Atomic/molecules/HeartButton2';
 
 
 const Score = styled(Box)(
@@ -92,7 +91,7 @@ const CardMediaBox = styled(CardMedia)(
     })
 )
 const CustomToggleButton = styled(ToggleButton)(
-    ({ theme }) => ({
+    () => ({
         whiteSpace: "nowrap",
     })
 )
@@ -177,7 +176,7 @@ function MapPage(props) {
         );
     }
     return (
-        <Grid container sx={{ mt: `${useAppBarHeight()}px` }} >
+        <Grid container sx={{ mt: `${theme.mixins.toolbar.minHeight}px` }} >
             <Grid item lg={5} md={5} sm={12} xs={12} order={{ lg: 1, md: 1, sm: 2, xs: 2 }} >
                 <Box sx={{ height: "90vh", overflow: "auto" }}>
                     <Accordion expanded={expanded1} color='white' sx={{ backgroundColor: "primary.main", borderRadius: 0 }} disableGutters elevation={0} square>

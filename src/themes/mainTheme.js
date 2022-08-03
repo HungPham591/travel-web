@@ -53,28 +53,28 @@ const mainTheme = createTheme({
         button: {
             textTransform: 'none'
         },
-        h1: {
-            fontSize: '42px',
-        },
-        h2: {
-            fontSize: '32px',
-        },
-        h3: {
-            fontSize: "28px",
-            color: "#333333"
-        },
-        h4: {
-            fontSize: "24px",
-            color: "#333333"
-        },
-        h5: {
-            fontSize: "20px",
-            color: "#333333"
-        },
-        h6: {
-            fontSize: "19px",
-            color: "#555555"
-        },
+        // h1: {
+        //     fontSize: '42px',
+        // },
+        // h2: {
+        //     fontSize: '32px',
+        // },
+        // h3: {
+        //     fontSize: "28px",
+        //     color: "#333333"
+        // },
+        // h4: {
+        //     fontSize: "24px",
+        //     color: "#333333"
+        // },
+        // h5: {
+        //     fontSize: "20px",
+        //     color: "#333333"
+        // },
+        // h6: {
+        //     fontSize: "19px",
+        //     color: "#555555"
+        // },
     },
     breakpoints: {
         values: {

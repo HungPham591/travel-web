@@ -3,7 +3,7 @@ import { Box, Stack, styled, Typography } from '@mui/material';
 import React from 'react';
 
 const VideoThumbnail = styled("img")(
-    ({ theme, image }) => ({
+    ({ image }) => ({
         transition: "all 0.5s",
         backgroundImage: `url("${image}")`,
         backgroundPosition: 'center',

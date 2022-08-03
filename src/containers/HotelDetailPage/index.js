@@ -66,7 +66,7 @@ const reviewData = [
 
 
 const IframeDialogBox = styled(Box)(
-    ({ theme }) => ({
+    () => ({
         position: "relative",
         overflow: "hidden",
         width: "100%",
