@@ -199,6 +199,7 @@ const IframeBox = styled(MuiBox)(
         position: "relative",
         overflow: "hidden",
         width: "100%",
+        paddingTop: "56.25%",
     })
 )
 const CircleImage = styled(Box)(

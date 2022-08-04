@@ -70,6 +70,7 @@ const IframeDialogBox = styled(Box)(
         position: "relative",
         overflow: "hidden",
         width: "100%",
+        paddingTop: "56.25%",
     })
 )
 const StyledRow = styled(Box)(({ theme }) => ({

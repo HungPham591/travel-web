@@ -65,6 +65,7 @@ const IframeBox = styled(MuiBox)(
     () => ({
         position: "relative",
         overflow: "hidden",
+        paddingTop: "56.25%",
         width: "100%",
     })
 )
