@@ -5,10 +5,10 @@ import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 
 const NewPopper = styled(Popper)(({ theme }) => ({
   backgroundColor: "white",
+  overflow: "auto",
   maxHeight: 150,
   minWidth: 320,
-  overflow: "auto",
-  zIndex: "20",
+  zIndex: 10,
   [theme.breakpoints.down("md")]: {
     maxWidth: 590,
   },

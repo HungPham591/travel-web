@@ -86,8 +86,7 @@ const mainTheme = createTheme({
         },
     },
     shape: {
-        borderRadius: 5,
-        halfBorderRadius: "0 5px 5px 0",
+        borderRadius: "3px",
         border: "2px solid rgb(18, 25, 33, 0.1)"
     },
     components: {

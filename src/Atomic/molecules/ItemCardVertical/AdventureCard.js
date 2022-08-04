@@ -11,7 +11,7 @@ import HahaIcon from "../../../icons/HahaIcon";
 import ShareIcon from "@mui/icons-material/Share";
 import Score from "../Score";
 import OvalButton from "../../atoms/AdvancedButton/OvalButton";
-import HeartButton from "../HeartButton/BlackBackground";
+import CustomBackgroundHearButton from "../HeartButton/CustomBackgroundHearButton";
 
 const ImageContainer = styled(Box)(({ theme, image }) => ({
   backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(${image})`,
@@ -53,7 +53,7 @@ export default function ItemCardVertical({ data }) {
               </Typography>
             </Box>
             <Box sx={{ zIndex: 5 }}>
-              <HeartButton bgColor="rgb(18, 25, 33, 0.5)" color="#ffffff" />
+              <CustomBackgroundHearButton bgColor="rgb(18, 25, 33, 0.5)" color="#ffffff" />
             </Box>
           </Box>
           <Box sx={{ position: "absolute", display: "flex", justifyContent: "center", alignItems: "center", height: "100%", width: "100%", top: 0, left: 0 }}>

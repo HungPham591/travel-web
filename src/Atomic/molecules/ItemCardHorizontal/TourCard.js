@@ -1,7 +1,7 @@
 import React from "react";
-import { styled, Box, Typography, Link, Grid, Card } from "@mui/material";
+import { styled, Box, Typography, Link, Grid, Card, Button } from "@mui/material";
 import Score from "../../molecules/Score";
-import HeartButton from "../HeartButton/CustomBackgroundHearButton";
+import CustomBackgroundHearButton from "../HeartButton/CustomBackgroundHearButton";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 
 const ImageContainer = styled(Grid)(({ theme, image }) => ({
@@ -27,34 +27,36 @@ export default function ItemCardHorizontal({ data }) {
     <Card>
       <Grid container sx={{ minHeight: 300 }}>
         <ImageContainer item lg={5} md={5} sm={12} xs={12} image={data.image}>
-          <Box sx={{ height: "100%" }}>
-            <Box sx={{ display: "flex", p: 3, justifyContent: "flex-end" }}>
-              <Box sx={{ backgroundColor: "background.dark", borderRadius: "3px", p: 1 }}>
-                <Typography variant="body2" sx={{ fontWeight: "600", color: "text.white" }}>
+          <Box sx={{ height: "100%", position: "relative" }}>
+            <Box sx={(theme) => ({ display: "flex", padding: theme.spacing(3), justifyContent: "flex-end" })}>
+              <Box sx={(theme) => ({ backgroundColor: theme.palette.background.dark, borderRadius: theme.shape.borderRadius, padding: theme.spacing(1) })}>
+                <Typography variant="body2" sx={(theme) => ({ fontWeight: 600, color: theme.palette.text.white })}>
                   {data.label}
                 </Typography>
               </Box>
             </Box>
-            <Box sx={{ display: "flex", justifyContent: "center", mt: 9 }}>
-              <Link
-                href={"/tour-detail/" + data.id}
-                className="readmore"
-                variant="subtitle1"
-                sx={{ display: "none", fontSize: 12 }}
-              >
-                Xem thêm
-              </Link>
+            <Box sx={(theme) => ({ position: "absolute", height: "100%", width: "100%", top: 0, left: 0, display: "flex", justifyContent: "center", alighItems: "center" })}>
+              <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center"}}>
+                <Button
+                  className="readmore"
+                  commponent={Link}
+                  href={"/place-detail/" + data.id}
+                  sx={{ display: "none" }}
+                >
+                  Xem thêm
+                </Button>
+              </Box>
             </Box>
           </Box>
         </ImageContainer>
         <Grid item lg={7} md={7} sm={12} xs={12}>
           <Box sx={{ display: "flex", flexDirection: "column", justifyContent: "space-between", height: "100%" }}>
-            <Box sx={{ p: 4, position: "relative" }}>
+            <Box sx={(theme) => ({ padding: theme.spacing(4), position: "relative" })}>
               <Box sx={{ position: "absolute", right: 30, top: 15 }}>
-                <HeartButton bgColor="rgb(18, 25, 33, 0.15)" color="#555555" />
+                <CustomBackgroundHearButton bgColor="rgb(18, 25, 33, 0.15)" color="#555555" />
               </Box>
-              <Box sx={{ fontSize: 20, mb: 1 }}>
-                <Link href={"/tour-detail/" + data.id} sx={{ "&: hover": { color: "black" } }}>{data.title}</Link>
+              <Box sx={(theme) => ({ fontSize: 20, marginBottom: theme.spacing(1) })}>
+                <Link href={"/tour-detail/" + data.id} sx={(theme) => ({ color: theme.palette.secondary.main, fontSize: 20, "&: hover": { color: theme.palette.common.black } })}>{data.title}</Link>
               </Box>
               <Typography sx={{ fontWeight: 300, color: "text.light", mt: 1 }} >
                 Mã tour:

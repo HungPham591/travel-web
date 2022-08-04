@@ -1,7 +1,7 @@
 import * as React from "react";
 import { styled, Card, Link, Typography, Box, Rating } from "@mui/material";
 import Score from "../../molecules/Score";
-import HeartButton from "../../molecules/HeartButton/BlackBackground";
+import CustomBackgroundHearButton from "../../molecules/HeartButton/CustomBackgroundHearButton";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 
@@ -37,7 +37,7 @@ export default function ItemCardVertical({ data }) {
               </Typography>
             </Box>
             <Box sx={{ zIndex: 5 }}>
-              <HeartButton bgColor="rgb(18, 25, 33, 0.5)" color="#ffffff" />
+              <CustomBackgroundHearButton bgColor="rgb(18, 25, 33, 0.5)" color="#ffffff" />
             </Box>
           </Box>
           <Box sx={{ position: "absolute", display: "flex", justifyContent: "center", alignItems: "center", height: "100%", width: "100%", top: 0, left: 0 }}>

@@ -38,11 +38,11 @@ export default function FooterDropdown({ values, children }) {
           display: "flex",
           justifyContent: "space-between",
           backgroundColor: theme.palette.background.inputBase,
-          color: theme.text.primary,
+          color: theme.palette.text.primary,
           opacity: "0.7",
         })}
       >
-        <Typography variant="subtitle1" sx={(theme) => ({ maginRight: theme.spacing(1), color: theme.palette.white.main })}>
+        <Typography variant="subtitle1" sx={(theme) => ({ maginRight: theme.spacing(1), color: theme.palette.text.white })}>
           {selected}
         </Typography>
         {children}
