@@ -21,12 +21,8 @@ const SubmitButton = styled(Button)(
 const Score = styled(Box)(
     ({ theme }) => ({
         backgroundColor: theme.palette.primary.main,
-        color: "white",
         borderRadius: theme.shape.borderRadius,
         borderBottomRightRadius: 0,
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
         padding: theme.spacing(1),
     })
 )
@@ -58,7 +54,7 @@ const StickyBox = styled(Box)(
     ({ theme }) => ({
         width: "100%",
         position: 'sticky',
-        top: "144px"
+        top: `calc(${theme.spacing(10)} + ${theme.mixins.toolbar.minHeight}px)`,
     })
 )
 const StickyBoxBody = styled(Box)(
@@ -66,7 +62,6 @@ const StickyBoxBody = styled(Box)(
         backgroundColor: theme.palette.background.default,
         padding: theme.spacing(2),
         borderRadius: theme.shape.borderRadius,
-        border: "solid 1px",
         borderColor: theme.palette.grey[300],
     })
 )
@@ -106,6 +101,7 @@ function DetailBookingBox(props) {
         return (
             <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
                 <TextField
+                    sx={{ backgroundColor: "white" }}
                     value={numberOfAdult + numberOfChildren}
                     variant="outlined"
                     size="small"
@@ -125,10 +121,10 @@ function DetailBookingBox(props) {
                     <ClickAwayListener onClickAway={handleNumberOfGuestClose}>
                         <Paper sx={{ p: 2 }}>
                             <Box className={classes.centerBox} >
-                                <Box sx={{ width: "110px" }} >
+                                <Box sx={theme => ({ width: theme.spacing(18) })} >
                                     <Typography >Người lớn</Typography>
                                 </Box>
-                                <Box sx={{ width: "130px" }} className={classes.centerBox}>
+                                <Box sx={theme => ({ width: theme.spacing(15) })} className={classes.centerBox}>
                                     <CircleButton onClick={handleRemoveAdultButtonClick} >
                                         <RemoveIcon />
                                     </CircleButton>
@@ -139,10 +135,10 @@ function DetailBookingBox(props) {
                                 </Box>
                             </Box>
                             <Box mt={2} className={classes.centerBox}>
-                                <Box sx={{ width: "110px" }}>
+                                <Box sx={theme => ({ width: theme.spacing(18) })}>
                                     <Typography >Trẻ nhỏ</Typography>
                                 </Box>
-                                <Box sx={{ width: "130px" }} className={classes.centerBox}>
+                                <Box sx={theme => ({ width: theme.spacing(15) })} className={classes.centerBox}>
                                     <CircleButton onClick={handleRemoveChildrenButtonClick}>
                                         <RemoveIcon />
                                     </CircleButton>
@@ -172,7 +168,7 @@ function DetailBookingBox(props) {
                             </Typography>
                         </Grid>
                         <Grid item xl={5} lg={5} md={12} sm={6} xs={12} sx={{ display: "flex", alignItems: "center", justifyContent: "flex-end" }} >
-                            <Box sx={{ paddingRight: 1 }}>
+                            <Box sx={{ pr: 1 }}>
                                 <Typography sx={{ fontSize: "12px", textAlign: "right" }}>Tuyệt vời</Typography>
                                 <Typography sx={{ fontSize: "11px", fontWeight: 400, fontStyle: "italic", textAlign: "right" }} >{data?.review} Đánh giá</Typography>
                             </Box>

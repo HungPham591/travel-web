@@ -18,9 +18,6 @@ const Score = styled(Box)(
         color: "white",
         borderRadius: theme.shape.borderRadius,
         borderBottomLeftRadius: 0,
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
         padding: theme.spacing(1),
     })
 )
@@ -84,7 +81,7 @@ const MapBox = styled(Box)(
     })
 )
 const CardMediaBox = styled(CardMedia)(
-    ({ theme }) => ({
+    () => ({
         width: "50%",
         position: "relative",
         aspectRatio: "16/9",
@@ -97,7 +94,7 @@ const CustomToggleButton = styled(ToggleButton)(
 )
 
 
-function MapPage(props) {
+function MapPage() {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.only("xs"));
     const [expanded1, setExpaned1] = useState(false);
@@ -130,22 +127,22 @@ function MapPage(props) {
                         alt="Live from space album cover"
                     />
                     <Box sx={{ position: "absolute", top: 10, right: 10, padding: 1, bgcolor: "rgba(0, 0, 0, 0.6);", borderRadius: 1 }} >
-                        <Typography sx={{ fontSize: "11px", color: "#CCCCCC" }}  >{data?.label}</Typography>
+                        <Typography sx={{ fontSize: "11px", color: "white" }}>{data?.label}</Typography>
                     </Box>
                 </CardMediaBox>
                 <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: "space-between", width: "100%" }}>
                     <CardContent sx={{ flex: '1 0 auto', position: 'relative' }}>
-                        <Box sx={{ position: "absolute", right: "15px" }} >
+                        <Box sx={theme => ({ position: "absolute", right: theme.spacing(2) })} >
                             <HeartButton />
                         </Box>
                         <Link to={`/tour-detail/${data?.id}`}>
-                            <CardTitle component="div" variant="h5">
+                            <CardTitle component="div" variant="h6">
                                 {data?.title}
                             </CardTitle>
                         </Link>
-                        <Typography sx={{ color: "grey.500" }} component="span">
+                        <Typography sx={theme => ({ color: theme.palette.grey[500] })} component="span">
                             Giá từ &nbsp;
-                            <Typography sx={{ color: "common.green", fontWeight: 500, display: "inline" }}>
+                            <Typography sx={theme => ({ color: theme.palette.common.green, fontWeight: 500, display: "inline" })}>
                                 {data?.price}₫
                             </Typography>
                             /khách
@@ -156,15 +153,15 @@ function MapPage(props) {
                         <CardFooter>
                             <FooterMarkerIcon>
                                 <RoomIcon fontSize='small' />
-                                <Typography sx={{ ml: 1, color: "grey.500" }} >Xem trên bản đồ</Typography>
+                                <Typography sx={theme => ({ ml: 1, color: theme.palette.grey[500] })} >Xem trên bản đồ</Typography>
                             </FooterMarkerIcon>
                             <Box sx={{ display: "flex", justifyContent: "flex-end", alignItems: "center" }} >
                                 <Box sx={{ pr: 1 }} >
                                     <Typography sx={{ fontSize: "12px", textAlign: "right" }} >Tuyệt vời</Typography>
-                                    <Typography sx={{ fontSize: "11px", fontStyle: "italic", textAlign: "right" }} >{data?.review} Đánh giá</Typography>
+                                    <Typography sx={{ fontSize: "11px", fontStyle: "italic", textAlign: "right" }}>{data?.review} Đánh giá</Typography>
                                 </Box>
                                 <Score>
-                                    <Typography sx={{ fontWeight: "bold", color: "white" }} >
+                                    <Typography variant='subtitle2' sx={{ fontWeight: "bold", color: "white" }} >
                                         {data?.score}
                                     </Typography>
                                 </Score>
@@ -179,17 +176,17 @@ function MapPage(props) {
         <Grid container sx={{ mt: `${theme.mixins.toolbar.minHeight}px` }} >
             <Grid item lg={5} md={5} sm={12} xs={12} order={{ lg: 1, md: 1, sm: 2, xs: 2 }} >
                 <Box sx={{ height: "90vh", overflow: "auto" }}>
-                    <Accordion expanded={expanded1} color='white' sx={{ backgroundColor: "primary.main", borderRadius: 0 }} disableGutters elevation={0} square>
-                        <AccordionSummary sx={{ backgroundColor: "primary.main", borderRadius: 0, width: "100%" }} >
+                    <Accordion expanded={expanded1} color='white' sx={theme => ({ backgroundColor: theme.palette.primary.main, borderRadius: 0 })} disableGutters elevation={0} square>
+                        <AccordionSummary sx={theme => ({ backgroundColor: theme.palette.primary.main, borderRadius: 0, width: "100%" })} >
                             <Box sx={{ display: "flex", alignItems: "center", justifyContent: "space-between", width: "100%" }} >
-                                <Typography sx={{ color: "white", fontSize: "16px", fontWeight: 500 }} >145 kết quả</Typography>
-                                <SearchIcon onClick={handleChangeButtonExpanded1} sx={{ color: "white", fontSize: "25px", cursor: "pointer" }} />
+                                <Typography sx={{ color: "white" }} >145 kết quả</Typography>
+                                <SearchIcon onClick={handleChangeButtonExpanded1} sx={{ color: "white", fontSize: "25px" }} />
                             </Box>
                         </AccordionSummary>
-                        <AccordionDetails>
-                            <TextField placeholder='Nhập từ khóa tìm kiếm...' variant='outlined' fullWidth sx={{ border: 0, mb: 1 }} InputProps={{ endAdornment: <SearchIcon /> }} />
-                            <TextField placeholder='Nhập địa điểm' variant='outlined' fullWidth sx={{ border: 0, mb: 1 }} InputProps={{ endAdornment: <RoomIcon /> }} />
-                            <Select defaultValue={1} MenuProps={{ disableScrollLock: true }} sx={{ border: 0, mb: 1 }} fullWidth>
+                        <AccordionDetails >
+                            <TextField placeholder='Nhập từ khóa tìm kiếm...' variant='outlined' fullWidth sx={{ border: 0, mb: 1 }} InputProps={{ endAdornment: <SearchIcon />, style: { backgroundColor: "white" } }} />
+                            <TextField placeholder='Nhập địa điểm' variant='outlined' fullWidth sx={{ border: 0, mb: 1 }} InputProps={{ endAdornment: <RoomIcon />, style: { backgroundColor: "white" } }} />
+                            <Select defaultValue={1} MenuProps={{ disableScrollLock: true }} sx={{ border: 0, mb: 1, backgroundColor: "white" }} fullWidth>
                                 <MenuItem value={1}>Tất cả danh mục</MenuItem>
                                 <MenuItem value={2}>Địa danh</MenuItem>
                                 <MenuItem value={3}>Tour du lịch</MenuItem>
@@ -212,7 +209,7 @@ function MapPage(props) {
                         </AccordionSummary>
                         <Divider />
                         <AccordionDetails>
-                            <Typography variant='h6' sx={{ fontWeight: 500 }}>Danh mục</Typography>
+                            <Typography variant='h6' >Danh mục</Typography>
                             <Grid container sx={{ mb: 2 }} >
                                 <Grid item sx={{ display: "flex", flexDirection: "column" }} lg={6} md={6} sm={6} xs={12} >
                                     <FormControlLabel control={<Checkbox defaultChecked />} label="Tất cả (945)" />
@@ -230,13 +227,13 @@ function MapPage(props) {
                             <Typography variant='h6' sx={{ mb: 2 }}>Khoảng cách</Typography>
                             <Box>
                                 <Typography sx={{ display: "inline" }}>Bán kính xung quanh địa điểm đã chọn </Typography>
-                                <Typography sx={{ fontWeight: 600, color: 'secondary.main', display: "inline" }} >{sliderValue}</Typography>
+                                <Typography sx={theme => ({ color: theme.palette.secondary.main, display: "inline" })} >{sliderValue}</Typography>
                                 <Typography sx={{ display: "inline" }}> km</Typography>
                             </Box>
                             <Slider color='secondary' defaultValue={10} value={sliderValue} onChange={handleSliderChange} step={10} />
                         </AccordionDetails>
                     </Accordion>
-                    <Box sx={{ padding: 1, minHeight: "100vh", bgcolor: "background.default" }}>
+                    <Box sx={theme => ({ padding: 1, minHeight: "100vh", bgcolor: theme.palette.background.default })}>
                         {
                             tourData.map((value, index) => {
                                 return <Box paddingY={1} key={index}>{HorizontalCard(value)}</Box>;

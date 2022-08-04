@@ -115,7 +115,7 @@ const CustomTimelineSeparator = styled(Box)(
     ({ theme }) => ({
         border: "solid 2px",
         borderRadius: "100%",
-        borderColor: "#999",
+        borderColor: theme.palette.grey[500],
         width: "50px",
         height: "50px",
         display: "flex",
@@ -129,7 +129,7 @@ const CustomTimelineSeparator = styled(Box)(
 const CustomTimelineOppositeContent = styled(TimelineOppositeContent)(
     ({ theme }) => ({
         textAlign: "right",
-        color: "#ebeef3",
+        color: theme.palette.grey,
         maxWidth: "130px",
         paddingLeft: 0,
         paddingTop: 0,
@@ -176,7 +176,7 @@ const TimelineHead = styled(Box)(
 )
 const CustomTimelineConnector = styled(TimelineConnector)(
     ({ theme }) => ({
-        backgroundColor: "#ebeef3",
+        backgroundColor: theme.palette.grey[100],
         display: "block",
         [theme.breakpoints.down("sm")]: {
             display: "none",
@@ -195,11 +195,10 @@ const CustomTimelineItem = styled(TimelineItem)(
     })
 )
 const IframeBox = styled(MuiBox)(
-    ({ theme }) => ({
+    () => ({
         position: "relative",
         overflow: "hidden",
         width: "100%",
-        paddingTop: "56.25%",
     })
 )
 const CircleImage = styled(Box)(
@@ -219,9 +218,9 @@ const CircleImage = styled(Box)(
 const VRButton = styled(Button)(
     ({ theme }) => ({
         boxShadow: 0,
-        borderRadius: "30px",
+        borderRadius: theme.shape.borderRadius,
         backgroundColor: theme.palette.secondary.main,
-        padding: `12px 30px`,
+        padding: `${theme.spacing(1.5)} ${theme.spacing(4)}`,
         fontWeight: 600
     })
 )
@@ -274,14 +273,14 @@ function TourDetailPage(props) {
     const handleVideoDialogClose = () => {
         setVideoDialogOpen(false);
     }
-    const handleVRButtonClick = (index) => {
+    const handleVRButtonClick = () => {
         setvrDialogOpen(true);
     }
     const handleImageClick = (index) => {
         setCurrentImageOpen(index);
         setImageDialogOpen(true);
     }
-    const handleVideoClick = (index) => {
+    const handleVideoClick = () => {
         setVideoDialogOpen(true);
     }
 
@@ -309,14 +308,14 @@ function TourDetailPage(props) {
                                 <TimelineHead>
                                     <CustomTimelineOppositeContent
                                     >
-                                        <Typography sx={{ color: "#888" }} >Ngày</Typography>
-                                        <Typography variant="h6" component="span">
+                                        <Typography sx={theme => ({ color: theme.palette.grey[500] })} >Ngày</Typography>
+                                        <Typography variant="h6" sx={theme => ({ color: theme.palette.grey[700] })}>
                                             {value.time}
                                         </Typography>
                                     </CustomTimelineOppositeContent>
                                     <TimelineSeparator>
                                         <CustomTimelineSeparator>
-                                            <Typography sx={{ color: "common.yellow", fontWeight: "500", fontSize: "24px", margin: "auto" }} >
+                                            <Typography variant='h5' sx={theme => ({ color: theme.palette.common.yellow, margin: "auto" })} >
                                                 {index + 1}
                                             </Typography>
                                         </CustomTimelineSeparator>

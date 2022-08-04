@@ -150,50 +150,39 @@ const tableTitle = [
     "GIÁ",
     "THAO TÁC",
 ]
+const avatar = () => {
+    return (
+        <Box sx={{ display: "flex", alignItems: "center" }}>
+            <CustomAvatar >A</CustomAvatar>
+            <Typography >Persius delenit has cu</Typography>
+        </Box>
+    )
+}
+const deleteButton = () => <IconButton><DeleteIcon sx={{ color: theme => theme.palette.secondary.main }} /></IconButton>
 const tableData = [
     {
-        item: (
-            <Box sx={{ display: "flex", alignItems: "center" }}>
-                <CustomAvatar >A</CustomAvatar>
-                <Typography >Persius delenit has cu</Typography>
-            </Box>
-        ),
+        item: avatar(),
         discount: "0%",
         price: "24,71$",
-        actions: <IconButton><DeleteIcon sx={{ color: theme => theme.palette.secondary.main }} /></IconButton>
+        actions: deleteButton()
     },
     {
-        item: (
-            <Box sx={{ display: "flex", alignItems: "center" }}>
-                <CustomAvatar >A</CustomAvatar>
-                <Typography >Persius delenit has cu</Typography>
-            </Box>
-        ),
+        item: avatar(),
         discount: "0%",
         price: "24,71$",
-        actions: <IconButton><DeleteIcon sx={{ color: theme => theme.palette.secondary.main }} /></IconButton>
+        actions: deleteButton()
     },
     {
-        item: (
-            <Box sx={{ display: "flex", alignItems: theme => theme.palette.secondary.main }}>
-                <CustomAvatar >A</CustomAvatar>
-                <Typography >Persius delenit has cu</Typography>
-            </Box>
-        ),
+        item: avatar(),
         discount: "0%",
         price: "24,71$",
-        actions: <IconButton><DeleteIcon sx={{ color: theme => theme.palette.secondary.main }} /></IconButton>
+        actions: deleteButton()
     },
     {
-        item: (
-            <Box sx={{ display: "flex", alignItems: "center" }}>
-                <CustomAvatar >A</CustomAvatar>
-                <Typography >Persius delenit has cu</Typography>
-            </Box>
-        ),
+        item: avatar(),
         discount: "0%",
         price: "24,71$",
-        actions: <IconButton><DeleteIcon sx={{ color: theme => theme.palette.secondary.main }} /></IconButton>
+        actions: deleteButton()
     }
 ];
 const tableCellAlign = [
@@ -267,10 +256,9 @@ function CartPage() {
                                     variant="outlined"
                                     size="small"
                                 />
-                                <Button variant='outlined' sx={{ whiteSpace: "nowrap", color: theme => theme.palette.common.grey, borderColor: theme => theme.palette.common.grey }}>Áp dụng mã giảm giá</Button>
+                                <Button variant='outlined' sx={{ whiteSpace: "nowrap", color: theme => theme.palette.grey[500], borderColor: theme => theme.palette.grey[500] }}>Áp dụng mã giảm giá</Button>
                             </Box>
-                            <Button variant='outlined' sx={{ color: theme => theme.palette.common.grey, borderColor: theme => theme.palette.common.grey }}>Cập nhật giỏ hàng</Button>
-
+                            <Button variant='outlined' sx={{ color: theme => theme.palette.grey[500], borderColor: theme => theme.palette.grey[500] }}>Cập nhật giỏ hàng</Button>
                         </Box>
                     </Grid>
                     <Grid item lg={4} sm={12} md={4} xs={12}>

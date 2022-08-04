@@ -11,12 +11,11 @@ const PurchaseButton = styled(Button)(
 )
 const StickyBox = styled(Box)(
     ({ theme }) => ({
-        border: "solid 1px",
         borderColor: theme.palette.grey[300],
         borderRadius: theme.shape.borderRadius,
         padding: theme.spacing(2),
         position: "sticky",
-        top: "100px",
+        top: `calc(${theme.spacing(4)} + ${theme.mixins.toolbar.minHeight}px)`,
         backgroundColor: theme.palette.background.default
     })
 )
@@ -26,8 +25,8 @@ function DetailCheckoutBox(props) {
         <StickyBox>
             <Grid container spacing={2}>
                 <Grid item xl={12} lg={12} md={12} sm={12} xs={12} sx={{ display: "flex", justifyContent: "space-between" }}>
-                    <Typography sx={{ fontWeight: 500, fontSize: "24px" }} >Tổng giá</Typography>
-                    <Typography sx={{ fontWeight: 500, fontSize: "24px" }}>69.00đ</Typography>
+                    <Typography variant='h5'>Tổng giá</Typography>
+                    <Typography variant='h5'>69.00đ</Typography>
                 </Grid>
                 <Grid item xl={12} lg={12} md={12} sm={12} xs={12} >
                     <Divider />

@@ -61,7 +61,6 @@ function RestaurantDetailPage() {
     const [currentImageOpen, setCurrentImageOpen] = useState(null);
     const [imageDialogOpen, setImageDialogOpen] = useState(false);
     const params = useParams();
-    // const [pageData, setPageData] = useState(restaurantData.find(item => item?.id === params?.id));
     const pageData = restaurantData.find(item => item?.id === params?.id);
 
     const handleImageDialogClose = () => {

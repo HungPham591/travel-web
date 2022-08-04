@@ -118,7 +118,7 @@ function Header(props) {
     const handleLogoClick = () => {
         navigate('/');
     }
-    const handleMenuClose = (event) => {
+    const handleMenuClose = () => {
         setAnchorEl(null);
     };
     const handleMenuButton = () => {
